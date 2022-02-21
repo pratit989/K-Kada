@@ -3,29 +3,26 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class OrderDetailsforTWidget extends StatefulWidget {
-  const OrderDetailsforTWidget({Key key}) : super(key: key);
+class OrderDetailsC1Widget extends StatefulWidget {
+  const OrderDetailsC1Widget({Key key}) : super(key: key);
 
   @override
-  _OrderDetailsforTWidgetState createState() => _OrderDetailsforTWidgetState();
+  _OrderDetailsC1WidgetState createState() => _OrderDetailsC1WidgetState();
 }
 
-class _OrderDetailsforTWidgetState extends State<OrderDetailsforTWidget> {
+class _OrderDetailsC1WidgetState extends State<OrderDetailsC1Widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 320,
-      height: 176,
+      height: 142,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).tertiaryColor,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 8,
-            color: Color(0x15000000),
-            offset: Offset(2, 2),
-          )
-        ],
         borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: FlutterFlowTheme.of(context).primaryColor,
+          width: 0.5,
+        ),
       ),
       child: Padding(
         padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
@@ -40,7 +37,7 @@ class _OrderDetailsforTWidgetState extends State<OrderDetailsforTWidget> {
               children: [
                 Text(
                   FFLocalizations.of(context).getText(
-                    '0sbd6pew' /* Order Id   : */,
+                    '8op8vjnz' /* Order Id   : */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',
@@ -50,7 +47,7 @@ class _OrderDetailsforTWidgetState extends State<OrderDetailsforTWidget> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    '0ic18t93' /* Ordered Date: */,
+                    '5xm3ba1x' /* Ordered Date: */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',
@@ -60,17 +57,7 @@ class _OrderDetailsforTWidgetState extends State<OrderDetailsforTWidget> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    '918sfe74' /* Total Amount Paid: */,
-                  ),
-                  style: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lato',
-                        color: Color(0xFF949496),
-                        fontWeight: FontWeight.w500,
-                      ),
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    'bq17wl18' /* Delivered to: */,
+                    '4schdtyi' /* Total Amount Paid: */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',
@@ -87,7 +74,7 @@ class _OrderDetailsforTWidgetState extends State<OrderDetailsforTWidget> {
               children: [
                 Text(
                   FFLocalizations.of(context).getText(
-                    'mxra3hi7' /* 0000000 */,
+                    'rdi86c3n' /* 0000000 */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',
@@ -96,7 +83,7 @@ class _OrderDetailsforTWidgetState extends State<OrderDetailsforTWidget> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    '5kxao8ee' /* 02-11-2021 */,
+                    'zpn9b7lc' /* 02-11-2021 */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',
@@ -105,18 +92,7 @@ class _OrderDetailsforTWidgetState extends State<OrderDetailsforTWidget> {
                 ),
                 Text(
                   FFLocalizations.of(context).getText(
-                    '94xzy7rz' /* ₹127.00 */,
-                  ),
-                  style: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w500,
-                      ),
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    'vq2doqw3' /* Sona lawns, xyz street,
-xyz, K... */
-                    ,
+                    'j10euad3' /* ₹127.00 */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',

@@ -4,14 +4,16 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SelectAreaCWidget extends StatefulWidget {
-  const SelectAreaCWidget({Key key}) : super(key: key);
+class SetDeliveryLocationCWidget extends StatefulWidget {
+  const SetDeliveryLocationCWidget({Key key}) : super(key: key);
 
   @override
-  _SelectAreaCWidgetState createState() => _SelectAreaCWidgetState();
+  _SetDeliveryLocationCWidgetState createState() =>
+      _SetDeliveryLocationCWidgetState();
 }
 
-class _SelectAreaCWidgetState extends State<SelectAreaCWidget> {
+class _SetDeliveryLocationCWidgetState
+    extends State<SetDeliveryLocationCWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -46,7 +48,7 @@ class _SelectAreaCWidgetState extends State<SelectAreaCWidget> {
                         ),
                         Text(
                           FFLocalizations.of(context).getText(
-                            'mp7m3uuz' /* SELECT AREA */,
+                            'b5tpy7yq' /* Set Delivery Location */,
                           ),
                           textAlign: TextAlign.center,
                           style:
@@ -57,19 +59,6 @@ class _SelectAreaCWidgetState extends State<SelectAreaCWidget> {
                                   ),
                         ),
                       ],
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(40, 0, 0, 0),
-                      child: Text(
-                        FFLocalizations.of(context).getText(
-                          '9gwwzaa4' /* Select location you would like... */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Lato',
-                              color: Color(0xFF696969),
-                              fontSize: 12,
-                            ),
-                      ),
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
@@ -106,7 +95,7 @@ class _SelectAreaCWidgetState extends State<SelectAreaCWidget> {
                               alignment: AlignmentDirectional(0, 0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'd4g1v0zl' /* Search location */,
+                                  'irsaumug' /* Search location */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1
@@ -137,7 +126,7 @@ class _SelectAreaCWidgetState extends State<SelectAreaCWidget> {
                             print('Button pressed ...');
                           },
                           text: FFLocalizations.of(context).getText(
-                            '948a0as1' /* Current location */,
+                            'm5n1864n' /* Current location */,
                           ),
                           icon: Icon(
                             Icons.my_location,
@@ -166,7 +155,7 @@ class _SelectAreaCWidgetState extends State<SelectAreaCWidget> {
                           print('Button pressed ...');
                         },
                         text: FFLocalizations.of(context).getText(
-                          'psao1igc' /* Locate on Map */,
+                          '4ajk9wtt' /* Locate on Map */,
                         ),
                         icon: Icon(
                           Icons.location_on_outlined,

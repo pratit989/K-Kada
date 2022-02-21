@@ -29,7 +29,7 @@ class _WelcomeCWidgetState extends State<WelcomeCWidget> {
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/Group_949.png',
+            'assets/images/Mask_Group_10.png',
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 1,
             fit: BoxFit.fitHeight,

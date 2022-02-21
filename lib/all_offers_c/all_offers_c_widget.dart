@@ -1,6 +1,6 @@
+import '../components/coupons_c_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -118,7 +118,7 @@ class _AllOffersCWidgetState extends State<AllOffersCWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                   child: Text(
                     FFLocalizations.of(context).getText(
-                      'xk4pjmgx' /* Select a coupon and add items ... */,
+                      'ukxzcc99' /* Select a coupon and add items ... */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Lato',
@@ -126,225 +126,19 @@ class _AllOffersCWidgetState extends State<AllOffersCWidget> {
                         ),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    height: MediaQuery.of(context).size.height * 0.18,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 8,
-                          color: Color(0x15000000),
-                          offset: Offset(2, 2),
-                        )
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    child: ListView(
+                      padding: EdgeInsets.zero,
+                      scrollDirection: Axis.vertical,
                       children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 20, 0),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        '8wk7u9a3' /* STAT40 */,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 160,
-                                        height: 37,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryColor,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Lato',
-                                              color: Colors.white,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1,
-                                        ),
-                                        borderRadius: 12,
-                                      ),
-                                    ),
-                                  ),
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      't5a8gnuk' /* Get 40% Off */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Lato',
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'vu041ur6' /* 40% Off upto Rs.100 on orders ... */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Open Sans',
-                                      color: Color(0xFF949496),
-                                      fontSize: 12,
-                                    ),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'wfs8wddb' /* SELECT */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Lato',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
-                                    ),
-                              ),
-                            ),
-                          ],
+                        CouponsCWidget(
+                          selectionVisibility: true,
                         ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    height: MediaQuery.of(context).size.height * 0.18,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 8,
-                          color: Color(0x15000000),
-                          offset: Offset(2, 2),
-                        )
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 20, 0),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        'k1t80u1v' /* BOOK20 */,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 160,
-                                        height: 37,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryColor,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Lato',
-                                              color: Colors.white,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1,
-                                        ),
-                                        borderRadius: 12,
-                                      ),
-                                    ),
-                                  ),
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      '2r3vpq5h' /* Get 20% Off */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Lato',
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'w01b34we' /* 20% Off upto Rs. 200 on orders... */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Open Sans',
-                                      color: Color(0xFF949496),
-                                      fontSize: 12,
-                                    ),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'f5choyqj' /* SELECT */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Lato',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
-                                    ),
-                              ),
-                            ),
-                          ],
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                          child: CouponsCWidget(),
                         ),
                       ],
                     ),

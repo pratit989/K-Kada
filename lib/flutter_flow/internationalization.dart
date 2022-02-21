@@ -1171,7 +1171,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // RegiosterT
+  // RegisterT
   {
     '6y775v24': {
       'en': 'Register',
@@ -1422,7 +1422,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // AnandLoduT
+  // TransporterHomeT
   {
     '9jzij3uy': {
       'en': 'Transporter',
@@ -1794,19 +1794,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // CartC
   {
-    'abcbskai': {
+    '26hotml3': {
       'en': 'Your Cart is Empty',
       'ml': '',
     },
-    'av40vc6x': {
+    'vircro2c': {
       'en': 'Looks like you haven\'t added anything\nto your cart yet',
       'ml': '',
     },
-    'b7azlqqt': {
+    'ql2q47kb': {
       'en': 'Start Shopping',
       'ml': '',
     },
-    'zwh5y6js': {
+    'bty8zbce': {
       'en': 'Home',
       'ml': '',
     },
@@ -1817,7 +1817,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Customer',
       'ml': 'വെണ്ടർ',
     },
-    'pydi6z2s': {
+    'syciqwg7': {
       'en': 'Hi Anand,\nWhat would you like to shop?',
       'ml': '',
     },
@@ -1825,39 +1825,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Search product',
       'ml': 'ഉൽപ്പന്നം തിരയുക',
     },
-    'pzptm2bf': {
+    '4tnms1k6': {
       'en': 'Offers',
       'ml': '',
     },
-    'xk0pwcxm': {
+    '4l5dkjzn': {
       'en': 'See All',
       'ml': '',
     },
-    'fl33tczh': {
-      'en': 'STAT40',
-      'ml': 'STAT40',
-    },
-    '1spuuyel': {
-      'en': 'Get 40% Off',
-      'ml': '40% കിഴിവ് നേടൂ',
-    },
-    'ct5sxrbs': {
-      'en': '40% Off upto Rs.100 on orders above Rs.200',
-      'ml': '200 രൂപയ്ക്ക് മുകളിലുള്ള ഓർഡറുകൾക്ക് 100 രൂപ വരെ 40% കിഴിവ്',
-    },
-    'fjaci9z7': {
+    'rclk8r64': {
       'en': 'Products',
       'ml': '',
     },
-    'uqw2ohpq': {
+    '2srrnc5u': {
       'en': 'See All',
       'ml': '',
     },
-    'moy241wp': {
+    'qkyn2r7m': {
       'en': 'View Cart ',
       'ml': '',
     },
-    'j1wvko4n': {
+    'yc5dvqgw': {
       'en': 'Home',
       'ml': '',
     },
@@ -1876,43 +1864,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Available Offers',
       'ml': 'എത്തിച്ചു',
     },
-    'xk4pjmgx': {
+    'ukxzcc99': {
       'en': 'Select a coupon and add items to your cart',
       'ml': '',
     },
-    '8wk7u9a3': {
-      'en': 'STAT40',
-      'ml': 'STAT40',
-    },
-    't5a8gnuk': {
-      'en': 'Get 40% Off',
-      'ml': '40% കിഴിവ് നേടൂ',
-    },
-    'vu041ur6': {
-      'en': '40% Off upto Rs.100 on orders above Rs.200',
-      'ml': '200 രൂപയ്ക്ക് മുകളിലുള്ള ഓർഡറുകൾക്ക് 100 രൂപ വരെ 40% കിഴിവ്',
-    },
-    'wfs8wddb': {
-      'en': 'SELECT',
-      'ml': '',
-    },
-    'k1t80u1v': {
-      'en': 'BOOK20',
-      'ml': 'STAT40',
-    },
-    '2r3vpq5h': {
-      'en': 'Get 20% Off',
-      'ml': '40% കിഴിവ് നേടൂ',
-    },
-    'w01b34we': {
-      'en': '20% Off upto Rs. 200 on orders for Long books',
-      'ml': '200 രൂപയ്ക്ക് മുകളിലുള്ള ഓർഡറുകൾക്ക് 100 രൂപ വരെ 40% കിഴിവ്',
-    },
-    'f5choyqj': {
-      'en': 'SELECT',
-      'ml': '',
-    },
-    'u045f2up': {
+    'fo91xlx0': {
       'en': 'Home',
       'ml': '',
     },
@@ -1927,7 +1883,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Search product code',
       'ml': 'ഉൽപ്പന്നം തിരയുക',
     },
-    'tc8ajsfl': {
+    'aovr3y22': {
       'en': 'Home',
       'ml': '',
     },
@@ -1961,6 +1917,584 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'brhkg34z': {
       'en': 'Home',
       'ml': 'വീട്',
+    },
+  },
+  // MyOrdersC
+  {
+    '86us2b0e': {
+      'en': 'My Orders',
+      'ml': 'സ്വയം പിക്കപ്പ്',
+    },
+    'y981lrsb': {
+      'en': 'Processing',
+      'ml': 'പുതിയ ഓർഡറുകൾ',
+    },
+    'vhyv8epf': {
+      'en': 'Delivered',
+      'ml': 'പാക്ക് ചെയ്തു',
+    },
+    'hqei0t79': {
+      'en': 'Cancelled',
+      'ml': 'എടുത്തു',
+    },
+    'dtgglw9y': {
+      'en': 'Filter orders by time',
+      'ml': '',
+    },
+    'obpnrhbm': {
+      'en': 'Last 30 days',
+      'ml': '',
+    },
+    'dmv0sjiv': {
+      'en': 'Last 30 days',
+      'ml': '',
+    },
+    'c32rn1ci': {
+      'en': 'Last 3 months',
+      'ml': '',
+    },
+    '27ebvd56': {
+      'en': 'Last 6 months',
+      'ml': '',
+    },
+    'a5t85zzy': {
+      'en': '2021',
+      'ml': '',
+    },
+    'qm4s02eo': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // OrderDetailsCPage
+  {
+    '5j5htbv2': {
+      'en': 'Order Details',
+      'ml': 'സ്വയം പിക്കപ്പ്',
+    },
+    '935etuci': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // RequestCancellationC
+  {
+    'qj0gm7c7': {
+      'en': 'Request Cancellation',
+      'ml': 'സ്വയം പിക്കപ്പ്',
+    },
+    'z0cj5u5q': {
+      'en':
+          'Please refuse the order if the vendor attempts\ndelivery. If you have already paid, we will initiate\na refund soon',
+      'ml': '',
+    },
+    '5azp3qhh': {
+      'en': 'Order created by mistake',
+      'ml': '',
+    },
+    'il0abzd7': {
+      'en': 'Order would not arrive on time',
+      'ml': '',
+    },
+    'slirmos9': {
+      'en': 'Shipping cost too high',
+      'ml': '',
+    },
+    '6eun9ngw': {
+      'en': 'Prices too high',
+      'ml': '',
+    },
+    'jm3x6gvu': {
+      'en': 'Need to change the shipping address',
+      'ml': '',
+    },
+    'ybx99kd4': {
+      'en': 'Need to change payment method',
+      'ml': '',
+    },
+    '95mvfkvi': {
+      'en': 'Other',
+      'ml': '',
+    },
+    'mht9mbst': {
+      'en': 'Cancellation reason (optional)',
+      'ml': '',
+    },
+    'wc5rak38': {
+      'en': 'Request Cancellation',
+      'ml': '',
+    },
+    '7074bx5r': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // CancellationRequested
+  {
+    '1seymq8q': {
+      'en': 'Cancellation Requested ',
+      'ml': 'സ്വയം പിക്കപ്പ്',
+    },
+    '9gf56t3y': {
+      'en':
+          'Your request for order cancellation is accepted. We\nare attempting to cancel it now. You can check the\nstatus of your order later.',
+      'ml': '',
+    },
+    'evb3deas': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // TrancsporterDetailsC
+  {
+    'dj7wb8n7': {
+      'en': 'Transporter Details',
+      'ml': 'സ്വയം പിക്കപ്പ്',
+    },
+    'okn26u0i': {
+      'en': 'RAMESH SHETTY',
+      'ml': '',
+    },
+    'sew0i552': {
+      'en': 'TRANSPORTER\'S UIN',
+      'ml': 'ട്രാൻസ്പോർട്ടർ യുഐഎൻ',
+    },
+    'yvc3qg1o': {
+      'en': 'K54584H454',
+      'ml': '',
+    },
+    'p2hejjgf': {
+      'en': 'TRANSPORTER\'S MOBILE NO',
+      'ml': 'ട്രാൻസ്പോർട്ടർ യുഐഎൻ',
+    },
+    'ujm6z79a': {
+      'en': '9565487521',
+      'ml': '',
+    },
+    '10gf6d33': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // OrderDetailsDeliveredC
+  {
+    'mtbf57ed': {
+      'en': 'Order Details',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    'xtmre8rf': {
+      'en': '🟡Delivered',
+      'ml': '⚫ എത്തിച്ചു',
+    },
+    'derak5im': {
+      'en': 'Delivery Type',
+      'ml': 'ഡെലിവറി തരം',
+    },
+    'vyfiiij7': {
+      'en': 'Payment Details',
+      'ml': 'പേയ്മെന്റ് വിശദാംശങ്ങൾ',
+    },
+    'eu7xz11q': {
+      'en': 'Item Details',
+      'ml': 'ഇനത്തിന്റെ വിശദാംശങ്ങൾ',
+    },
+    'kxct7edp': {
+      'en': 'Download Invoice',
+      'ml': 'ഇൻവോയ്സ് ഡൗൺലോഡ് ചെയ്യുക',
+    },
+    't78mwikb': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // OrderDetailsProcessingC
+  {
+    'bwyiv4ag': {
+      'en': 'Order Details',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    'nko0ss4f': {
+      'en': '⬤ Processing',
+      'ml': '⚫പാക്ക് ചെയ്തു',
+    },
+    'f9bp14jh': {
+      'en': 'Delivery Type',
+      'ml': 'ഡെലിവറി തരം',
+    },
+    '3qwjs7om': {
+      'en': 'Payment Details',
+      'ml': 'പേയ്മെന്റ് വിശദാംശങ്ങൾ',
+    },
+    '2qe1pexc': {
+      'en': 'Item Details',
+      'ml': 'ഇനത്തിന്റെ വിശദാംശങ്ങൾ',
+    },
+    'rxytldob': {
+      'en': 'Track Status',
+      'ml': 'സ്റ്റാറ്റസ് ട്രാക്ക് ചെയ്യുക',
+    },
+    '6pn14fzc': {
+      'en': 'Download Invoice',
+      'ml': 'ഇൻവോയ്സ് ഡൗൺലോഡ് ചെയ്യുക',
+    },
+    'ywuzeq9k': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // ReturnOrReplaceOrderC
+  {
+    '412t1hfo': {
+      'en': 'Return/Replace Order',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    'oipvc9y2': {
+      'en': 'Reason for Return/Replace',
+      'ml': '',
+    },
+    'qoexd3yi': {
+      'en': 'You can select one or more options',
+      'ml': '',
+    },
+    '4pal33zi': {
+      'en': 'Bought by mistake',
+      'ml': '',
+    },
+    'mhl7qgc8': {
+      'en': 'Better price available',
+      'ml': '',
+    },
+    'ridft83s': {
+      'en': 'Incompatible or not useful',
+      'ml': '',
+    },
+    'pdj81dzh': {
+      'en': 'Performance or quality not adequate',
+      'ml': '',
+    },
+    'inhknih3': {
+      'en': 'Item arrived too late',
+      'ml': '',
+    },
+    'y0g8jgpj': {
+      'en': 'Missing parts or accessories',
+      'ml': '',
+    },
+    'e88x78d6': {
+      'en': 'Wrong item was sent',
+      'ml': '',
+    },
+    'etstqa90': {
+      'en': 'Received extra item I didn\'t buy\n(no refund needed)',
+      'ml': '',
+    },
+    'n14dumtz': {
+      'en': 'Item Defective',
+      'ml': '',
+    },
+    'rrg9cb47': {
+      'en': 'Proceed',
+      'ml': '',
+    },
+    '6dnqr1eh': {
+      'en': 'Please make sure your order does not contain perishable items.',
+      'ml': '',
+    },
+    'e25qwx32': {
+      'en': 'See Refund Terms & Policies',
+      'ml': '',
+    },
+    'zldbwj4d': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // TermsNPolicyC
+  {
+    '9ntrzjm4': {
+      'en': 'Refund Terms & Policy',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    '15tmkvyt': {
+      'en':
+          'Products purchased can be returned for a refund or replacement within 7 days from the date of invoice provided.',
+      'ml': '',
+    },
+    'gebv4tja': {
+      'en': '●   The goods are in the original packaging',
+      'ml': '',
+    },
+    'qt41b2f7': {
+      'en':
+          '●   The product has not been used and has not  been \n       altered in any manner.',
+      'ml': '',
+    },
+    'ji85kqt5': {
+      'en':
+          '●   The product is accompanied by the original invoice\n       of purchase.',
+      'ml': '',
+    },
+    'xihj0cq0': {
+      'en':
+          'The following types ofproducts once accepted by customers cannot be returned:',
+      'ml': '',
+    },
+    '36rr26q8': {
+      'en': '●   Refrigerated items',
+      'ml': '',
+    },
+    'yi8t0orp': {
+      'en':
+          '●   Seasonal and Festive items such as Deocration lights,\n      Gift packs, etc',
+      'ml': '',
+    },
+    'uqgxirfk': {
+      'en':
+          '●   Personal utility items such as undergarments, socks,\n       cosmetics etc.',
+      'ml': '',
+    },
+    'd6jpr5eq': {
+      'en':
+          '●   Fresh food and non-food items such as vegetables,\n       fruits and flowers.',
+      'ml': '',
+    },
+    'vxiinmfc': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // ReturnOrReplaceOrder2C
+  {
+    'bzywo3gp': {
+      'en': 'Return/Replace Order',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    '4xrmyziq': {
+      'en': 'Add Details',
+      'ml': '',
+    },
+    '4r38ccfy': {
+      'en': 'Details you think is important for us to know',
+      'ml': '',
+    },
+    'yantsin6': {
+      'en': 'Add Details',
+      'ml': '',
+    },
+    '3lxo8c9i': {
+      'en': 'Photos can help us to understand your problem better',
+      'ml': '',
+    },
+    'pdz35l5o': {
+      'en': 'Slide to add multiple photos',
+      'ml': '',
+    },
+    'qhukq9ge': {
+      'en': 'Select an option',
+      'ml': '',
+    },
+    '0dwmbp4f': {
+      'en': 'Return',
+      'ml': '',
+    },
+    'mhqevqgl': {
+      'en': 'Replacement',
+      'ml': '',
+    },
+    'npfpaign': {
+      'en': 'Select an option and submit',
+      'ml': '',
+    },
+    '4u74tilo': {
+      'en': 'Pickup',
+      'ml': '',
+    },
+    '3h3fbusf': {
+      'en': 'Self Return',
+      'ml': '',
+    },
+    'aiicn3yr': {
+      'en': 'Submit',
+      'ml': '',
+    },
+    'd2r8d70q': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // ProductSelectionDetailsC
+  {
+    'pbulfnqv': {
+      'en': 'Kangaroo HD-10D Stapler',
+      'ml': '',
+    },
+    'iq51ju6o': {
+      'en': '₹76.50',
+      'ml': '',
+    },
+    'eq5hkxdp': {
+      'en': 'Description',
+      'ml': '',
+    },
+    'fgdr7wxh': {
+      'en':
+          '- Loading Capacity Of 100 Staples.\n- Stapling Capacity of 20 Sheets.\n- Plastic Top And Bottom Reinforced With Steel.\n- Edge Stapling.',
+      'ml': '',
+    },
+    'qq2tecg8': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // MyCartC
+  {
+    'urbt2eem': {
+      'en': 'My Cart',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    'lo2396zq': {
+      'en': 'Apply Coupon',
+      'ml': '',
+    },
+    '7fsfohco': {
+      'en': 'PROCEED',
+      'ml': '',
+    },
+    'k7vazcce': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // DeliveryTypeC
+  {
+    'iul5kvqf': {
+      'en': 'Select Delivery Type',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    'xspz1ytk': {
+      'en': 'Select one of the delivery mode',
+      'ml': '',
+    },
+    'vkvbnqz0': {
+      'en': 'SELF PICKUP',
+      'ml': 'സെൽഫ് പിക്കപ്പ് ഓർഡറുകൾ',
+    },
+    'vqbhihex': {
+      'en': 'You can collect your order\nfrom our shop.',
+      'ml': 'സെൽഫ് പിക്കപ്പ് ഓർഡറുകൾ',
+    },
+    'azzilg3t': {
+      'en': 'No delivery charges',
+      'ml': 'സെൽഫ് പിക്കപ്പ് ഓർഡറുകൾ',
+    },
+    '37529r07': {
+      'en': 'SELECT',
+      'ml': 'തിരഞ്ഞെടുക്കുക',
+    },
+    'jiqs6pz6': {
+      'en': 'HOME DELIVERY',
+      'ml': 'സെൽഫ് പിക്കപ്പ് ഓർഡറുകൾ',
+    },
+    'gtkccbgh': {
+      'en':
+          'You can also get your order\ndelivered to an address of\nyour choice.',
+      'ml': 'സെൽഫ് പിക്കപ്പ് ഓർഡറുകൾ',
+    },
+    '811amupg': {
+      'en': 'Delivery charges applied',
+      'ml': 'സെൽഫ് പിക്കപ്പ് ഓർഡറുകൾ',
+    },
+    '9xjkcmlv': {
+      'en': 'SELECT',
+      'ml': 'തിരഞ്ഞെടുക്കുക',
+    },
+    'h0waqipd': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // SetDeliveryLocationC
+  {
+    'b5tpy7yq': {
+      'en': 'Set Delivery Location',
+      'ml': 'എത്തിച്ചു',
+    },
+    'irsaumug': {
+      'en': 'Search location',
+      'ml': 'ഉൽപ്പന്നം തിരയുക',
+    },
+    'm5n1864n': {
+      'en': 'Current location',
+      'ml': '',
+    },
+    '4ajk9wtt': {
+      'en': 'Locate on Map',
+      'ml': '',
+    },
+    '3j07ezna': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // ReturnWaitingC
+  {
+    '0cjxp80d': {
+      'en': 'Your Return/Replace Request\n is waiting for Approval',
+      'ml': '',
+    },
+    'pyd6tmt9': {
+      'en': 'You can wait or ',
+      'ml': '',
+    },
+    'oukco74m': {
+      'en': 'check the status ',
+      'ml': '',
+    },
+    '17gr96qg': {
+      'en': 'of your request',
+      'ml': '',
+    },
+    '4d46ll8q': {
+      'en': 'Continue Shopping',
+      'ml': '',
+    },
+    '4msd9t34': {
+      'en': 'Cancel Return',
+      'ml': '',
+    },
+    'h1a2q5w9': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // ReturnRequestCancelledC
+  {
+    'im2h1eh1': {
+      'en': 'Return Request Cancelled!',
+      'ml': '',
+    },
+    '7do9e3y0': {
+      'en': 'Continue Shopping',
+      'ml': '',
+    },
+    'l3ckpgoe': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // SelfPickupC
+  {
+    '1s14ngvg': {
+      'en': 'Self Pickup',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    'pxr4xutf': {
+      'en': 'Shop Address',
+      'ml': '',
+    },
+    'j842xbox': {
+      'en': 'Home',
+      'ml': '',
     },
   },
   // VandC
@@ -2336,7 +2870,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'അടച്ച ആകെ തുക:',
     },
     'bq17wl18': {
-      'en': 'Delivered to;',
+      'en': 'Delivered to:',
       'ml': 'കൈമാറി;',
     },
     'mxra3hi7': {
@@ -2445,7 +2979,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Offer Selected',
       'ml': 'സംരക്ഷിച്ചു!',
     },
-    'r79pgns0': {
+    '7o4u7yxw': {
       'en':
           'Add items to your cart and proceed. The\noffer will be applied to your cart.',
       'ml': '',
@@ -2483,6 +3017,339 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6mst8o9n': {
       'en': 'Log Out',
       'ml': 'ലോഗ് ഔട്ട് ചെയ്യുക',
+    },
+  },
+  // OrderDetailsC
+  {
+    'z3rqqahn': {
+      'en': 'Order Id :',
+      'ml': 'ഓർഡർ ഐഡി :',
+    },
+    '1pwgz4v5': {
+      'en': 'Delivery Type     :',
+      'ml': 'ഡെലിവറി തരം:',
+    },
+    '53gb0ek0': {
+      'en': 'Order Total          :',
+      'ml': 'ഓർഡർ ആകെ:',
+    },
+    'v00tl3hn': {
+      'en': 'Via Debit card',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    '041d4l22': {
+      'en': 'Track Order',
+      'ml': 'പാക്ക് ഓർഡർ',
+    },
+    '4g09pqfq': {
+      'en': 'Cancel Order',
+      'ml': 'പാക്ക് ഓർഡർ',
+    },
+    '9u0w80sc': {
+      'en': 'View Order Details',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ കാണുക',
+    },
+  },
+  // CouponsC
+  {
+    '9rg5qhg6': {
+      'en': 'STAT40',
+      'ml': 'STAT40',
+    },
+    'awur2kap': {
+      'en': '40% Off upto Rs.100 on orders above Rs.200',
+      'ml': '200 രൂപയ്ക്ക് മുകളിലുള്ള ഓർഡറുകൾക്ക് 100 രൂപ വരെ 40% കിഴിവ്',
+    },
+    'syexe8jt': {
+      'en': 'Get 40% Off',
+      'ml': '40% കിഴിവ് നേടൂ',
+    },
+    '2o6wen9c': {
+      'en': 'SELECT',
+      'ml': '',
+    },
+  },
+  // OrderDetailsC1
+  {
+    '8op8vjnz': {
+      'en': 'Order Id   :',
+      'ml': 'ഓർഡർ ഐഡി :',
+    },
+    '5xm3ba1x': {
+      'en': 'Ordered Date:',
+      'ml': 'ഓർഡർ ചെയ്ത തീയതി:',
+    },
+    '4schdtyi': {
+      'en': 'Total Amount Paid:',
+      'ml': 'അടച്ച ആകെ തുക:',
+    },
+    'rdi86c3n': {
+      'en': '0000000',
+      'ml': '0000000',
+    },
+    'zpn9b7lc': {
+      'en': '02-11-2021',
+      'ml': '02-11-2021',
+    },
+    'j10euad3': {
+      'en': '₹127.00',
+      'ml': '₹127.00',
+    },
+  },
+  // OrderDetailsC2
+  {
+    '905poyxi': {
+      'en': 'Payment Details',
+      'ml': 'ഓർഡർ ഐഡി :',
+    },
+    'mfb5p61v': {
+      'en': 'Via Debit Card',
+      'ml': '0000000',
+    },
+    'j354rmhk': {
+      'en': 'Billing Address',
+      'ml': 'ഓർഡർ ഐഡി :',
+    },
+    'lvwl1jnh': {
+      'en':
+          'Flat no. 1710 , Manav Enclave,\nRoad no, 12, Xyz ,\nKerala - 400025',
+      'ml': '',
+    },
+  },
+  // OrderDetailsC3
+  {
+    'maadnszm': {
+      'en': 'Shipping Address',
+      'ml': 'ഓർഡർ ഐഡി :',
+    },
+    'qi8t0iqw': {
+      'en':
+          'Flat no. 1710 , Manav Enclave,\nRoad no, 12, Xyz ,\nKerala - 400025',
+      'ml': '',
+    },
+  },
+  // OrderDetaisC4
+  {
+    'xe4zgnav': {
+      'en': 'Order Summary ',
+      'ml': 'ഓർഡർ ഐഡി :',
+    },
+    'e9h6n2cx': {
+      'en': 'Items',
+      'ml': '0000000',
+    },
+    'fdqm8rkx': {
+      'en': 'Taxes',
+      'ml': '02-11-2021',
+    },
+    'dyjw7dj4': {
+      'en': 'Discount Applied',
+      'ml': '₹127.00',
+    },
+    'yde0gxus': {
+      'en': 'Delivery Charges',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    'birjal0o': {
+      'en': 'Grand Total',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    'vblbu3xn': {
+      'en': ':',
+      'ml': '0000000',
+    },
+    'o5knf14a': {
+      'en': ':',
+      'ml': '02-11-2021',
+    },
+    '62qo59ci': {
+      'en': ':',
+      'ml': '₹127.00',
+    },
+    '8be7e8ff': {
+      'en': ':',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    'd28m82kk': {
+      'en': ':',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    '44oloj7a': {
+      'en': ':',
+      'ml': '0000000',
+    },
+    'r08atn51': {
+      'en': '₹ 76.50',
+      'ml': '0000000',
+    },
+    'i9t5j5ry': {
+      'en': '₹ 10.50',
+      'ml': '02-11-2021',
+    },
+    '5a7nua3l': {
+      'en': '- ₹ 10.50',
+      'ml': '₹127.00',
+    },
+    '47861677': {
+      'en': '₹ 40.00',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    '7bwa9dul': {
+      'en': '₹127.00',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+  },
+  // CardDetailsC
+  {
+    'oiipgquq': {
+      'en': 'Card Number',
+      'ml': '',
+    },
+    '6h1qq45r': {
+      'en': 'Name on Card',
+      'ml': '',
+    },
+    '5hr9no8i': {
+      'en': 'Valid Thru (MM / YY)',
+      'ml': '',
+    },
+    '26vfe2o9': {
+      'en': 'CVV',
+      'ml': '',
+    },
+  },
+  // ColorsAvailableC
+  {
+    '0egtt5qf': {
+      'en': 'Colors Available',
+      'ml': '',
+    },
+  },
+  // GrandTotalOfMycartC
+  {
+    'pl29p18u': {
+      'en': 'Sub Total',
+      'ml': '0000000',
+    },
+    'zf1ypcct': {
+      'en': 'Discount',
+      'ml': '₹127.00',
+    },
+    'dx9n1gf6': {
+      'en': 'Taxes',
+      'ml': '02-11-2021',
+    },
+    '7lmgdem7': {
+      'en': 'Delivery Charges',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    '8dcrki5f': {
+      'en': 'Grand Total',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    'pniaw591': {
+      'en': ':',
+      'ml': '0000000',
+    },
+    '08xfvasc': {
+      'en': ':',
+      'ml': '02-11-2021',
+    },
+    'jt117qa6': {
+      'en': ':',
+      'ml': '₹127.00',
+    },
+    'yqy6c5e6': {
+      'en': ':',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    '7m3w2s2i': {
+      'en': ':',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    'wk6dmpca': {
+      'en': ':',
+      'ml': '0000000',
+    },
+    'fil75i6a': {
+      'en': '₹ 76.50',
+      'ml': '0000000',
+    },
+    'pkd6o3zf': {
+      'en': '₹ 0.00',
+      'ml': '02-11-2021',
+    },
+    '10sm85tn': {
+      'en': '₹ 10.50',
+      'ml': '₹127.00',
+    },
+    'tinc7ljx': {
+      'en': '₹ 40.00',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+    'r9oc73y4': {
+      'en': '₹127.00',
+      'ml': 'ഡെബിറ്റ് കാർഡ് വഴി',
+    },
+  },
+  // YourLocationC
+  {
+    'scmz3hu2': {
+      'en': 'Your Location',
+      'ml': '',
+    },
+    '7l2w3ajm': {
+      'en': 'Samrat Ashok Nagar , xyz colony,\nnear xyz, Kerala - 00000',
+      'ml': '',
+    },
+    'p4zcwlzg': {
+      'en': 'Change',
+      'ml': '',
+    },
+    'funlh07m': {
+      'en': 'Confirm Location',
+      'ml': '',
+    },
+    'gsvju2aw': {
+      'en': 'Add Address for this location',
+      'ml': '',
+    },
+  },
+  // YourLocation2C
+  {
+    'xbxqq8o5': {
+      'en': 'Your Location',
+      'ml': '',
+    },
+    'gimpyd0w': {
+      'en': '[Some hint text...]',
+      'ml': '',
+    },
+  },
+  // CancelRequestOptionC
+  {
+    '93zup6dj': {
+      'en': 'Are You sure you want to\ncancel return request?',
+      'ml': 'ഇല്ലാതാക്കണമെന്ന് തീർച്ചയാണോ?',
+    },
+    'j65hbnl9': {
+      'en': 'YES',
+      'ml': 'ഇല്ല',
+    },
+    'pqp7qygx': {
+      'en': 'NO',
+      'ml': 'അതെ',
+    },
+  },
+  // AnandStationaryC
+  {
+    'x6x4b37x': {
+      'en': 'ANAND STATIONARY',
+      'ml': '',
+    },
+    'jf7vgqqw': {
+      'en': 'Samrat Ashok Nagar , xyz colony,\nnear xyz, Kerala - 00000',
+      'ml': '',
     },
   },
 ].reduce((a, b) => a..addAll(b));

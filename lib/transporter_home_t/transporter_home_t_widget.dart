@@ -4,14 +4,14 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AnandLoduTWidget extends StatefulWidget {
-  const AnandLoduTWidget({Key key}) : super(key: key);
+class TransporterHomeTWidget extends StatefulWidget {
+  const TransporterHomeTWidget({Key key}) : super(key: key);
 
   @override
-  _AnandLoduTWidgetState createState() => _AnandLoduTWidgetState();
+  _TransporterHomeTWidgetState createState() => _TransporterHomeTWidgetState();
 }
 
-class _AnandLoduTWidgetState extends State<AnandLoduTWidget> {
+class _TransporterHomeTWidgetState extends State<TransporterHomeTWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override

@@ -14,7 +14,7 @@ class _AllProductsCartCWidgetState extends State<AllProductsCartCWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: 320,
       height: 134,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).tertiaryColor,
@@ -28,7 +28,8 @@ class _AllProductsCartCWidgetState extends State<AllProductsCartCWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 5),
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.3,
+                width: 110,
+                height: 110,
                 decoration: BoxDecoration(
                   color: Color(0x00FFFFFF),
                   image: DecorationImage(
@@ -85,13 +86,16 @@ class _AllProductsCartCWidgetState extends State<AllProductsCartCWidget> {
                             fontWeight: FontWeight.bold,
                           ),
                     ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 50, 0),
-                          child: Container(
+                    Container(
+                      width: 180,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
                             width: 50,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context).tertiaryColor,
@@ -119,13 +123,12 @@ class _AllProductsCartCWidgetState extends State<AllProductsCartCWidget> {
                               ),
                             ),
                           ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Container(
-                              width: 100,
-                              height: MediaQuery.of(context).size.height * 0.13,
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                            child: Container(
+                              width: 89,
+                              height: 22,
                               decoration: BoxDecoration(
                                 color:
                                     FlutterFlowTheme.of(context).secondaryColor,
@@ -170,9 +173,9 @@ class _AllProductsCartCWidgetState extends State<AllProductsCartCWidget> {
                                 ],
                               ),
                             ),
-                          ],
-                        ),
-                      ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),

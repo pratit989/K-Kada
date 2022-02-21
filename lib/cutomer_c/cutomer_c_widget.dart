@@ -1,3 +1,4 @@
+import '../components/coupons_c_widget.dart';
 import '../components/products_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -13,6 +14,7 @@ class CutomerCWidget extends StatefulWidget {
 }
 
 class _CutomerCWidgetState extends State<CutomerCWidget> {
+  PageController pageViewController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -87,7 +89,7 @@ class _CutomerCWidgetState extends State<CutomerCWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                   child: Text(
                     FFLocalizations.of(context).getText(
-                      'pydi6z2s' /* Hi Anand,
+                      'syciqwg7' /* Hi Anand,
 What would you like ... */
                       ,
                     ),
@@ -155,7 +157,7 @@ What would you like ... */
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'pzptm2bf' /* Offers */,
+                          '4tnms1k6' /* Offers */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Lato',
@@ -166,7 +168,7 @@ What would you like ... */
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          'xk0pwcxm' /* See All */,
+                          '4l5dkjzn' /* See All */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Lato',
@@ -178,111 +180,40 @@ What would you like ... */
                     ],
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 160,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).tertiaryColor,
+                  ),
                   child: Container(
-                    width: MediaQuery.of(context).size.width * 0.85,
-                    height: MediaQuery.of(context).size.height * 0.15,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 8,
-                          color: Color(0x15000000),
-                          offset: Offset(2, 2),
-                        )
-                      ],
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 20, 0),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        'fl33tczh' /* STAT40 */,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 160,
-                                        height: 37,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryColor,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily: 'Lato',
-                                              color: Colors.white,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1,
-                                        ),
-                                        borderRadius: 12,
-                                      ),
-                                    ),
-                                  ),
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      '1spuuyel' /* Get 40% Off */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Lato',
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'ct5sxrbs' /* 40% Off upto Rs.100 on orders ... */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Open Sans',
-                                      color: Color(0xFF949496),
-                                      fontSize: 12,
-                                    ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                    width: double.infinity,
+                    height: 154,
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+                      child: PageView(
+                        controller: pageViewController ??=
+                            PageController(initialPage: 0),
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          CouponsCWidget(),
+                          CouponsCWidget(
+                            selectionVisibility: false,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 5),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'fjaci9z7' /* Products */,
+                          'rclk8r64' /* Products */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Lato',
@@ -293,7 +224,7 @@ What would you like ... */
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
-                          'uqw2ohpq' /* See All */,
+                          '2srrnc5u' /* See All */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Lato',
@@ -305,9 +236,21 @@ What would you like ... */
                     ],
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                  child: ProductsWidget(),
+                Expanded(
+                  child: ListView(
+                    padding: EdgeInsets.zero,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                        child: ProductsWidget(),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                        child: ProductsWidget(),
+                      ),
+                    ],
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
@@ -316,7 +259,7 @@ What would you like ... */
                       print('Button pressed ...');
                     },
                     text: FFLocalizations.of(context).getText(
-                      'moy241wp' /* View Cart  */,
+                      'qkyn2r7m' /* View Cart  */,
                     ),
                     icon: Icon(
                       Icons.shopping_cart_outlined,

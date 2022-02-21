@@ -34,7 +34,7 @@ class _CartCWidgetState extends State<CartCWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'abcbskai' /* Your Cart is Empty */,
+                        '26hotml3' /* Your Cart is Empty */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Lato',
@@ -55,7 +55,7 @@ class _CartCWidgetState extends State<CartCWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 50),
                   child: Text(
                     FFLocalizations.of(context).getText(
-                      'av40vc6x' /* Looks like you haven't added a... */,
+                      'vircro2c' /* Looks like you haven't added a... */,
                     ),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyText1.override(
@@ -70,7 +70,7 @@ class _CartCWidgetState extends State<CartCWidget> {
                     print('Button pressed ...');
                   },
                   text: FFLocalizations.of(context).getText(
-                    'b7azlqqt' /* Start Shopping */,
+                    'ql2q47kb' /* Start Shopping */,
                   ),
                   options: FFButtonOptions(
                     width: 181,

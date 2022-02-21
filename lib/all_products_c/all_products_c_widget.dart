@@ -1,3 +1,4 @@
+import '../components/all_products_cart_c_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _AllProductsCWidgetState extends State<AllProductsCWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(40, 20, 40, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(30, 20, 30, 0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -99,6 +100,24 @@ class _AllProductsCWidgetState extends State<AllProductsCWidget> {
                         ),
                       ],
                     ),
+                  ),
+                ),
+                Expanded(
+                  child: ListView(
+                    padding: EdgeInsets.zero,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                        child: AllProductsCartCWidget(),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                        child: AllProductsCartCWidget(),
+                      ),
+                      AllProductsCartCWidget(),
+                      AllProductsCartCWidget(),
+                    ],
                   ),
                 ),
               ],

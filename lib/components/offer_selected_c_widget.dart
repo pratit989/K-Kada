@@ -58,7 +58,7 @@ class _OfferSelectedCWidgetState extends State<OfferSelectedCWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'r79pgns0' /* Add items to your cart and pro... */,
+                            '7o4u7yxw' /* Add items to your cart and pro... */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyText1.override(

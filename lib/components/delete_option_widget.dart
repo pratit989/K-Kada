@@ -26,7 +26,7 @@ class _DeleteOptionWidgetState extends State<DeleteOptionWidget> {
           width: 320,
           height: 157,
           decoration: BoxDecoration(
-            color: Color(0xFFEEEEEE),
+            color: FlutterFlowTheme.of(context).tertiaryColor,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Align(

@@ -6,14 +6,14 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RegiosterTWidget extends StatefulWidget {
-  const RegiosterTWidget({Key key}) : super(key: key);
+class RegisterTWidget extends StatefulWidget {
+  const RegisterTWidget({Key key}) : super(key: key);
 
   @override
-  _RegiosterTWidgetState createState() => _RegiosterTWidgetState();
+  _RegisterTWidgetState createState() => _RegisterTWidgetState();
 }
 
-class _RegiosterTWidgetState extends State<RegiosterTWidget> {
+class _RegisterTWidgetState extends State<RegisterTWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
   TextEditingController textController3;

@@ -28,7 +28,7 @@ class _CouponAddedSuccessfullyWidgetState
           width: 320,
           height: 158,
           decoration: BoxDecoration(
-            color: Color(0xFFEEEEEE),
+            color: FlutterFlowTheme.of(context).tertiaryColor,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Align(
