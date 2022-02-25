@@ -33,6 +33,7 @@ class _CouponsCWidgetState extends State<CouponsCWidget> {
               offset: Offset(2, 2),
             )
           ],
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.max,

@@ -57,19 +57,22 @@ class _RegisterTWidgetState extends State<RegisterTWidget> {
                   ),
                 ],
               ),
-              Text(
-                FFLocalizations.of(context).getText(
-                  '6y775v24' /* Register */,
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                child: Text(
+                  FFLocalizations.of(context).getText(
+                    '6y775v24' /* Register */,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyText1.override(
+                        fontFamily: 'Lato',
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
-                style: FlutterFlowTheme.of(context).bodyText1.override(
-                      fontFamily: 'Lato',
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'hlptproo' /* Fill in the details to sign up */,

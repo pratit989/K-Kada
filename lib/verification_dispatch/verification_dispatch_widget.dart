@@ -44,7 +44,7 @@ class _VerificationDispatchWidgetState
                       child: Icon(
                         Icons.arrow_back_ios_sharp,
                         color: FlutterFlowTheme.of(context).secondaryColor,
-                        size: 25,
+                        size: 30,
                       ),
                     ),
                     Text(

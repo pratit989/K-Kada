@@ -2438,46 +2438,46 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ReturnWaitingC
   {
-    '0cjxp80d': {
+    'vety6osp': {
       'en': 'Your Return/Replace Request\n is waiting for Approval',
       'ml': '',
     },
-    'pyd6tmt9': {
+    'ru0rd7e8': {
       'en': 'You can wait or ',
       'ml': '',
     },
-    'oukco74m': {
+    'fzzs05oo': {
       'en': 'check the status ',
       'ml': '',
     },
-    '17gr96qg': {
+    'd9kcezx7': {
       'en': 'of your request',
       'ml': '',
     },
-    '4d46ll8q': {
+    'rs0rawn6': {
       'en': 'Continue Shopping',
       'ml': '',
     },
-    '4msd9t34': {
+    '2xkeolsh': {
       'en': 'Cancel Return',
       'ml': '',
     },
-    'h1a2q5w9': {
+    'c79r2qe4': {
       'en': 'Home',
       'ml': '',
     },
   },
   // ReturnRequestCancelledC
   {
-    'im2h1eh1': {
+    '0ypznrfi': {
       'en': 'Return Request Cancelled!',
       'ml': '',
     },
-    '7do9e3y0': {
+    '4rg99xdz': {
       'en': 'Continue Shopping',
       'ml': '',
     },
-    'l3ckpgoe': {
+    'quix1pq2': {
       'en': 'Home',
       'ml': '',
     },
@@ -2488,11 +2488,103 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Self Pickup',
       'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
     },
-    'pxr4xutf': {
+    '1ekg1c9i': {
       'en': 'Shop Address',
       'ml': '',
     },
-    'j842xbox': {
+    '73akz10i': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // SelectPaymentModeC
+  {
+    '1fu5nt4u': {
+      'en': 'Select Payment Mode',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    '2uz4ksol': {
+      'en': 'Debit Card',
+      'ml': '',
+    },
+    'pqsbiacc': {
+      'en': 'Google Pay',
+      'ml': '',
+    },
+    'oylal21i': {
+      'en': 'Apple Pay',
+      'ml': '',
+    },
+    'qt1x7au1': {
+      'en': 'Cash on Delivery',
+      'ml': '',
+    },
+    'mf7qo53p': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // MakePaymentC
+  {
+    'jeog8b6k': {
+      'en': 'Make Payment',
+      'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
+    },
+    'dk06qm8w': {
+      'en': 'Debit Card',
+      'ml': '',
+    },
+    'yqudverm': {
+      'en': 'Pay Now',
+      'ml': '',
+    },
+    'nguvfpji': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // PaymentSuccessfulC
+  {
+    '7amw5f0d': {
+      'en': 'Payment Successful!',
+      'ml': '',
+    },
+    'lkosyp0d': {
+      'en': 'Track Status',
+      'ml': '',
+    },
+    'mgaq61ll': {
+      'en': 'Download invoice',
+      'ml': '',
+    },
+    'f11yu3qj': {
+      'en': 'Go back to Main Page',
+      'ml': '',
+    },
+    'rva1gxc4': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // AllOffersSelectC
+  {
+    'ytm1avtu': {
+      'en': 'All Offers',
+      'ml': 'എത്തിച്ചു',
+    },
+    '4ztzo985': {
+      'en': 'Search product code',
+      'ml': 'ഉൽപ്പന്നം തിരയുക',
+    },
+    'qojc2h5d': {
+      'en': 'Available Offers',
+      'ml': 'എത്തിച്ചു',
+    },
+    '093ved3d': {
+      'en': 'Select a coupon and add items to your cart',
+      'ml': '',
+    },
+    'khzu17d2': {
       'en': 'Home',
       'ml': '',
     },
@@ -3317,12 +3409,28 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // YourLocation2C
   {
-    'xbxqq8o5': {
+    'twew6stu': {
       'en': 'Your Location',
       'ml': '',
     },
-    'gimpyd0w': {
+    'pronrn42': {
       'en': '[Some hint text...]',
+      'ml': '',
+    },
+    'ybybizkn': {
+      'en': 'House No / Flat No / Floor*',
+      'ml': '',
+    },
+    's3l766l8': {
+      'en': 'Society / Street Name*',
+      'ml': '',
+    },
+    'lt1c5ltw': {
+      'en': 'Skip',
+      'ml': '',
+    },
+    'xwy825i0': {
+      'en': 'Change',
       'ml': '',
     },
   },
@@ -3349,6 +3457,55 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'jf7vgqqw': {
       'en': 'Samrat Ashok Nagar , xyz colony,\nnear xyz, Kerala - 00000',
+      'ml': '',
+    },
+  },
+  // CVVc
+  {
+    'ytqn21c3': {
+      'en': 'What is CVV number?',
+      'ml': '',
+    },
+    '3i12cbxj': {
+      'en': 'It\'s a 3-digit code on the back of your card',
+      'ml': '',
+    },
+  },
+  // TransporterDetailsC
+  {
+    'y0cdaxgx': {
+      'en': 'Ramesh Shetty',
+      'ml': '',
+    },
+    'iixvx2re': {
+      'en': 'K54584H454',
+      'ml': '',
+    },
+    'r9xqb26i': {
+      'en': 'Transporter Details',
+      'ml': '',
+    },
+  },
+  // CouponSelectC
+  {
+    '2bt0ujv3': {
+      'en': 'STAT40',
+      'ml': 'STAT40',
+    },
+    '5jaz04hm': {
+      'en': 'Get 40% Off',
+      'ml': '40% കിഴിവ് നേടൂ',
+    },
+    'q0vl9afl': {
+      'en': '40% Off upto Rs.100 on orders above Rs.200',
+      'ml': '200 രൂപയ്ക്ക് മുകളിലുള്ള ഓർഡറുകൾക്ക് 100 രൂപ വരെ 40% കിഴിവ്',
+    },
+    '1kp9r2sd': {
+      'en': 'SELECT',
+      'ml': '',
+    },
+    '5853425r': {
+      'en': 'SELECT',
       'ml': '',
     },
   },
