@@ -19,5 +19,5 @@ This command creates the generated files that parse each Record from Firestore i
 
 ### Getting started continued:
 
-Frontend: Arpit Gupta
+Frontend: Arpit Gupta    
 Backend: Pratit Todkar
