@@ -210,7 +210,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                               },
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  '81xwnz7v' /* Sign up */,
+                                  '81xwnz7v' /*  Sign up */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1

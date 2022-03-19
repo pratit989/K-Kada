@@ -105,19 +105,18 @@ class _CouponSelectCWidgetState extends State<CouponSelectCWidget> {
                         ),
                   ),
                 ),
-                if (widget.selectionVisibility ?? true)
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        '1kp9r2sd' /* SELECT */,
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Lato',
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                          ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                  child: Text(
+                    FFLocalizations.of(context).getText(
+                      '1kp9r2sd' /* SELECT */,
                     ),
+                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Lato',
+                          color: FlutterFlowTheme.of(context).primaryColor,
+                        ),
                   ),
+                ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                   child: Text(

@@ -20,10 +20,10 @@ class FFLocalizations {
       (kTranslationsMap[key] ?? {})[locale.languageCode] ?? '';
 
   String getVariableText({
-    String en = '',
-    String ml = '',
+    String enText = '',
+    String mlText = '',
   }) =>
-      [en, ml][languageIndex] ?? '';
+      [enText, mlText][languageIndex] ?? '';
 }
 
 class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
@@ -60,6 +60,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Customer',
       'ml': 'ഉപഭോക്താവ്',
     },
+    'cvp5ike4': {
+      'en': 'Select a Language',
+      'ml': '',
+    },
+    'm28dlcs1': {
+      'en': 'English',
+      'ml': '',
+    },
+    '235kcrvf': {
+      'en': 'Malyalam',
+      'ml': '',
+    },
     '2tgxhxsp': {
       'en': 'Home',
       'ml': 'വീട്',
@@ -84,7 +96,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'അക്കൗണ്ട് ഇല്ലേ?',
     },
     '81xwnz7v': {
-      'en': 'Sign up',
+      'en': ' Sign up',
       'ml': 'സൈൻ അപ്പ് ചെയ്യുക',
     },
     '2n1xk4tx': {
@@ -791,33 +803,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // EditOffer
-  {
-    'dh4fki50': {
-      'en': 'Edit Offer',
-      'ml': 'ഓഫർ എഡിറ്റ് ചെയ്യുക',
-    },
-    'd1smf47p': {
-      'en': 'STAT40',
-      'ml': 'STAT40',
-    },
-    'cj54u5j4': {
-      'en': 'Get 40% Off',
-      'ml': '40% കിഴിവ് നേടൂ',
-    },
-    'enoszsk8': {
-      'en': '40% Off upto Rs.100 on orders above Rs.200',
-      'ml': '200 രൂപയ്ക്ക് മുകളിലുള്ള ഓർഡറുകൾക്ക് 100 രൂപ വരെ 40% കിഴിവ്',
-    },
-    'oy2mk366': {
-      'en': 'Save',
-      'ml': 'രക്ഷിക്കും',
-    },
-    'nkqa0exk': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // AboutMyStore
   {
     '3hd18o4j': {
@@ -845,6 +830,33 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'രക്ഷിക്കും',
     },
     'rdwwy6dh': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // EditOffer
+  {
+    'dh4fki50': {
+      'en': 'Edit Offer',
+      'ml': 'ഓഫർ എഡിറ്റ് ചെയ്യുക',
+    },
+    'd1smf47p': {
+      'en': 'STAT40',
+      'ml': 'STAT40',
+    },
+    'cj54u5j4': {
+      'en': 'Get 40% Off',
+      'ml': '40% കിഴിവ് നേടൂ',
+    },
+    'enoszsk8': {
+      'en': '40% Off upto Rs.100 on orders above Rs.200',
+      'ml': '200 രൂപയ്ക്ക് മുകളിലുള്ള ഓർഡറുകൾക്ക് 100 രൂപ വരെ 40% കിഴിവ്',
+    },
+    'oy2mk366': {
+      'en': 'Save',
+      'ml': 'രക്ഷിക്കും',
+    },
+    'nkqa0exk': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -2438,46 +2450,46 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ReturnWaitingC
   {
-    'vety6osp': {
+    '03uxjphu': {
       'en': 'Your Return/Replace Request\n is waiting for Approval',
       'ml': '',
     },
-    'ru0rd7e8': {
+    'bk75229v': {
       'en': 'You can wait or ',
       'ml': '',
     },
-    'fzzs05oo': {
+    '9rsjn4xz': {
       'en': 'check the status ',
       'ml': '',
     },
-    'd9kcezx7': {
+    'dgtd3cbs': {
       'en': 'of your request',
       'ml': '',
     },
-    'rs0rawn6': {
+    'jac2009o': {
       'en': 'Continue Shopping',
       'ml': '',
     },
-    '2xkeolsh': {
+    'x5rl6h84': {
       'en': 'Cancel Return',
       'ml': '',
     },
-    'c79r2qe4': {
+    '7u3szwc2': {
       'en': 'Home',
       'ml': '',
     },
   },
   // ReturnRequestCancelledC
   {
-    '0ypznrfi': {
+    'dsyackbl': {
       'en': 'Return Request Cancelled!',
       'ml': '',
     },
-    '4rg99xdz': {
+    'oiiz1hg8': {
       'en': 'Continue Shopping',
       'ml': '',
     },
-    'quix1pq2': {
+    '1m02kco6': {
       'en': 'Home',
       'ml': '',
     },
@@ -2488,11 +2500,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Self Pickup',
       'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
     },
-    '1ekg1c9i': {
+    'mk74j4wy': {
       'en': 'Shop Address',
       'ml': '',
     },
-    '73akz10i': {
+    '2z8g7hk6': {
       'en': 'Home',
       'ml': '',
     },
@@ -2503,23 +2515,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Select Payment Mode',
       'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
     },
-    '2uz4ksol': {
+    'qy7i6pj2': {
       'en': 'Debit Card',
       'ml': '',
     },
-    'pqsbiacc': {
+    'l0hj7mck': {
       'en': 'Google Pay',
       'ml': '',
     },
-    'oylal21i': {
+    'u5w625nx': {
       'en': 'Apple Pay',
       'ml': '',
     },
-    'qt1x7au1': {
+    't45qtqbb': {
       'en': 'Cash on Delivery',
       'ml': '',
     },
-    'mf7qo53p': {
+    '4se6pax5': {
       'en': 'Home',
       'ml': '',
     },
@@ -2530,7 +2542,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Make Payment',
       'ml': 'ഓർഡർ വിശദാംശങ്ങൾ',
     },
-    'dk06qm8w': {
+    'c2h9aqec': {
       'en': 'Debit Card',
       'ml': '',
     },
@@ -2538,30 +2550,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Pay Now',
       'ml': '',
     },
-    'nguvfpji': {
+    'odu1kx2x': {
       'en': 'Home',
       'ml': '',
     },
   },
   // PaymentSuccessfulC
   {
-    '7amw5f0d': {
+    'olzd9oh4': {
       'en': 'Payment Successful!',
       'ml': '',
     },
-    'lkosyp0d': {
+    '3zwu27wn': {
       'en': 'Track Status',
       'ml': '',
     },
-    'mgaq61ll': {
+    'edhpykdk': {
       'en': 'Download invoice',
       'ml': '',
     },
-    'f11yu3qj': {
+    'cew84xix': {
       'en': 'Go back to Main Page',
       'ml': '',
     },
-    'rva1gxc4': {
+    '39hi5w5b': {
       'en': 'Home',
       'ml': '',
     },
@@ -3409,27 +3421,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // YourLocation2C
   {
-    'twew6stu': {
+    'hqsvnxrh': {
       'en': 'Your Location',
       'ml': '',
     },
-    'pronrn42': {
+    'j5b3zyxo': {
       'en': '[Some hint text...]',
       'ml': '',
     },
-    'ybybizkn': {
+    'lilart6v': {
       'en': 'House No / Flat No / Floor*',
       'ml': '',
     },
-    's3l766l8': {
+    'ahz4w661': {
       'en': 'Society / Street Name*',
       'ml': '',
     },
-    'lt1c5ltw': {
+    'xf0hln5i': {
       'en': 'Skip',
       'ml': '',
     },
-    'xwy825i0': {
+    'tomaarz1': {
       'en': 'Change',
       'ml': '',
     },
@@ -3462,26 +3474,26 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // CVVc
   {
-    'ytqn21c3': {
+    'eb11jojp': {
       'en': 'What is CVV number?',
       'ml': '',
     },
-    '3i12cbxj': {
+    '33f7ry9g': {
       'en': 'It\'s a 3-digit code on the back of your card',
       'ml': '',
     },
   },
   // TransporterDetailsC
   {
-    'y0cdaxgx': {
+    '3mmrpp1v': {
       'en': 'Ramesh Shetty',
       'ml': '',
     },
-    'iixvx2re': {
+    '3uuktt6c': {
       'en': 'K54584H454',
       'ml': '',
     },
-    'r9xqb26i': {
+    '3i80w3st': {
       'en': 'Transporter Details',
       'ml': '',
     },
@@ -3504,7 +3516,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'SELECT',
       'ml': '',
     },
-    '5853425r': {
+    'sh1iae4x': {
       'en': 'SELECT',
       'ml': '',
     },

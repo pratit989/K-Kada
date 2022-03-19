@@ -124,6 +124,63 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                 borderRadius: 12,
               ),
             ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 20),
+              child: Text(
+                'Select a Language',
+                style: FlutterFlowTheme.of(context).bodyText1.override(
+                      fontFamily: 'Lato',
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+              ),
+            ),
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                FFButtonWidget(
+                  onPressed: () async {
+                    setAppLanguage(context, 'en');
+                  },
+                  text: 'English',
+                  options: FFButtonOptions(
+                    width: 130,
+                    height: 40,
+                    color: FlutterFlowTheme.of(context).primaryColor,
+                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                          fontFamily: 'Lato',
+                          color: Colors.white,
+                        ),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: 12,
+                  ),
+                ),
+                FFButtonWidget(
+                  onPressed: () async {
+                    setAppLanguage(context, 'ml');
+                  },
+                  text: 'Malyalam',
+                  options: FFButtonOptions(
+                    width: 130,
+                    height: 40,
+                    color: FlutterFlowTheme.of(context).primaryColor,
+                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                          fontFamily: 'Lato',
+                          color: Colors.white,
+                        ),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                      width: 1,
+                    ),
+                    borderRadius: 12,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
