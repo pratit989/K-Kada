@@ -62,7 +62,7 @@ class _TrancsporterDetailsCWidgetState
                     image: DecorationImage(
                       fit: BoxFit.contain,
                       image: Image.asset(
-                        'assets/images/Group_949.png',
+                        'assets/images/Rameshshetty.png',
                       ).image,
                     ),
                     shape: BoxShape.circle,

@@ -48,7 +48,7 @@ class _AllProductsCartCWidgetState extends State<AllProductsCartCWidget> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Image.asset(
-                  'assets/images/Rectangle_245.png',
+                  'assets/images/Stapler1.png',
                   width: 100,
                   height: 100,
                   fit: BoxFit.cover,

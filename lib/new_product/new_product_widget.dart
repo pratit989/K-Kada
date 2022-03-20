@@ -91,7 +91,9 @@ class _NewProductWidgetState extends State<NewProductWidget> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Image.asset(
-                          'assets/images/Group_952.png',
+                          'assets/images/Group_965.png',
+                          width: 320,
+                          height: 187,
                           fit: BoxFit.fill,
                         ),
                       ),
@@ -130,45 +132,6 @@ class _NewProductWidgetState extends State<NewProductWidget> {
                           color: FlutterFlowTheme.of(context).tertiaryColor,
                         ),
                         child: Image.asset(
-                          'assets/images/Group_954.png',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Container(
-                        width: 320,
-                        height: 73,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).tertiaryColor,
-                        ),
-                        child: Image.asset(
-                          'assets/images/Group_955.png',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Container(
-                        width: 320,
-                        height: 73,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).tertiaryColor,
-                        ),
-                        child: Image.asset(
-                          'assets/images/Group_956.png',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Container(
-                        width: 320,
-                        height: 73,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).tertiaryColor,
-                        ),
-                        child: Image.asset(
                           'assets/images/Group_957.png',
                           width: 100,
                           height: 100,
@@ -182,7 +145,46 @@ class _NewProductWidgetState extends State<NewProductWidget> {
                           color: FlutterFlowTheme.of(context).tertiaryColor,
                         ),
                         child: Image.asset(
-                          'assets/images/Group_958.png',
+                          'assets/images/Group_962.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Container(
+                        width: 320,
+                        height: 73,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                        ),
+                        child: Image.asset(
+                          'assets/images/Group_961.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Container(
+                        width: 320,
+                        height: 73,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                        ),
+                        child: Image.asset(
+                          'assets/images/Group_963.png',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      Container(
+                        width: 320,
+                        height: 73,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                        ),
+                        child: Image.asset(
+                          'assets/images/Group_964.png',
                           width: 100,
                           fit: BoxFit.cover,
                         ),

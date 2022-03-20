@@ -26,7 +26,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Image.asset(
-              'assets/images/Group_950.png',
+              'assets/images/Mask_Group_10.png',
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.5,
               fit: BoxFit.cover,
@@ -127,7 +127,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 20),
               child: Text(
-                'Select a Language',
+                FFLocalizations.of(context).getText(
+                  'k57zvsn4' /* Select a Language */,
+                ),
                 style: FlutterFlowTheme.of(context).bodyText1.override(
                       fontFamily: 'Lato',
                       fontSize: 18,
@@ -143,7 +145,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                   onPressed: () async {
                     setAppLanguage(context, 'en');
                   },
-                  text: 'English',
+                  text: FFLocalizations.of(context).getText(
+                    'gof8z9f4' /* English */,
+                  ),
                   options: FFButtonOptions(
                     width: 130,
                     height: 40,
@@ -163,7 +167,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                   onPressed: () async {
                     setAppLanguage(context, 'ml');
                   },
-                  text: 'Malyalam',
+                  text: FFLocalizations.of(context).getText(
+                    'xofartp2' /* Malyalam */,
+                  ),
                   options: FFButtonOptions(
                     width: 130,
                     height: 40,

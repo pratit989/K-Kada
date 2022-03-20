@@ -36,7 +36,9 @@ class _CVVcWidgetState extends State<CVVcWidget> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  'What is CVV number?',
+                  FFLocalizations.of(context).getText(
+                    'actl9jfd' /* What is CVV number? */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',
                         fontSize: 16,
@@ -53,7 +55,9 @@ class _CVVcWidgetState extends State<CVVcWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 90, 0),
               child: Text(
-                'It\'s a 3-digit code on the back of your card',
+                FFLocalizations.of(context).getText(
+                  'xmku9hon' /* It's a 3-digit code on the bac... */,
+                ),
                 style: FlutterFlowTheme.of(context).bodyText1.override(
                       fontFamily: 'Lato',
                       fontSize: 12,

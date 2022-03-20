@@ -33,7 +33,9 @@ class _ReturnRequestCancelledCWidgetState
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Return Request Cancelled!',
+                    FFLocalizations.of(context).getText(
+                      'xfu90miu' /* Return Request Cancelled! */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Lato',
                           color: FlutterFlowTheme.of(context).primaryColor,
@@ -53,7 +55,9 @@ class _ReturnRequestCancelledCWidgetState
                       onPressed: () {
                         print('Button pressed ...');
                       },
-                      text: 'Continue Shopping',
+                      text: FFLocalizations.of(context).getText(
+                        'ta30632w' /* Continue Shopping */,
+                      ),
                       options: FFButtonOptions(
                         width: 181,
                         height: 36,

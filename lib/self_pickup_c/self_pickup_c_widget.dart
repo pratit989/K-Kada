@@ -55,7 +55,9 @@ class _SelfPickupCWidgetState extends State<SelfPickupCWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
                   child: Text(
-                    'Shop Address',
+                    FFLocalizations.of(context).getText(
+                      '347wzgm7' /* Shop Address */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Lato',
                           color: Color(0xD8000000),

@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -27,11 +28,32 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xFFF5F5F5),
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).alternate,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_ios_sharp,
+            color: FlutterFlowTheme.of(context).secondaryColor,
+            size: 30,
+          ),
+          onPressed: () {
+            print('IconButton pressed ...');
+          },
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 2,
+      ),
+      backgroundColor: FlutterFlowTheme.of(context).secondaryColor,
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/Mask_Group_10.png',
+            'assets/images/Boy.png',
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 1,
             fit: BoxFit.fill,
@@ -45,35 +67,9 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(40, 20, 40, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    flex: 2,
-                    child: Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Color(0x00EEEEEE),
-                      ),
-                      child: Align(
-                        alignment: AlignmentDirectional(-1, -1),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              Navigator.pop(context);
-                            },
-                            child: Icon(
-                              Icons.arrow_back_ios_sharp,
-                              color: FlutterFlowTheme.of(context).tertiaryColor,
-                              size: 30,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
                   Expanded(
                     child: Align(
                       alignment: AlignmentDirectional(0, 1),

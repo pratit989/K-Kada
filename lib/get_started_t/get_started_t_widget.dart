@@ -31,7 +31,7 @@ class _GetStartedTWidgetState extends State<GetStartedTWidget> {
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/Mask_Group_10.png',
+            'assets/images/Boy2.png',
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 1,
             fit: BoxFit.fill,

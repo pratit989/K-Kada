@@ -85,7 +85,7 @@ class _AboutMyStoreWidgetState extends State<AboutMyStoreWidget> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Image.asset(
-                    'assets/images/Group_952.png',
+                    'assets/images/ShopPhoto.png',
                     fit: BoxFit.fill,
                   ),
                 ),

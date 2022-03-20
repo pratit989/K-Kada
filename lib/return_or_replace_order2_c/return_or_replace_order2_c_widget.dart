@@ -169,7 +169,7 @@ class _ReturnOrReplaceOrder2CWidgetState
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: Image.asset(
-                          'assets/images/Group_949.png',
+                          'assets/images/addphoto.png',
                           width: 290,
                           height: 133,
                           fit: BoxFit.contain,

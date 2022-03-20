@@ -33,7 +33,7 @@ class _OrderPickedSuccessfulWidgetState
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/images/Group_950.png',
+                  'assets/images/Person.png',
                   width: 68.21,
                   height: 135.84,
                   fit: BoxFit.contain,

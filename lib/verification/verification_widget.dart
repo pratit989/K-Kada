@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -26,30 +27,33 @@ class _VerificationWidgetState extends State<VerificationWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).alternate,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_ios_sharp,
+            color: Colors.white,
+            size: 30,
+          ),
+          onPressed: () {
+            print('IconButton pressed ...');
+          },
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 2,
+      ),
       backgroundColor: Colors.black,
       body: Padding(
         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 40, 0, 0),
-                  child: InkWell(
-                    onTap: () async {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(
-                      Icons.arrow_back_ios_sharp,
-                      color: Colors.white,
-                      size: 30,
-                    ),
-                  ),
-                ),
-              ],
-            ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
               child: Text(
@@ -64,11 +68,12 @@ class _VerificationWidgetState extends State<VerificationWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 20),
+              padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 20),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'hn34d9zj' /* Please enter the 4 digit verif... */,
                 ),
+                textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).bodyText1.override(
                       fontFamily: 'Lato',
                       color: Color(0xFFBEBEBE),
@@ -133,14 +138,17 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                           color: Color(0xFFE4E4E4),
                         ),
                   ),
-                  Text(
-                    FFLocalizations.of(context).getText(
-                      'id8irn2h' /*  Resend */,
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                    child: Text(
+                      FFLocalizations.of(context).getText(
+                        'id8irn2h' /*  Resend */,
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Open Sans',
+                            color: Color(0xFFEEC643),
+                          ),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Open Sans',
-                          color: Color(0xFFEEC643),
-                        ),
                   ),
                 ],
               ),

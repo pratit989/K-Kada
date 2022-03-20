@@ -112,7 +112,9 @@ class _SelectPaymentModeCWidgetState extends State<SelectPaymentModeCWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 70, 0),
                               child: Text(
-                                'Debit Card',
+                                FFLocalizations.of(context).getText(
+                                  '2670cuha' /* Debit Card */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1
                                     .override(
@@ -188,7 +190,9 @@ class _SelectPaymentModeCWidgetState extends State<SelectPaymentModeCWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 70, 0),
                               child: Text(
-                                'Google Pay',
+                                FFLocalizations.of(context).getText(
+                                  'df47o7at' /* Google Pay */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1
                                     .override(
@@ -264,7 +268,9 @@ class _SelectPaymentModeCWidgetState extends State<SelectPaymentModeCWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 70, 0),
                               child: Text(
-                                'Apple Pay',
+                                FFLocalizations.of(context).getText(
+                                  'vbf5frg1' /* Apple Pay */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1
                                     .override(
@@ -341,7 +347,9 @@ class _SelectPaymentModeCWidgetState extends State<SelectPaymentModeCWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 7, 0),
                               child: Text(
-                                'Cash on Delivery',
+                                FFLocalizations.of(context).getText(
+                                  'ftqp4cyq' /* Cash on Delivery */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1
                                     .override(

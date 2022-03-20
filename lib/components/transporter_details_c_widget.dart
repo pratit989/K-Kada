@@ -31,7 +31,7 @@ class _TransporterDetailsCWidgetState extends State<TransporterDetailsCWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/images/Group_954.png',
+            'assets/images/Ramesh.png',
             width: 52,
             height: 52,
             fit: BoxFit.contain,
@@ -44,7 +44,9 @@ class _TransporterDetailsCWidgetState extends State<TransporterDetailsCWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Ramesh Shetty',
+                  FFLocalizations.of(context).getText(
+                    'c1x9uk7n' /* Ramesh Shetty */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',
                         color: FlutterFlowTheme.of(context).tertiaryColor,
@@ -54,7 +56,9 @@ class _TransporterDetailsCWidgetState extends State<TransporterDetailsCWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                   child: Text(
-                    'K54584H454',
+                    FFLocalizations.of(context).getText(
+                      'eu4363d3' /* K54584H454 */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Lato',
                           color: Color(0xFFA5A5A5),
@@ -67,7 +71,9 @@ class _TransporterDetailsCWidgetState extends State<TransporterDetailsCWidget> {
             ),
           ),
           Text(
-            'Transporter Details',
+            FFLocalizations.of(context).getText(
+              'fmii1rv7' /* Transporter Details */,
+            ),
             style: FlutterFlowTheme.of(context).bodyText1.override(
                   fontFamily: 'Lato',
                   color: FlutterFlowTheme.of(context).primaryColor,

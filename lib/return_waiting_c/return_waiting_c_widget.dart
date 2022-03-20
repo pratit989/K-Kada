@@ -39,7 +39,11 @@ class _ReturnWaitingCWidgetState extends State<ReturnWaitingCWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 100),
                   child: Text(
-                    'Your Return/Replace Request\n is waiting for Approval',
+                    FFLocalizations.of(context).getText(
+                      '34vbxk4i' /* Your Return/Replace Request
+ i... */
+                      ,
+                    ),
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Lato',
@@ -52,7 +56,9 @@ class _ReturnWaitingCWidgetState extends State<ReturnWaitingCWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'You can wait or ',
+                      FFLocalizations.of(context).getText(
+                        'sc05l89i' /* You can wait or  */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Lato',
                             color: Color(0xFF949496),
@@ -60,7 +66,9 @@ class _ReturnWaitingCWidgetState extends State<ReturnWaitingCWidget> {
                           ),
                     ),
                     Text(
-                      'check the status ',
+                      FFLocalizations.of(context).getText(
+                        '2cl4bomy' /* check the status  */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Lato',
                             color: FlutterFlowTheme.of(context).primaryColor,
@@ -68,7 +76,9 @@ class _ReturnWaitingCWidgetState extends State<ReturnWaitingCWidget> {
                           ),
                     ),
                     Text(
-                      'of your request',
+                      FFLocalizations.of(context).getText(
+                        '44pbotrp' /* of your request */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Lato',
                             color: Color(0xFF949496),
@@ -83,7 +93,9 @@ class _ReturnWaitingCWidgetState extends State<ReturnWaitingCWidget> {
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'Continue Shopping',
+                    text: FFLocalizations.of(context).getText(
+                      'ty3d97lg' /* Continue Shopping */,
+                    ),
                     options: FFButtonOptions(
                       width: 181,
                       height: 36,
@@ -110,7 +122,9 @@ class _ReturnWaitingCWidgetState extends State<ReturnWaitingCWidget> {
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'Cancel Return',
+                    text: FFLocalizations.of(context).getText(
+                      '24ws9cfz' /* Cancel Return */,
+                    ),
                     options: FFButtonOptions(
                       width: 181,
                       height: 36,

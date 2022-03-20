@@ -46,7 +46,7 @@ class _CartCWidgetState extends State<CartCWidget> {
                   ),
                 ),
                 Image.asset(
-                  'assets/images/Group_950.png',
+                  'assets/images/CART.png',
                   width: 100,
                   height: 100,
                   fit: BoxFit.contain,

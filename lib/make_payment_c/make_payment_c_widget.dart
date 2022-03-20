@@ -110,7 +110,9 @@ class _MakePaymentCWidgetState extends State<MakePaymentCWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 70, 0),
                               child: Text(
-                                'Debit Card',
+                                FFLocalizations.of(context).getText(
+                                  'gxgz9cp7' /* Debit Card */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1
                                     .override(

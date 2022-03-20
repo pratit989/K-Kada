@@ -107,7 +107,7 @@ class _MyStoreWidgetState extends State<MyStoreWidget> {
                     );
                   },
                   child: Image.asset(
-                    'assets/images/Group_950.png',
+                    'assets/images/Group_955.png',
                     width: MediaQuery.of(context).size.width * 0.65,
                     fit: BoxFit.contain,
                   ),
@@ -125,7 +125,7 @@ class _MyStoreWidgetState extends State<MyStoreWidget> {
                     );
                   },
                   child: Image.asset(
-                    'assets/images/Group_951.png',
+                    'assets/images/Group_956.png',
                     width: MediaQuery.of(context).size.width * 0.65,
                     fit: BoxFit.contain,
                   ),

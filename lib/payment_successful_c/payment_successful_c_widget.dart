@@ -39,7 +39,9 @@ class _PaymentSuccessfulCWidgetState extends State<PaymentSuccessfulCWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 60),
                   child: Text(
-                    'Payment Successful!',
+                    FFLocalizations.of(context).getText(
+                      'kop67vak' /* Payment Successful! */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodyText1.override(
                           fontFamily: 'Lato',
                           fontSize: 16,
@@ -53,7 +55,9 @@ class _PaymentSuccessfulCWidgetState extends State<PaymentSuccessfulCWidget> {
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'Track Status',
+                    text: FFLocalizations.of(context).getText(
+                      'm2hqp7wr' /* Track Status */,
+                    ),
                     options: FFButtonOptions(
                       width: 160,
                       height: 37,
@@ -79,7 +83,9 @@ class _PaymentSuccessfulCWidgetState extends State<PaymentSuccessfulCWidget> {
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'Download invoice',
+                    text: FFLocalizations.of(context).getText(
+                      'ybcc6e4s' /* Download invoice */,
+                    ),
                     options: FFButtonOptions(
                       width: 160,
                       height: 37,
@@ -100,7 +106,9 @@ class _PaymentSuccessfulCWidgetState extends State<PaymentSuccessfulCWidget> {
                   ),
                 ),
                 Text(
-                  'Go back to Main Page',
+                  FFLocalizations.of(context).getText(
+                    '8b6txcb6' /* Go back to Main Page */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',
                         color: FlutterFlowTheme.of(context).primaryColor,

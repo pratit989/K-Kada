@@ -71,7 +71,7 @@ class _ThatsItTWidgetState extends State<ThatsItTWidget> {
                 ),
               ),
               Image.asset(
-                'assets/images/Group_951.png',
+                'assets/images/Car.png',
                 width: 287,
                 height: 203,
                 fit: BoxFit.cover,

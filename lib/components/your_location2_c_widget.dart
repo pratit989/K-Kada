@@ -61,7 +61,9 @@ class _YourLocation2CWidgetState extends State<YourLocation2CWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Your Location',
+                      FFLocalizations.of(context).getText(
+                        'pbv1f6e5' /* Your Location */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Lato',
                             color: Color(0xFFB5B5B5),
@@ -75,7 +77,9 @@ class _YourLocation2CWidgetState extends State<YourLocation2CWidget> {
                         obscureText: false,
                         decoration: InputDecoration(
                           labelStyle: FlutterFlowTheme.of(context).bodyText1,
-                          hintText: '[Some hint text...]',
+                          hintText: FFLocalizations.of(context).getText(
+                            'lp3dkbr9' /* [Some hint text...] */,
+                          ),
                           hintStyle:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Lato',
@@ -112,7 +116,9 @@ class _YourLocation2CWidgetState extends State<YourLocation2CWidget> {
                         controller: textController2,
                         obscureText: false,
                         decoration: InputDecoration(
-                          hintText: 'House No / Flat No / Floor*',
+                          hintText: FFLocalizations.of(context).getText(
+                            't9geft4i' /* House No / Flat No / Floor* */,
+                          ),
                           hintStyle:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Lato',
@@ -152,7 +158,9 @@ class _YourLocation2CWidgetState extends State<YourLocation2CWidget> {
                         controller: textController3,
                         obscureText: false,
                         decoration: InputDecoration(
-                          hintText: 'Society / Street Name*',
+                          hintText: FFLocalizations.of(context).getText(
+                            'k2very8r' /* Society / Street Name* */,
+                          ),
                           hintStyle:
                               FlutterFlowTheme.of(context).bodyText1.override(
                                     fontFamily: 'Lato',
@@ -193,7 +201,9 @@ class _YourLocation2CWidgetState extends State<YourLocation2CWidget> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      'Skip',
+                      FFLocalizations.of(context).getText(
+                        '2aw0xg7x' /* Skip */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily: 'Lato',
                             color: Color(0xFF949496),
@@ -202,7 +212,9 @@ class _YourLocation2CWidgetState extends State<YourLocation2CWidget> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
                       child: Text(
-                        'Change',
+                        FFLocalizations.of(context).getText(
+                          'vlkf6zov' /* Change */,
+                        ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Lato',
                               color: FlutterFlowTheme.of(context).primaryColor,

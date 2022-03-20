@@ -47,7 +47,7 @@ class _ProductsCopyWidgetState extends State<ProductsCopyWidget> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Image.asset(
-                  'assets/images/Rectangle_245.png',
+                  'assets/images/Stapler2.png',
                   width: 100,
                   height: 100,
                   fit: BoxFit.cover,

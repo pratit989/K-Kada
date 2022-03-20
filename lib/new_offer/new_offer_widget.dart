@@ -77,7 +77,7 @@ class _NewOfferWidgetState extends State<NewOfferWidget> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Image.asset(
-                      'assets/images/Group_949.png',
+                      'assets/images/Couponcode2.png',
                       width: 100,
                       height: 100,
                       fit: BoxFit.cover,
@@ -94,7 +94,7 @@ class _NewOfferWidgetState extends State<NewOfferWidget> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Image.asset(
-                      'assets/images/Group_949.png',
+                      'assets/images/Discount.png',
                       width: 100,
                       height: 100,
                       fit: BoxFit.cover,
@@ -109,7 +109,7 @@ class _NewOfferWidgetState extends State<NewOfferWidget> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Image.asset(
-                    'assets/images/Group_950.png',
+                    'assets/images/Description.png',
                     width: 100,
                     height: 100,
                     fit: BoxFit.cover,

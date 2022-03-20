@@ -33,7 +33,7 @@ class _OrderDeliveredSuccessfullyTWidgetState
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Image.asset(
-                    'assets/images/Group_949.png',
+                    'assets/images/BOX2.png',
                     width: 100,
                     height: 100,
                     fit: BoxFit.fill,

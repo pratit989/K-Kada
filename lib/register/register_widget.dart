@@ -2,7 +2,6 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../verification/verification_widget.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -31,6 +30,27 @@ class _RegisterWidgetState extends State<RegisterWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).alternate,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_ios_sharp,
+            color: FlutterFlowTheme.of(context).secondaryColor,
+            size: 30,
+          ),
+          onPressed: () {
+            print('IconButton pressed ...');
+          },
+        ),
+        actions: [],
+        centerTitle: true,
+        elevation: 0,
+      ),
       backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: SafeArea(
         child: Padding(
@@ -39,24 +59,6 @@ class _RegisterWidgetState extends State<RegisterWidget> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                    child: InkWell(
-                      onTap: () async {
-                        Navigator.pop(context);
-                      },
-                      child: Icon(
-                        Icons.arrow_back_ios_sharp,
-                        color: Color(0xFF183C28),
-                        size: 30,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                 child: Text(
@@ -96,15 +98,26 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                         size: 50,
                       ),
                     ),
-                    AutoSizeText(
-                      FFLocalizations.of(context).getText(
-                        'xbamvbl4' /* ADD YOUR PROFILE PICTURE */,
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Lato',
-                            color: Color(0xA0303030),
-                            fontWeight: FontWeight.w500,
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).alternate,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'xbamvbl4' /* ADD YOUR PROFILE PICTURE */,
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Lato',
+                                      color: Color(0xA0303030),
+                                      fontWeight: FontWeight.w500,
+                                    ),
                           ),
+                        ),
+                      ),
                     ),
                   ],
                 ),

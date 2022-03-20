@@ -176,7 +176,7 @@ class _EditOfferWidgetState extends State<EditOfferWidget> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Image.asset(
-                    'assets/images/Group_949.png',
+                    'assets/images/Group_964.png',
                     width: 100,
                     height: 100,
                     fit: BoxFit.cover,
@@ -193,7 +193,7 @@ class _EditOfferWidgetState extends State<EditOfferWidget> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Image.asset(
-                    'assets/images/Group_949.png',
+                    'assets/images/Discount2.png',
                     width: 100,
                     height: 100,
                     fit: BoxFit.cover,
@@ -210,7 +210,7 @@ class _EditOfferWidgetState extends State<EditOfferWidget> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Image.asset(
-                    'assets/images/Group_950.png',
+                    'assets/images/Dicription2.png',
                     width: 100,
                     height: 100,
                     fit: BoxFit.cover,
