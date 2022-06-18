@@ -112,7 +112,7 @@ class _RequestCancellationCWidgetState
                       FFLocalizations.of(context).getText(
                         '95mvfkvi' /* Other */,
                       )
-                    ].toList(),
+                    ],
                     onChanged: (val) => setState(() => dropDownValue = val),
                     width: 320,
                     height: 47,

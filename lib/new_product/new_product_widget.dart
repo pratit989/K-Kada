@@ -76,26 +76,9 @@ class _NewProductWidgetState extends State<NewProductWidget> {
                     padding: EdgeInsets.zero,
                     scrollDirection: Axis.horizontal,
                     children: [
-                      Container(
-                        width: 320,
-                        height: 187,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).tertiaryColor,
-                          boxShadow: [
-                            BoxShadow(
-                              blurRadius: 6,
-                              color: Color(0x2A000000),
-                              offset: Offset(0, 3),
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Image.asset(
-                          'assets/images/Group_965.png',
-                          width: 320,
-                          height: 187,
-                          fit: BoxFit.fill,
-                        ),
+                      Image.asset(
+                        'assets/images/Group_965.png',
+                        fit: BoxFit.cover,
                       ),
                     ],
                   ),

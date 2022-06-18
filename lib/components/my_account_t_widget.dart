@@ -1,5 +1,6 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../welcome/welcome_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,7 +16,7 @@ class _MyAccountTWidgetState extends State<MyAccountTWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 1,
+      height: MediaQuery.of(context).size.height * 0.4,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).tertiaryColor,
         borderRadius: BorderRadius.only(
@@ -94,28 +95,39 @@ class _MyAccountTWidgetState extends State<MyAccountTWidget> {
                 ],
               ),
             ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                  child: Icon(
-                    Icons.logout,
-                    color: Colors.black,
-                    size: 25,
+            InkWell(
+              onTap: () async {
+                await Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WelcomeWidget(),
                   ),
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    'jmhhpg2i' /* Log Out */,
+                  (r) => false,
+                );
+              },
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                    child: Icon(
+                      Icons.logout,
+                      color: Colors.black,
+                      size: 25,
+                    ),
                   ),
-                  style: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lato',
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                      ),
-                ),
-              ],
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      'jmhhpg2i' /* Log Out */,
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Lato',
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                        ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

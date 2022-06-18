@@ -1,5 +1,7 @@
+import '../cutomer_c/cutomer_c_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../my_store/my_store_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,7 +17,7 @@ class _VandCWidgetState extends State<VandCWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 1,
+      height: MediaQuery.of(context).size.height * 0.4,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).tertiaryColor,
         borderRadius: BorderRadius.only(
@@ -32,86 +34,110 @@ class _VandCWidgetState extends State<VandCWidget> {
           children: [
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                    child: Icon(
-                      Icons.brightness_1,
-                      color: Color(0xFF65B9C3),
-                      size: 50,
+              child: InkWell(
+                onTap: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MyStoreWidget(),
                     ),
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'fcsi1yti' /* Vendor */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Lato',
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
+                  );
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                      child: Icon(
+                        Icons.brightness_1,
+                        color: Color(0xFF65B9C3),
+                        size: 50,
                       ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          '60sbvaw8' /*  Anand Stationary */,
+                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'fcsi1yti' /* Vendor */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Lato',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Color(0xFF949496),
-                              fontSize: 12,
-                            ),
-                      ),
-                    ],
-                  ),
-                ],
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            '60sbvaw8' /*  Anand Stationary */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Open Sans',
+                                    color: Color(0xFF949496),
+                                    fontSize: 12,
+                                  ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                    child: Icon(
-                      Icons.brightness_1,
-                      color: Color(0xFF65B9C3),
-                      size: 50,
+              child: InkWell(
+                onTap: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CutomerCWidget(),
                     ),
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          '5h2qaaqz' /* Customer */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Lato',
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
+                  );
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                      child: Icon(
+                        Icons.brightness_1,
+                        color: Color(0xFF65B9C3),
+                        size: 50,
                       ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'to03l269' /*  Anand Shetty */,
+                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            '5h2qaaqz' /* Customer */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Lato',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Color(0xFF949496),
-                              fontSize: 12,
-                            ),
-                      ),
-                    ],
-                  ),
-                ],
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'to03l269' /*  Anand Shetty */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Open Sans',
+                                    color: Color(0xFF949496),
+                                    fontSize: 12,
+                                  ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             Row(

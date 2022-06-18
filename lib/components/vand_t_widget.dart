@@ -15,7 +15,7 @@ class _VandTWidgetState extends State<VandTWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 1,
+      height: MediaQuery.of(context).size.height * 0.4,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).tertiaryColor,
         borderRadius: BorderRadius.only(

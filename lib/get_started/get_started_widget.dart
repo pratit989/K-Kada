@@ -29,7 +29,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).alternate,
+        backgroundColor: FlutterFlowTheme.of(context).secondaryColor,
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -38,19 +38,20 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
           buttonSize: 60,
           icon: Icon(
             Icons.arrow_back_ios_sharp,
-            color: FlutterFlowTheme.of(context).secondaryColor,
+            color: FlutterFlowTheme.of(context).tertiaryColor,
             size: 30,
           ),
-          onPressed: () {
-            print('IconButton pressed ...');
+          onPressed: () async {
+            Navigator.pop(context);
           },
         ),
         actions: [],
         centerTitle: false,
         elevation: 2,
       ),
-      backgroundColor: FlutterFlowTheme.of(context).secondaryColor,
+      backgroundColor: Color(0xE5000000),
       body: Stack(
+        alignment: AlignmentDirectional(0, 1),
         children: [
           Image.asset(
             'assets/images/Boy.png',
@@ -60,6 +61,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
           ),
           Container(
             width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 1,
             decoration: BoxDecoration(
               color: Color(0xE5000000),
             ),
@@ -71,6 +73,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
+                    flex: 2,
                     child: Align(
                       alignment: AlignmentDirectional(0, 1),
                       child: Text(

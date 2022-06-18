@@ -1,5 +1,7 @@
 import '../components/add_new_product_widget.dart';
 import '../components/products_widget.dart';
+import '../edit_product_details/edit_product_details_widget.dart';
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../select_category/select_category_widget.dart';
@@ -20,6 +22,36 @@ class _MyProductsWidgetState extends State<MyProductsWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).alternate,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_ios_sharp,
+            color: FlutterFlowTheme.of(context).secondaryColor,
+            size: 30,
+          ),
+          onPressed: () async {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          'My Product',
+          style: FlutterFlowTheme.of(context).title2.override(
+                fontFamily: 'Lato',
+                color: FlutterFlowTheme.of(context).secondaryColor,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
+      ),
       backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: Stack(
         alignment: AlignmentDirectional(0, 1),
@@ -31,38 +63,6 @@ class _MyProductsWidgetState extends State<MyProductsWidget> {
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 40),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              Navigator.pop(context);
-                            },
-                            child: Icon(
-                              Icons.arrow_back_ios_sharp,
-                              color: Color(0xFF183C28),
-                              size: 30,
-                            ),
-                          ),
-                        ),
-                        Text(
-                          FFLocalizations.of(context).getText(
-                            'zp104smn' /* My Products */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Lato',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                        ),
-                      ],
-                    ),
-                  ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                     child: Container(
@@ -118,14 +118,25 @@ class _MyProductsWidgetState extends State<MyProductsWidget> {
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height * 0.55,
                     decoration: BoxDecoration(
-                      color: Color(0xFFEEEEEE),
+                      color: FlutterFlowTheme.of(context).alternate,
                       borderRadius: BorderRadius.circular(0),
                     ),
                     child: ListView(
                       padding: EdgeInsets.zero,
                       scrollDirection: Axis.vertical,
                       children: [
-                        ProductsWidget(),
+                        InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    EditProductDetailsWidget(),
+                              ),
+                            );
+                          },
+                          child: ProductsWidget(),
+                        ),
                       ],
                     ),
                   ),

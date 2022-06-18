@@ -118,7 +118,7 @@ class _ReturnOrReplaceOrderCWidgetState
                       FFLocalizations.of(context).getText(
                         'n14dumtz' /* Item Defective */,
                       )
-                    ],
+                    ].toList(),
                     onChanged: (value) {
                       setState(() => radioButtonValue = value);
                     },

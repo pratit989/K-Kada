@@ -1,3 +1,5 @@
+import '../components/my_account_t_widget.dart';
+import '../components/vand_t_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -36,47 +38,79 @@ class _TransporterHomeTWidgetState extends State<TransporterHomeTWidget> {
                       decoration: BoxDecoration(
                         color: Color(0x00EEEEEE),
                       ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
-                            child: Icon(
-                              Icons.account_circle,
-                              color: Colors.black,
-                              size: 25,
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 2, 0),
-                            child: Text(
-                              FFLocalizations.of(context).getText(
-                                '9jzij3uy' /* Transporter */,
+                      child: InkWell(
+                        onTap: () async {
+                          await showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Color(0xDE000000),
+                            context: context,
+                            builder: (context) {
+                              return Padding(
+                                padding: MediaQuery.of(context).viewInsets,
+                                child: VandTWidget(),
+                              );
+                            },
+                          );
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 5, 0),
+                              child: Icon(
+                                Icons.account_circle,
+                                color: Colors.black,
+                                size: 25,
                               ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Lato',
-                                    color: Color(0xFF183C28),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                  ),
                             ),
-                          ),
-                          Icon(
-                            Icons.keyboard_arrow_down_sharp,
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            size: 24,
-                          ),
-                        ],
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 2, 0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  '9jzij3uy' /* Transporter */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: 'Lato',
+                                      color: Color(0xFF183C28),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                              ),
+                            ),
+                            Icon(
+                              Icons.keyboard_arrow_down_sharp,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              size: 24,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(50, 0, 0, 0),
-                      child: Icon(
-                        Icons.menu_sharp,
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        size: 35,
+                      child: InkWell(
+                        onTap: () async {
+                          await showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            context: context,
+                            builder: (context) {
+                              return Padding(
+                                padding: MediaQuery.of(context).viewInsets,
+                                child: MyAccountTWidget(),
+                              );
+                            },
+                          );
+                        },
+                        child: Icon(
+                          Icons.menu_sharp,
+                          color: FlutterFlowTheme.of(context).primaryColor,
+                          size: 35,
+                        ),
                       ),
                     ),
                   ],

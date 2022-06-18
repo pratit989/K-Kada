@@ -1,7 +1,9 @@
+import '../almost_done/almost_done_widget.dart';
+import '../almost_done_t/almost_done_t_widget.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../verification/verification_widget.dart';
+import '../select_area_c/select_area_c_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -262,12 +264,30 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                     size: 25,
                   ),
                   onPressed: () async {
-                    await Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => VerificationWidget(),
-                      ),
-                    );
+                    if ((FFAppState().userType) == 'Customer') {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SelectAreaCWidget(),
+                        ),
+                      );
+                    } else {
+                      if ((FFAppState().userType) == 'Transporter') {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AlmostDoneTWidget(),
+                          ),
+                        );
+                      } else {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AlmostDoneWidget(),
+                          ),
+                        );
+                      }
+                    }
                   },
                 ),
               ),

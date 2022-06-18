@@ -138,7 +138,9 @@ class _AllOffersCWidgetState extends State<AllOffersCWidget> {
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                          child: CouponsCWidget(),
+                          child: CouponsCWidget(
+                            selectionVisibility: false,
+                          ),
                         ),
                       ],
                     ),

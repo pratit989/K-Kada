@@ -1,6 +1,9 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../verification/verification_widget.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,14 +28,36 @@ class _WelcomeCWidgetState extends State<WelcomeCWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).secondaryColor,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_ios_sharp,
+            color: FlutterFlowTheme.of(context).tertiaryColor,
+            size: 30,
+          ),
+          onPressed: () async {
+            Navigator.pop(context);
+          },
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
+      ),
+      backgroundColor: FlutterFlowTheme.of(context).secondaryColor,
       body: Stack(
+        alignment: AlignmentDirectional(0, -1),
         children: [
           Image.asset(
             'assets/images/boy3.png',
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height * 1,
-            fit: BoxFit.fitHeight,
+            fit: BoxFit.fitWidth,
           ),
           Container(
             width: MediaQuery.of(context).size.width,
@@ -41,44 +66,22 @@ class _WelcomeCWidgetState extends State<WelcomeCWidget> {
               color: Color(0xE5000000),
             ),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(40, 20, 40, 200),
+              padding: EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Align(
-                    alignment: AlignmentDirectional(-1, -1),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                      child: Icon(
-                        Icons.arrow_back_ios_sharp,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                        size: 30,
-                      ),
+                  AutoSizeText(
+                    FFLocalizations.of(context).getText(
+                      'td3x9x1v' /* Welcome! */,
                     ),
-                  ),
-                  Expanded(
-                    child: Align(
-                      alignment: AlignmentDirectional(0, 0),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 325, 0, 0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'td3x9x1v' /* Welcome! */,
-                          ),
-                          style: FlutterFlowTheme.of(context)
-                              .subtitle2
-                              .override(
-                                fontFamily: 'Lato',
-                                color:
-                                    FlutterFlowTheme.of(context).tertiaryColor,
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              ),
+                    style: FlutterFlowTheme.of(context).subtitle2.override(
+                          fontFamily: 'Lato',
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
                         ),
-                      ),
-                    ),
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
@@ -146,8 +149,13 @@ class _WelcomeCWidgetState extends State<WelcomeCWidget> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
+                        onPressed: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => VerificationWidget(),
+                            ),
+                          );
                         },
                         text: FFLocalizations.of(context).getText(
                           '2o5zkyzv' /* Proceed */,

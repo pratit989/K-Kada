@@ -1,3 +1,4 @@
+import '../add_vehicle_t/add_vehicle_t_widget.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -150,7 +151,7 @@ class _AlmostDoneTWidgetState extends State<AlmostDoneTWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                   child: FlutterFlowDropDown(
-                    options: [].toList(),
+                    options: <String>[],
                     onChanged: (val) => setState(() => dropDownValue1 = val),
                     width: MediaQuery.of(context).size.width,
                     textStyle: FlutterFlowTheme.of(context).bodyText1.override(
@@ -185,7 +186,7 @@ class _AlmostDoneTWidgetState extends State<AlmostDoneTWidget> {
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                   child: FlutterFlowDropDown(
-                    options: [].toList(),
+                    options: <String>[],
                     onChanged: (val) => setState(() => dropDownValue2 = val),
                     width: MediaQuery.of(context).size.width,
                     textStyle: FlutterFlowTheme.of(context).bodyText1.override(
@@ -262,8 +263,13 @@ class _AlmostDoneTWidgetState extends State<AlmostDoneTWidget> {
                       color: FlutterFlowTheme.of(context).tertiaryColor,
                       size: 25,
                     ),
-                    onPressed: () {
-                      print('IconButton pressed ...');
+                    onPressed: () async {
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AddVehicleTWidget(),
+                        ),
+                      );
                     },
                   ),
                 ),

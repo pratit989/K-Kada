@@ -1,4 +1,4 @@
-import '../components/coupons_c_widget.dart';
+import '../components/coupon_select_c_widget.dart';
 import '../components/products_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -196,10 +196,8 @@ What would you like ... */
                             PageController(initialPage: 0),
                         scrollDirection: Axis.horizontal,
                         children: [
-                          CouponsCWidget(),
-                          CouponsCWidget(
-                            selectionVisibility: false,
-                          ),
+                          CouponSelectCWidget(),
+                          CouponSelectCWidget(),
                         ],
                       ),
                     ),

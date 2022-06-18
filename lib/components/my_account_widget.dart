@@ -1,5 +1,8 @@
+import '../about_my_store/about_my_store_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../my_account_details/my_account_details_widget.dart';
+import '../welcome/welcome_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,7 +18,7 @@ class _MyAccountWidgetState extends State<MyAccountWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 1,
+      height: MediaQuery.of(context).size.height * 0.4,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).tertiaryColor,
         borderRadius: BorderRadius.only(
@@ -32,90 +35,123 @@ class _MyAccountWidgetState extends State<MyAccountWidget> {
           children: [
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                    child: Icon(
-                      Icons.brightness_1,
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      size: 25,
+              child: InkWell(
+                onTap: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MyAccountDetailsWidget(),
                     ),
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'tl3wpd2t' /* My Account */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Lato',
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ),
+                  );
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                      child: Icon(
+                        Icons.brightness_1,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 25,
                       ),
-                    ],
-                  ),
-                ],
+                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'tl3wpd2t' /* My Account */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Lato',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+              child: InkWell(
+                onTap: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AboutMyStoreWidget(),
+                    ),
+                  );
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                      child: Icon(
+                        Icons.error_outlined,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 25,
+                      ),
+                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'dxlua4wr' /* About my store */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Lato',
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () async {
+                await Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WelcomeWidget(),
+                  ),
+                  (r) => false,
+                );
+              },
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                     child: Icon(
-                      Icons.error_outlined,
-                      color: FlutterFlowTheme.of(context).primaryColor,
+                      Icons.logout,
+                      color: Colors.black,
                       size: 25,
                     ),
                   ),
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'dxlua4wr' /* About my store */,
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      'ptnruygw' /* Log Out */,
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Lato',
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Lato',
-                              fontSize: 18,
-                              fontWeight: FontWeight.w500,
-                            ),
-                      ),
-                    ],
                   ),
                 ],
               ),
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                  child: Icon(
-                    Icons.logout,
-                    color: Colors.black,
-                    size: 25,
-                  ),
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    'ptnruygw' /* Log Out */,
-                  ),
-                  style: FlutterFlowTheme.of(context).bodyText1.override(
-                        fontFamily: 'Lato',
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                      ),
-                ),
-              ],
             ),
           ],
         ),

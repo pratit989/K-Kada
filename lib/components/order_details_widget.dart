@@ -15,7 +15,7 @@ class OrderDetailsWidget extends StatefulWidget {
   final String orderId;
   final String deliverytType;
   final int orderTotal;
-  final String date;
+  final DateTime date;
 
   @override
   _OrderDetailsWidgetState createState() => _OrderDetailsWidgetState();
@@ -74,7 +74,10 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(5, 0, 30, 0),
                         child: Text(
                           valueOrDefault<String>(
-                            widget.orderId,
+                            '#${valueOrDefault<String>(
+                              widget.orderId,
+                              '000000',
+                            )}',
                             '#000000',
                           ),
                           style:
@@ -90,7 +93,7 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
                         child: Text(
                           valueOrDefault<String>(
-                            widget.date,
+                            dateTimeFormat('d/M/y', getCurrentTimestamp),
                             '21-11-2021',
                           ),
                           style:
@@ -160,7 +163,12 @@ class _OrderDetailsWidgetState extends State<OrderDetailsWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                         child: Text(
                           valueOrDefault<String>(
-                            widget.orderTotal.toString(),
+                            formatNumber(
+                              widget.orderTotal,
+                              formatType: FormatType.decimal,
+                              decimalType: DecimalType.automatic,
+                              currency: '₹',
+                            ),
                             '₹127.00',
                           ),
                           style:

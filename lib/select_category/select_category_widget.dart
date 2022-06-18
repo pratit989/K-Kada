@@ -134,7 +134,7 @@ class _SelectCategoryWidgetState extends State<SelectCategoryWidget> {
                       FFLocalizations.of(context).getText(
                         '9yx3v144' /* Stationary */,
                       )
-                    ].toList(),
+                    ],
                     onChanged: (val) => setState(() => dropDownValue = val),
                     width: MediaQuery.of(context).size.width,
                     textStyle: FlutterFlowTheme.of(context).bodyText1.override(

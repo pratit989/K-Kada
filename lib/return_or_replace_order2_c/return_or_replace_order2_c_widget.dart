@@ -213,7 +213,7 @@ class _ReturnOrReplaceOrder2CWidgetState
                       FFLocalizations.of(context).getText(
                         'mhqevqgl' /* Replacement */,
                       )
-                    ],
+                    ].toList(),
                     onChanged: (value) {
                       setState(() => radioButtonValue1 = value);
                     },
@@ -254,7 +254,7 @@ class _ReturnOrReplaceOrder2CWidgetState
                       FFLocalizations.of(context).getText(
                         '3h3fbusf' /* Self Return */,
                       )
-                    ],
+                    ].toList(),
                     onChanged: (value) {
                       setState(() => radioButtonValue2 = value);
                     },

@@ -123,12 +123,12 @@ class _AboutMyStoreWidgetState extends State<AboutMyStoreWidget> {
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: TextFormField(
+                      controller: textController1,
                       onChanged: (_) => EasyDebounce.debounce(
                         'textController1',
                         Duration(milliseconds: 2000),
                         () => setState(() {}),
                       ),
-                      controller: textController1,
                       obscureText: false,
                       decoration: InputDecoration(
                         hintText: FFLocalizations.of(context).getText(
@@ -161,7 +161,7 @@ class _AboutMyStoreWidgetState extends State<AboutMyStoreWidget> {
                         suffixIcon: textController1.text.isNotEmpty
                             ? InkWell(
                                 onTap: () => setState(
-                                  () => textController1.clear(),
+                                  () => textController1?.clear(),
                                 ),
                                 child: Icon(
                                   Icons.clear,
@@ -216,12 +216,12 @@ class _AboutMyStoreWidgetState extends State<AboutMyStoreWidget> {
                   child: Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: TextFormField(
+                      controller: textController2,
                       onChanged: (_) => EasyDebounce.debounce(
                         'textController2',
                         Duration(milliseconds: 2000),
                         () => setState(() {}),
                       ),
-                      controller: textController2,
                       obscureText: false,
                       decoration: InputDecoration(
                         hintText: FFLocalizations.of(context).getText(
@@ -248,7 +248,7 @@ class _AboutMyStoreWidgetState extends State<AboutMyStoreWidget> {
                         suffixIcon: textController2.text.isNotEmpty
                             ? InkWell(
                                 onTap: () => setState(
-                                  () => textController2.clear(),
+                                  () => textController2?.clear(),
                                 ),
                                 child: Icon(
                                   Icons.clear,

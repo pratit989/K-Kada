@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -34,6 +35,36 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).alternate,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_ios_sharp,
+            color: FlutterFlowTheme.of(context).secondaryColor,
+            size: 30,
+          ),
+          onPressed: () async {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          'My Account',
+          style: FlutterFlowTheme.of(context).title2.override(
+                fontFamily: 'Lato',
+                color: Colors.black,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
+      ),
       backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: SafeArea(
         child: Padding(
@@ -42,32 +73,6 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                      child: Icon(
-                        Icons.arrow_back_ios_sharp,
-                        color: Color(0xFF183C28),
-                        size: 30,
-                      ),
-                    ),
-                    Text(
-                      FFLocalizations.of(context).getText(
-                        'avdrirs3' /* My Account */,
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Lato',
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ],
-                ),
-              ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 20),
                 child: Text(
@@ -89,12 +94,12 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                     ),
                   ),
                   child: TextFormField(
+                    controller: textController1,
                     onChanged: (_) => EasyDebounce.debounce(
                       'textController1',
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
-                    controller: textController1,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: InputBorder.none,
@@ -102,7 +107,7 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                       suffixIcon: textController1.text.isNotEmpty
                           ? InkWell(
                               onTap: () => setState(
-                                () => textController1.clear(),
+                                () => textController1?.clear(),
                               ),
                               child: Icon(
                                 Icons.clear,
@@ -143,12 +148,12 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                     ),
                   ),
                   child: TextFormField(
+                    controller: textController2,
                     onChanged: (_) => EasyDebounce.debounce(
                       'textController2',
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
-                    controller: textController2,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: InputBorder.none,
@@ -156,7 +161,7 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                       suffixIcon: textController2.text.isNotEmpty
                           ? InkWell(
                               onTap: () => setState(
-                                () => textController2.clear(),
+                                () => textController2?.clear(),
                               ),
                               child: Icon(
                                 Icons.clear,
@@ -197,12 +202,12 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                     ),
                   ),
                   child: TextFormField(
+                    controller: textController3,
                     onChanged: (_) => EasyDebounce.debounce(
                       'textController3',
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
-                    controller: textController3,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: InputBorder.none,
@@ -210,7 +215,7 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                       suffixIcon: textController3.text.isNotEmpty
                           ? InkWell(
                               onTap: () => setState(
-                                () => textController3.clear(),
+                                () => textController3?.clear(),
                               ),
                               child: Icon(
                                 Icons.clear,
@@ -273,12 +278,12 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                     ),
                   ),
                   child: TextFormField(
+                    controller: textController4,
                     onChanged: (_) => EasyDebounce.debounce(
                       'textController4',
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
-                    controller: textController4,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: InputBorder.none,
@@ -286,7 +291,7 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                       suffixIcon: textController4.text.isNotEmpty
                           ? InkWell(
                               onTap: () => setState(
-                                () => textController4.clear(),
+                                () => textController4?.clear(),
                               ),
                               child: Icon(
                                 Icons.clear,
@@ -327,12 +332,12 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                     ),
                   ),
                   child: TextFormField(
+                    controller: textController5,
                     onChanged: (_) => EasyDebounce.debounce(
                       'textController5',
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
-                    controller: textController5,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: InputBorder.none,
@@ -340,7 +345,7 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                       suffixIcon: textController5.text.isNotEmpty
                           ? InkWell(
                               onTap: () => setState(
-                                () => textController5.clear(),
+                                () => textController5?.clear(),
                               ),
                               child: Icon(
                                 Icons.clear,

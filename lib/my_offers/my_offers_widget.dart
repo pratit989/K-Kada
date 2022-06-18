@@ -20,46 +20,42 @@ class _MyOffersWidgetState extends State<MyOffersWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).alternate,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_ios_sharp,
+            color: FlutterFlowTheme.of(context).secondaryColor,
+            size: 30,
+          ),
+          onPressed: () async {
+            Navigator.pop(context);
+          },
+        ),
+        title: Text(
+          'My Offer',
+          style: FlutterFlowTheme.of(context).title2.override(
+                fontFamily: 'Lato',
+                color: FlutterFlowTheme.of(context).secondaryColor,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
+      ),
       backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: Padding(
         padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(40, 40, 0, 40),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                    child: InkWell(
-                      onTap: () async {
-                        Navigator.pop(context);
-                      },
-                      child: Icon(
-                        Icons.arrow_back_ios_sharp,
-                        color: Color(0xFF183C28),
-                        size: 30,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 100, 0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        'vhdy58gx' /* My Offers */,
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Lato',
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(40, 0, 40, 30),
               child: Container(

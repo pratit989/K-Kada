@@ -63,16 +63,36 @@ class _NewOrdersTWidgetState extends State<NewOrdersTWidget> {
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
-                    child: OrderDetailsWidget(),
+                    child: OrderDetailsWidget(
+                      orderId: '0000000',
+                      deliverytType: 'Home Devlivery',
+                      orderTotal: 127,
+                      date: getCurrentTimestamp,
+                    ),
                   ),
-                  OrderDetailsWidget(),
+                  OrderDetailsWidget(
+                    orderId: '000000',
+                    deliverytType: 'Home Delivery',
+                    orderTotal: 127,
+                    date: getCurrentTimestamp,
+                  ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
-                    child: OrderDetailsWidget(),
+                    child: OrderDetailsWidget(
+                      orderId: '000000',
+                      deliverytType: 'Home Delivery',
+                      orderTotal: 127,
+                      date: getCurrentTimestamp,
+                    ),
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 40),
-                    child: OrderDetailsWidget(),
+                    child: OrderDetailsWidget(
+                      orderId: '000000',
+                      deliverytType: 'Home Delivery',
+                      orderTotal: 127,
+                      date: getCurrentTimestamp,
+                    ),
                   ),
                   FFButtonWidget(
                     onPressed: () {

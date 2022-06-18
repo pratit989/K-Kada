@@ -29,6 +29,27 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).alternate,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_ios_sharp,
+            color: FlutterFlowTheme.of(context).secondaryColor,
+            size: 30,
+          ),
+          onPressed: () {
+            print('IconButton pressed ...');
+          },
+        ),
+        actions: [],
+        centerTitle: true,
+        elevation: 0,
+      ),
       backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: SafeArea(
         child: Padding(
@@ -39,19 +60,6 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                  child: InkWell(
-                    onTap: () async {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(
-                      Icons.arrow_back_ios_sharp,
-                      color: Color(0xFF183C28),
-                      size: 30,
-                    ),
-                  ),
-                ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
                   child: Text(
@@ -248,7 +256,7 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                         FFLocalizations.of(context).getText(
                           'bburc6v4' /* Stationary */,
                         )
-                      ].toList(),
+                      ],
                       onChanged: (val) => setState(() => dropDownValue = val),
                       width: MediaQuery.of(context).size.width,
                       textStyle:

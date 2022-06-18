@@ -162,7 +162,7 @@ class _EditVehicleTWidgetState extends State<EditVehicleTWidget> {
                         FFLocalizations.of(context).getText(
                           'td81yuso' /* 3 - WHEELER */,
                         )
-                      ].toList(),
+                      ],
                       onChanged: (val) => setState(() => dropDownValue = val),
                       width: MediaQuery.of(context).size.width,
                       textStyle:

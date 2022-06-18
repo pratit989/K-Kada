@@ -505,25 +505,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // VerificationCompleted
-  {
-    'fay9yvxp': {
-      'en': 'Verification\nCompleted!',
-      'ml': 'പരിശോധന പൂർത്തിയായി!',
-    },
-    '4d6c6c8g': {
-      'en': '\'ANAND STATIONARY\'',
-      'ml': '&#39;ആനന്ദ് സ്റ്റേഷനറി&#39;',
-    },
-    'v6ouqyxz': {
-      'en': 'Set up your store!',
-      'ml': 'നിങ്ങളുടെ സ്റ്റോർ സജ്ജമാക്കുക!',
-    },
-    'gup4eqqu': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // MyStore
   {
     'x5k0grl6': {
@@ -545,10 +526,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // MyAccountDetails
   {
-    'avdrirs3': {
-      'en': 'My Account',
-      'ml': 'എന്റെ അക്കൗണ്ട്',
-    },
     'ttrkdvob': {
       'en': 'FIRST NAME',
       'ml': 'പേരിന്റെ ആദ്യഭാഗം',
@@ -577,7 +554,30 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Save Changes',
       'ml': 'മാറ്റങ്ങൾ സൂക്ഷിക്കുക',
     },
+    'dbz4hxxk': {
+      'en': 'My Account',
+      'ml': '',
+    },
     '7sc1dxc3': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // VerificationCompleted
+  {
+    'fay9yvxp': {
+      'en': 'Verification\nCompleted!',
+      'ml': 'പരിശോധന പൂർത്തിയായി!',
+    },
+    '4d6c6c8g': {
+      'en': '\'ANAND STATIONARY\'',
+      'ml': '&#39;ആനന്ദ് സ്റ്റേഷനറി&#39;',
+    },
+    'v6ouqyxz': {
+      'en': 'Set up your store!',
+      'ml': 'നിങ്ങളുടെ സ്റ്റോർ സജ്ജമാക്കുക!',
+    },
+    'gup4eqqu': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -674,13 +674,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // MyProducts
   {
-    'zp104smn': {
-      'en': 'My Products',
-      'ml': 'എന്റെ ഉൽപ്പന്നങ്ങൾ',
-    },
     'wod930mb': {
       'en': 'Search Product',
       'ml': 'ഉൽപ്പന്നം തിരയുക',
+    },
+    'cx97rb1b': {
+      'en': 'My Product',
+      'ml': '',
     },
     'sfyyitly': {
       'en': 'Home',
@@ -689,10 +689,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // MyOffers
   {
-    'vhdy58gx': {
-      'en': 'My Offers',
-      'ml': 'എന്റെ ഓഫറുകൾ',
-    },
     'lfzej5b9': {
       'en': 'Search Product',
       'ml': 'ഉൽപ്പന്നം തിരയുക',
@@ -721,34 +717,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '20% Off upto Rs. 200 on orders for Long Books',
       'ml': 'രൂപ വരെ 20% കിഴിവ്. ലോംഗ് ബുക്കുകൾക്കുള്ള ഓർഡറിൽ 200 രൂപ',
     },
+    '20820dxj': {
+      'en': 'My Offer',
+      'ml': '',
+    },
     'za4tdaqt': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // OrderTypes
-  {
-    'klckqmox': {
-      'en': 'Select one of the option below to view orders.',
-      'ml': 'ഓർഡറുകൾ കാണുന്നതിന് ചുവടെയുള്ള ഓപ്ഷനുകളിലൊന്ന് തിരഞ്ഞെടുക്കുക.',
-    },
-    '2dod7hib': {
-      'en': 'SELF PICKUP ORDERS',
-      'ml': 'സെൽഫ് പിക്കപ്പ് ഓർഡറുകൾ',
-    },
-    '19yjsvrf': {
-      'en': 'SELECT',
-      'ml': 'തിരഞ്ഞെടുക്കുക',
-    },
-    'ice56lud': {
-      'en': 'HOME DELIVERY ORDERS',
-      'ml': 'ഹോം ഡെലിവറി ഓർഡറുകൾ',
-    },
-    'tpibyr1r': {
-      'en': 'SELECT',
-      'ml': 'തിരഞ്ഞെടുക്കുക',
-    },
-    '2vv9a1ta': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -803,6 +776,48 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // OrderTypes
+  {
+    'klckqmox': {
+      'en': 'Select one of the option below to view orders.',
+      'ml': 'ഓർഡറുകൾ കാണുന്നതിന് ചുവടെയുള്ള ഓപ്ഷനുകളിലൊന്ന് തിരഞ്ഞെടുക്കുക.',
+    },
+    '2dod7hib': {
+      'en': 'SELF PICKUP ORDERS',
+      'ml': 'സെൽഫ് പിക്കപ്പ് ഓർഡറുകൾ',
+    },
+    '19yjsvrf': {
+      'en': 'SELECT',
+      'ml': 'തിരഞ്ഞെടുക്കുക',
+    },
+    'ice56lud': {
+      'en': 'HOME DELIVERY ORDERS',
+      'ml': 'ഹോം ഡെലിവറി ഓർഡറുകൾ',
+    },
+    'tpibyr1r': {
+      'en': 'SELECT',
+      'ml': 'തിരഞ്ഞെടുക്കുക',
+    },
+    '2vv9a1ta': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // CheckList
+  {
+    '8vuz3jlv': {
+      'en': 'Check List',
+      'ml': 'പട്ടിക പരിശോധിക്കുക',
+    },
+    '4ofaughh': {
+      'en': 'Items',
+      'ml': 'ഇനങ്ങൾ',
+    },
+    'i5w0uvwh': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // AboutMyStore
   {
     '3hd18o4j': {
@@ -830,21 +845,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'രക്ഷിക്കും',
     },
     'rdwwy6dh': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // CheckList
-  {
-    '8vuz3jlv': {
-      'en': 'Check List',
-      'ml': 'പട്ടിക പരിശോധിക്കുക',
-    },
-    '4ofaughh': {
-      'en': 'Items',
-      'ml': 'ഇനങ്ങൾ',
-    },
-    'i5w0uvwh': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -1120,33 +1120,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'ഓർഡർ ലിസ്റ്റിലേക്ക് മടങ്ങുക',
     },
     'u9uq4he6': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // GetStartedT
-  {
-    'ynwq2u3q': {
-      'en': 'Get Started!',
-      'ml': 'തുടങ്ങി!',
-    },
-    'r6rtn1ix': {
-      'en': 'Enter Phone number',
-      'ml': 'ഫോൺ നമ്പർ നൽകുക',
-    },
-    'zak1z771': {
-      'en': 'Sign In',
-      'ml': 'സൈൻ ഇൻ',
-    },
-    'ah7p4ywg': {
-      'en': 'Don\'t have an account? ',
-      'ml': 'അക്കൗണ്ട് ഇല്ലേ?',
-    },
-    'pvnz29cy': {
-      'en': 'Sign up',
-      'ml': 'സൈൻ അപ്പ് ചെയ്യുക',
-    },
-    'kqaaq005': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -1718,38 +1691,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // VerificationC
-  {
-    'o9imldm0': {
-      'en': 'Verification',
-      'ml': 'സ്ഥിരീകരണം',
-    },
-    'uiestouz': {
-      'en':
-          'Please enter the 4 digit verification\n                   code we sent you',
-      'ml': 'ഞങ്ങൾ നിങ്ങൾക്ക് അയച്ച 4 അക്ക സ്ഥിരീകരണ കോഡ് നൽകുക',
-    },
-    'lt2uoa1h': {
-      'en': 'Enter OTP',
-      'ml': 'OTP നൽകുക',
-    },
-    '4y4or5l4': {
-      'en': 'Didn\'t receive a code?',
-      'ml': 'ഒരു കോഡ് ലഭിച്ചില്ലേ?',
-    },
-    'p6rz6ves': {
-      'en': ' Resend',
-      'ml': 'വീണ്ടും അയയ്ക്കുക',
-    },
-    'hhpcwxon': {
-      'en': 'Confirm',
-      'ml': 'സ്ഥിരീകരിക്കുക',
-    },
-    '2x1n9uoe': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // RegisterC
   {
     '91jh7j4r': {
@@ -1779,10 +1720,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // SelectAreaC
   {
-    'mp7m3uuz': {
-      'en': 'SELECT AREA',
-      'ml': 'ഏരിയ തിരഞ്ഞെടുക്കുക',
-    },
     '9gwwzaa4': {
       'en': 'Select location you would like to search for shops',
       'ml':
@@ -1800,26 +1737,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Locate on Map',
       'ml': 'മാപ്പിൽ കണ്ടെത്തുക',
     },
+    'n6ow5w0v': {
+      'en': 'SELECT AREA',
+      'ml': '',
+    },
     'zlqr1dp2': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // CartC
-  {
-    '26hotml3': {
-      'en': 'Your Cart is Empty',
-      'ml': 'നിങ്ങളുടെ കാർട്ട് ശൂന്യമാണ്',
-    },
-    'vircro2c': {
-      'en': 'Looks like you haven\'t added anything\nto your cart yet',
-      'ml': 'നിങ്ങളുടെ കാർട്ടിൽ ഇതുവരെ ഒന്നും ചേർത്തിട്ടില്ലെന്ന് തോന്നുന്നു',
-    },
-    'ql2q47kb': {
-      'en': 'Start Shopping',
-      'ml': 'ഷോപ്പിംഗ് ആരംഭിക്കുക',
-    },
-    'bty8zbce': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -1863,6 +1785,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // CartC
+  {
+    '26hotml3': {
+      'en': 'Your Cart is Empty',
+      'ml': 'നിങ്ങളുടെ കാർട്ട് ശൂന്യമാണ്',
+    },
+    'vircro2c': {
+      'en': 'Looks like you haven\'t added anything\nto your cart yet',
+      'ml': 'നിങ്ങളുടെ കാർട്ടിൽ ഇതുവരെ ഒന്നും ചേർത്തിട്ടില്ലെന്ന് തോന്നുന്നു',
+    },
+    'ql2q47kb': {
+      'en': 'Start Shopping',
+      'ml': 'ഷോപ്പിംഗ് ആരംഭിക്കുക',
+    },
+    'bty8zbce': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // AllOffersC
   {
     '6c2hn0oh': {
@@ -1897,37 +1838,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'ഉൽപ്പന്ന കോഡ് തിരയുക',
     },
     'aovr3y22': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // MyAccountC
-  {
-    'zfhk6gc4': {
-      'en': 'My Account',
-      'ml': 'എന്റെ അക്കൗണ്ട്',
-    },
-    'dzrks6b4': {
-      'en': 'FIRST NAME',
-      'ml': 'പേരിന്റെ ആദ്യഭാഗം',
-    },
-    'a27yu0ft': {
-      'en': 'LAST NAME',
-      'ml': 'പേരിന്റെ അവസാന ഭാഗം',
-    },
-    'ft2gc6dj': {
-      'en': 'MOBILE NUMBER',
-      'ml': 'മൊബൈൽ നമ്പർ',
-    },
-    '0d04eulv': {
-      'en': 'EMAIL ID  ',
-      'ml': 'ഇ - മെയിൽ ഐഡി',
-    },
-    'jabo45bg': {
-      'en': 'Save Changes',
-      'ml': 'മാറ്റങ്ങൾ സൂക്ഷിക്കുക',
-    },
-    'brhkg34z': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -1975,6 +1885,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': '2021',
     },
     'qm4s02eo': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // MyAccountC
+  {
+    'zfhk6gc4': {
+      'en': 'My Account',
+      'ml': 'എന്റെ അക്കൗണ്ട്',
+    },
+    'dzrks6b4': {
+      'en': 'FIRST NAME',
+      'ml': 'പേരിന്റെ ആദ്യഭാഗം',
+    },
+    'a27yu0ft': {
+      'en': 'LAST NAME',
+      'ml': 'പേരിന്റെ അവസാന ഭാഗം',
+    },
+    'ft2gc6dj': {
+      'en': 'MOBILE NUMBER',
+      'ml': 'മൊബൈൽ നമ്പർ',
+    },
+    '0d04eulv': {
+      'en': 'EMAIL ID  ',
+      'ml': 'ഇ - മെയിൽ ഐഡി',
+    },
+    'jabo45bg': {
+      'en': 'Save Changes',
+      'ml': 'മാറ്റങ്ങൾ സൂക്ഷിക്കുക',
+    },
+    'brhkg34z': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -2613,6 +2554,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'khzu17d2': {
       'en': 'Home',
       'ml': 'വീട്',
+    },
+  },
+  // EditProductDetails
+  {
+    'xxkd5rl4': {
+      'en': 'Edit Product Details',
+      'ml': '',
+    },
+    '0jb1l7ln': {
+      'en': 'Save',
+      'ml': '',
+    },
+    'fioy3qkx': {
+      'en': 'Home',
+      'ml': '',
     },
   },
   // VandC

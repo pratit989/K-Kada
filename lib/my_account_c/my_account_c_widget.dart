@@ -87,12 +87,12 @@ class _MyAccountCWidgetState extends State<MyAccountCWidget> {
                     ),
                   ),
                   child: TextFormField(
+                    controller: textController1,
                     onChanged: (_) => EasyDebounce.debounce(
                       'textController1',
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
-                    controller: textController1,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: InputBorder.none,
@@ -100,7 +100,7 @@ class _MyAccountCWidgetState extends State<MyAccountCWidget> {
                       suffixIcon: textController1.text.isNotEmpty
                           ? InkWell(
                               onTap: () => setState(
-                                () => textController1.clear(),
+                                () => textController1?.clear(),
                               ),
                               child: Icon(
                                 Icons.clear,
@@ -141,12 +141,12 @@ class _MyAccountCWidgetState extends State<MyAccountCWidget> {
                     ),
                   ),
                   child: TextFormField(
+                    controller: textController2,
                     onChanged: (_) => EasyDebounce.debounce(
                       'textController2',
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
-                    controller: textController2,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: InputBorder.none,
@@ -154,7 +154,7 @@ class _MyAccountCWidgetState extends State<MyAccountCWidget> {
                       suffixIcon: textController2.text.isNotEmpty
                           ? InkWell(
                               onTap: () => setState(
-                                () => textController2.clear(),
+                                () => textController2?.clear(),
                               ),
                               child: Icon(
                                 Icons.clear,
@@ -195,12 +195,12 @@ class _MyAccountCWidgetState extends State<MyAccountCWidget> {
                     ),
                   ),
                   child: TextFormField(
+                    controller: textController3,
                     onChanged: (_) => EasyDebounce.debounce(
                       'textController3',
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
-                    controller: textController3,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: InputBorder.none,
@@ -208,7 +208,7 @@ class _MyAccountCWidgetState extends State<MyAccountCWidget> {
                       suffixIcon: textController3.text.isNotEmpty
                           ? InkWell(
                               onTap: () => setState(
-                                () => textController3.clear(),
+                                () => textController3?.clear(),
                               ),
                               child: Icon(
                                 Icons.clear,
@@ -261,12 +261,12 @@ class _MyAccountCWidgetState extends State<MyAccountCWidget> {
                     ),
                   ),
                   child: TextFormField(
+                    controller: textController4,
                     onChanged: (_) => EasyDebounce.debounce(
                       'textController4',
                       Duration(milliseconds: 2000),
                       () => setState(() {}),
                     ),
-                    controller: textController4,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: InputBorder.none,
@@ -274,7 +274,7 @@ class _MyAccountCWidgetState extends State<MyAccountCWidget> {
                       suffixIcon: textController4.text.isNotEmpty
                           ? InkWell(
                               onTap: () => setState(
-                                () => textController4.clear(),
+                                () => textController4?.clear(),
                               ),
                               child: Icon(
                                 Icons.clear,

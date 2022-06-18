@@ -3,6 +3,8 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../my_store/my_store_widget.dart';
+import '../select_area_c/select_area_c_widget.dart';
+import '../transporter_home_t/transporter_home_t_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -40,8 +42,8 @@ class _VerificationWidgetState extends State<VerificationWidget> {
             color: Colors.white,
             size: 30,
           ),
-          onPressed: () {
-            print('IconButton pressed ...');
+          onPressed: () async {
+            Navigator.pop(context);
           },
         ),
         actions: [],
@@ -161,12 +163,32 @@ class _VerificationWidgetState extends State<VerificationWidget> {
               ),
               child: FFButtonWidget(
                 onPressed: () async {
-                  await Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => MyStoreWidget(),
-                    ),
-                  );
+                  if ((FFAppState().userType) == 'Customer') {
+                    await Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SelectAreaCWidget(),
+                      ),
+                    );
+                  } else {
+                    if ((FFAppState().userType) == 'Transporter') {
+                      await Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TransporterHomeTWidget(),
+                        ),
+                        (r) => false,
+                      );
+                    } else {
+                      await Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MyStoreWidget(),
+                        ),
+                        (r) => false,
+                      );
+                    }
+                  }
                 },
                 text: FFLocalizations.of(context).getText(
                   'kzn1hrux' /* Confirm */,

@@ -162,7 +162,7 @@ class _AddVehicleTWidgetState extends State<AddVehicleTWidget> {
                         FFLocalizations.of(context).getText(
                           'ffxfliay' /* 3 - WHEELER */,
                         )
-                      ].toList(),
+                      ],
                       onChanged: (val) => setState(() => dropDownValue = val),
                       width: MediaQuery.of(context).size.width,
                       textStyle:

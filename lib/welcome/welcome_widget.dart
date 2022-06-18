@@ -2,6 +2,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../get_started/get_started_widget.dart';
+import '../welcome_c/welcome_c_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -48,6 +49,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
               child: FFButtonWidget(
                 onPressed: () async {
+                  setState(() => FFAppState().userType = 'Vendor');
                   await Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -78,8 +80,14 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
               child: FFButtonWidget(
-                onPressed: () {
-                  print('Button pressed ...');
+                onPressed: () async {
+                  setState(() => FFAppState().userType = 'Transporter');
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GetStartedWidget(),
+                    ),
+                  );
                 },
                 text: FFLocalizations.of(context).getText(
                   'vofml9x7' /* Transporter */,
@@ -102,8 +110,14 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
               ),
             ),
             FFButtonWidget(
-              onPressed: () {
-                print('Button pressed ...');
+              onPressed: () async {
+                setState(() => FFAppState().userType = 'Customer');
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WelcomeCWidget(),
+                  ),
+                );
               },
               text: FFLocalizations.of(context).getText(
                 'tqtcz0jg' /* Customer */,
@@ -154,7 +168,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                     color: FlutterFlowTheme.of(context).primaryColor,
                     textStyle: FlutterFlowTheme.of(context).subtitle2.override(
                           fontFamily: 'Lato',
-                          color: Colors.white,
+                          color: FlutterFlowTheme.of(context).secondaryColor,
                         ),
                     borderSide: BorderSide(
                       color: Colors.transparent,
@@ -176,7 +190,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                     color: FlutterFlowTheme.of(context).primaryColor,
                     textStyle: FlutterFlowTheme.of(context).subtitle2.override(
                           fontFamily: 'Lato',
-                          color: Colors.white,
+                          color: FlutterFlowTheme.of(context).secondaryColor,
                         ),
                     borderSide: BorderSide(
                       color: Colors.transparent,

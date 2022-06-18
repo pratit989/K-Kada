@@ -62,7 +62,7 @@ class _SelectPaymentModeCWidgetState extends State<SelectPaymentModeCWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       FlutterFlowRadioButton(
-                        options: [''],
+                        options: [''].toList(),
                         onChanged: (value) {
                           setState(() => radioButtonValue1 = value);
                         },
@@ -140,7 +140,7 @@ class _SelectPaymentModeCWidgetState extends State<SelectPaymentModeCWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       FlutterFlowRadioButton(
-                        options: [''],
+                        options: [''].toList(),
                         onChanged: (value) {
                           setState(() => radioButtonValue2 = value);
                         },
@@ -218,7 +218,7 @@ class _SelectPaymentModeCWidgetState extends State<SelectPaymentModeCWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       FlutterFlowRadioButton(
-                        options: [''],
+                        options: [''].toList(),
                         onChanged: (value) {
                           setState(() => radioButtonValue3 = value);
                         },
@@ -296,7 +296,7 @@ class _SelectPaymentModeCWidgetState extends State<SelectPaymentModeCWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       FlutterFlowRadioButton(
-                        options: [''],
+                        options: [''].toList(),
                         onChanged: (value) {
                           setState(() => radioButtonValue4 = value);
                         },

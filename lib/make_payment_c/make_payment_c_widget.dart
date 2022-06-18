@@ -60,7 +60,7 @@ class _MakePaymentCWidgetState extends State<MakePaymentCWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       FlutterFlowRadioButton(
-                        options: [''],
+                        options: [''].toList(),
                         onChanged: (value) {
                           setState(() => radioButtonValue = value);
                         },

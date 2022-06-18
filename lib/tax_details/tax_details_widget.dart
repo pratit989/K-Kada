@@ -28,36 +28,36 @@ class _TaxDetailsWidgetState extends State<TaxDetailsWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      appBar: AppBar(
+        backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
+        automaticallyImplyLeading: false,
+        leading: FlutterFlowIconButton(
+          borderColor: Colors.transparent,
+          borderRadius: 30,
+          borderWidth: 1,
+          buttonSize: 60,
+          icon: Icon(
+            Icons.arrow_back_ios_sharp,
+            color: FlutterFlowTheme.of(context).secondaryColor,
+            size: 30,
+          ),
+          onPressed: () {
+            print('IconButton pressed ...');
+          },
+        ),
+        actions: [],
+        centerTitle: false,
+        elevation: 0,
+      ),
       backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(40, 20, 40, 0),
+          padding: EdgeInsetsDirectional.fromSTEB(40, 10, 40, 0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                      child: InkWell(
-                        onTap: () async {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(
-                          Icons.arrow_back_ios_sharp,
-                          color: Color(0xFF183C28),
-                          size: 30,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               Text(
                 FFLocalizations.of(context).getText(
                   'xa274k0k' /* Tax Details */,

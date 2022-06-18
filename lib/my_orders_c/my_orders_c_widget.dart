@@ -188,7 +188,7 @@ class _MyOrdersCWidgetState extends State<MyOrdersCWidget> {
                         FFLocalizations.of(context).getText(
                           'a5t85zzy' /* 2021 */,
                         )
-                      ].toList(),
+                      ],
                       onChanged: (val) => setState(() => dropDownValue = val),
                       width: 130,
                       height: 50,
@@ -215,15 +215,30 @@ class _MyOrdersCWidgetState extends State<MyOrdersCWidget> {
                   children: [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                      child: OrderDetailsCWidget(),
+                      child: OrderDetailsCWidget(
+                        orderId: '000000',
+                        deliverytType: 'Home Delivery',
+                        orderTotal: 127,
+                        date: getCurrentTimestamp,
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                      child: OrderDetailsCWidget(),
+                      child: OrderDetailsCWidget(
+                        orderId: '0000000',
+                        deliverytType: 'Home Delivery',
+                        orderTotal: 127,
+                        date: getCurrentTimestamp,
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-                      child: OrderDetailsCWidget(),
+                      child: OrderDetailsCWidget(
+                        orderId: '000000',
+                        deliverytType: 'Home Delivery',
+                        orderTotal: 127,
+                        date: getCurrentTimestamp,
+                      ),
                     ),
                   ],
                 ),
