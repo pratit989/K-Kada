@@ -42,38 +42,6 @@ class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
 }
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // Verification
-  {
-    'flsrh0ca': {
-      'en': 'Verification',
-      'ml': 'സ്ഥിരീകരണം',
-    },
-    'hn34d9zj': {
-      'en':
-          'Please enter the 4 digit verification\n                   code we sent you',
-      'ml': 'ഞങ്ങൾ നിങ്ങൾക്ക് അയച്ച 4 അക്ക സ്ഥിരീകരണ കോഡ് നൽകുക',
-    },
-    'qh1snv6i': {
-      'en': 'Enter OTP',
-      'ml': 'OTP നൽകുക',
-    },
-    'q17tmdlt': {
-      'en': 'Don\'t have an account?',
-      'ml': 'അക്കൗണ്ട് ഇല്ലേ?',
-    },
-    'id8irn2h': {
-      'en': ' Resend',
-      'ml': 'വീണ്ടും അയയ്ക്കുക',
-    },
-    'kzn1hrux': {
-      'en': 'Confirm',
-      'ml': 'സ്ഥിരീകരിക്കുക',
-    },
-    'onkt0k6a': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // Welcome
   {
     '07hl3mlx': {
@@ -109,460 +77,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // GetStarted
-  {
-    'u4rxuqjz': {
-      'en': 'Get Started!',
-      'ml': 'തുടങ്ങി!',
-    },
-    '1fbo4j9g': {
-      'en': 'Enter Phone number',
-      'ml': 'ഫോൺ നമ്പർ നൽകുക',
-    },
-    'pgwd7q2t': {
-      'en': 'Sign In',
-      'ml': 'സൈൻ ഇൻ',
-    },
-    '7rg9uud1': {
-      'en': 'Don\'t have an account?',
-      'ml': 'അക്കൗണ്ട് ഇല്ലേ?',
-    },
-    '81xwnz7v': {
-      'en': ' Sign up',
-      'ml': 'സൈൻ അപ്പ് ചെയ്യുക',
-    },
-    '2n1xk4tx': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // Register
-  {
-    'ao3p8g75': {
-      'en': 'Register',
-      'ml': 'രജിസ്റ്റർ ചെയ്യുക',
-    },
-    'knptriw3': {
-      'en': 'Fill in the details to sign up',
-      'ml': 'സൈൻ അപ്പ് ചെയ്യുന്നതിന് വിശദാംശങ്ങൾ പൂരിപ്പിക്കുക',
-    },
-    'xbamvbl4': {
-      'en': 'ADD YOUR PROFILE PICTURE',
-      'ml': 'നിങ്ങളുടെ പ്രൊഫൈൽ ചിത്രം ചേർക്കുക',
-    },
-    '10deh2kv': {
-      'en': '*FULL NAME',
-      'ml': '*പൂർണ്ണമായ പേര്',
-    },
-    'zq4wnl0o': {
-      'en': '*PHONE NUMBER',
-      'ml': '*ഫോൺ നമ്പർ',
-    },
-    'm09gqt45': {
-      'en': '*DATE OF BIRTH',
-      'ml': '*ജനനത്തീയതി',
-    },
-    'zcgj7bsr': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // VerificationRepeat
-  {
-    'gmaeagft': {
-      'en': 'Verification',
-      'ml': 'സ്ഥിരീകരണം',
-    },
-    '2t1x2ui8': {
-      'en':
-          'Please enter the 4 digit verification\n                   code we sent you',
-      'ml': 'ഞങ്ങൾ നിങ്ങൾക്ക് അയച്ച 4 അക്ക സ്ഥിരീകരണ കോഡ് നൽകുക',
-    },
-    't1gkby2g': {
-      'en': 'Enter OTP',
-      'ml': 'OTP നൽകുക',
-    },
-    '659teoro': {
-      'en': 'Don\'t have an account?',
-      'ml': 'അക്കൗണ്ട് ഇല്ലേ?',
-    },
-    '01bf7etk': {
-      'en': ' Resend',
-      'ml': 'വീണ്ടും അയയ്ക്കുക',
-    },
-    'n5s08cke': {
-      'en': 'Confirm',
-      'ml': 'സ്ഥിരീകരിക്കുക',
-    },
-    'jjumk65z': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // TaxDetails
-  {
-    'xa274k0k': {
-      'en': 'Tax Details',
-      'ml': 'നികുതി വിശദാംശങ്ങൾ',
-    },
-    '08wb1woc': {
-      'en': 'Enter your Tax Details accurately',
-      'ml': 'നിങ്ങളുടെ നികുതി വിശദാംശങ്ങൾ കൃത്യമായി നൽകുക',
-    },
-    'd5g2uxc7': {
-      'en': '*GST Number',
-      'ml': '*ജിഎസ്ടി നമ്പർ',
-    },
-    'j72n8scg': {
-      'en': '*PAN Number',
-      'ml': '*പാൻ നമ്പർ',
-    },
-    'owbzzipw': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // AlmostDone
-  {
-    '5wtrqxfq': {
-      'en': 'Almost done,',
-      'ml': 'ഏതാണ്ട് പൂർത്തിയായി,',
-    },
-    'lryd6cnr': {
-      'en': 'What\'s your shop address?',
-      'ml': 'നിങ്ങളുടെ കടയുടെ വിലാസം എന്താണ്?',
-    },
-    '04lx3sto': {
-      'en': '*ADDRESS',
-      'ml': '*വിലാസം',
-    },
-    'b3f5hqnd': {
-      'en':
-          '( Enter the same address as shown on your GST registration certificate )',
-      'ml':
-          '(നിങ്ങളുടെ GST രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റിൽ കാണിച്ചിരിക്കുന്ന അതേ വിലാസം നൽകുക)',
-    },
-    'jfrcbung': {
-      'en': '*CITY',
-      'ml': '*സിറ്റി',
-    },
-    'v40xcfoz': {
-      'en': '*STATE',
-      'ml': '*സംസ്ഥാനം',
-    },
-    'c8jwcwbb': {
-      'en': '*PIN CODE',
-      'ml': '*പിൻ കോഡ്',
-    },
-    '5vioqy0x': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // SellerInformation
-  {
-    '9hum03jg': {
-      'en': 'Seller Information',
-      'ml': 'വിൽപ്പനക്കാരന്റെ വിവരങ്ങൾ',
-    },
-    '15b5vpay': {
-      'en': 'We just need to know, your shop details',
-      'ml': 'ഞങ്ങൾക്ക് അറിയേണ്ടത് നിങ്ങളുടെ ഷോപ്പിന്റെ വിശദാംശങ്ങൾ മാത്രമാണ്',
-    },
-    'g8ie3whp': {
-      'en': '*UPLOAD PHOTO OF YOUR SHIOP',
-      'ml': '*നിങ്ങളുടെ ഷിപ്പിന്റെ ഫോട്ടോ അപ്‌ലോഡ് ചെയ്യുക',
-    },
-    '46u8dcuq': {
-      'en': 'Proceed to camera',
-      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
-    },
-    'xffblyl4': {
-      'en': 'LOGO ( optonal )',
-      'ml': 'ലോഗോ (ഓപ്‌ടോണൽ)',
-    },
-    'avnp7jj5': {
-      'en': 'Proceed to camera',
-      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
-    },
-    '56whc172': {
-      'en': '*SHOP TYPE',
-      'ml': '*ഷോപ്പ് തരം',
-    },
-    'm5y1r9oi': {
-      'en': 'Electronics',
-      'ml': 'ഇലക്ട്രോണിക്സ്',
-    },
-    'qa3n0fif': {
-      'en': 'Clothing and Accessories',
-      'ml': 'വസ്ത്രങ്ങളും അനുബന്ധ ഉപകരണങ്ങളും',
-    },
-    '56ujfdm6': {
-      'en': 'Health and Beauty',
-      'ml': 'ആരോഗ്യവും സൗന്ദര്യവും',
-    },
-    'bso4hjag': {
-      'en': 'Groceries',
-      'ml': 'പലചരക്ക് സാധനങ്ങൾ',
-    },
-    'ubi6l16u': {
-      'en': 'Fruits and Vegetables',
-      'ml': 'പഴങ്ങളും പച്ചക്കറികളും',
-    },
-    '0bxal6ia': {
-      'en': 'Books',
-      'ml': 'പുസ്തകങ്ങൾ',
-    },
-    'z9xwmynd': {
-      'en': 'Home and Kitchen',
-      'ml': 'വീടും അടുക്കളയും',
-    },
-    't46jkw9f': {
-      'en': 'Sports and Outdoors',
-      'ml': 'സ്പോർട്സും ഔട്ട്ഡോറുകളും',
-    },
-    'hnazhwur': {
-      'en': 'Handicrafts',
-      'ml': 'കരകൗശലവസ്തുക്കൾ',
-    },
-    'gfhyp6kv': {
-      'en': 'Dairy and Beverages',
-      'ml': 'പാലും പാനീയങ്ങളും',
-    },
-    'khs4pbqg': {
-      'en': 'Packed Food',
-      'ml': 'പായ്ക്ക് ചെയ്ത ഭക്ഷണം',
-    },
-    'ert9e8c3': {
-      'en': 'Baby and Kids',
-      'ml': 'കുഞ്ഞും കുട്ടികളും',
-    },
-    '136idrg1': {
-      'en': 'Footwear',
-      'ml': 'പാദരക്ഷകൾ',
-    },
-    'bburc6v4': {
-      'en': 'Stationary',
-      'ml': 'നിശ്ചലമായ',
-    },
-    'lb63m5sw': {
-      'en': '*SHOP NAME ( as per your GST Certificate )',
-      'ml': '*ഷോപ്പ് പേര് (നിങ്ങളുടെ GST സർട്ടിഫിക്കറ്റ് അനുസരിച്ച്)',
-    },
-    'ei2hrlzn': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // UploadDocuments
-  {
-    'ojo7o7j6': {
-      'en': 'Upload Documents',
-      'ml': 'പ്രമാണങ്ങൾ അപ്‌ലോഡ് ചെയ്യുക',
-    },
-    '7hg1mr93': {
-      'en':
-          'We need to check that you are really you,\nIt helps us fight fraud and keep your business secure',
-      'ml':
-          'നിങ്ങൾ യഥാർത്ഥത്തിൽ നിങ്ങളാണെന്ന് ഞങ്ങൾ പരിശോധിക്കേണ്ടതുണ്ട്, ഇത് വഞ്ചനയ്‌ക്കെതിരെ പോരാടാനും നിങ്ങളുടെ ബിസിനസ്സ് സുരക്ഷിതമായി നിലനിർത്താനും ഞങ്ങളെ സഹായിക്കുന്നു',
-    },
-    '6lgx161q': {
-      'en': '*ADHAAR CARD',
-      'ml': '*ആധാർ കാർഡ്',
-    },
-    'a6a62cek': {
-      'en': 'Proceed to camera',
-      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
-    },
-    'vah8wibs': {
-      'en': '*PAN CARD',
-      'ml': '*പാൻ കാർഡ്',
-    },
-    'sxounyyn': {
-      'en': 'Proceed to camera',
-      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
-    },
-    'aj060qzq': {
-      'en': '*FSSAI CERTIFICATE',
-      'ml': '*FSSAI സർട്ടിഫിക്കറ്റ്',
-    },
-    'fv6w8ld6': {
-      'en': 'Proceed to camera',
-      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
-    },
-    'jxgye1tu': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // BankAccountDetails
-  {
-    '2qkjiaxf': {
-      'en': 'Bank Account Details',
-      'ml': 'ബാങ്ക് അക്കൗണ്ട് വിശദാംശങ്ങൾ',
-    },
-    'd1atu2uz': {
-      'en':
-          'K-kada needs your bank account details to receive payments. Please provide the details of the bank account you use for your business, which is linked\nto your GST/PAN.',
-      'ml':
-          'പേയ്‌മെന്റുകൾ സ്വീകരിക്കാൻ കെ-കടയ്ക്ക് നിങ്ങളുടെ ബാങ്ക് അക്കൗണ്ട് വിശദാംശങ്ങൾ ആവശ്യമാണ്. നിങ്ങളുടെ GST/PAN-മായി ലിങ്ക് ചെയ്‌തിരിക്കുന്ന നിങ്ങളുടെ ബിസിനസ്സിനായി നിങ്ങൾ ഉപയോഗിക്കുന്ന ബാങ്ക് അക്കൗണ്ടിന്റെ വിശദാംശങ്ങൾ നൽകുക.',
-    },
-    'iiiid61t': {
-      'en': '*ACCOUNT HOLDER NAME',
-      'ml': '*അക്കൗണ്ട് ഹോൾഡറുടെ പേര്',
-    },
-    'hnhrnq53': {
-      'en': '*ACCOUNT TYPE',
-      'ml': '*അക്കൗണ്ട് തരം',
-    },
-    'pz92wqe6': {
-      'en': '*ACCOUNT NUMBER',
-      'ml': '*അക്കൗണ്ട് നമ്പർ',
-    },
-    'dshx1peg': {
-      'en': '*RE-ENTER ACCOUNT NUMBER',
-      'ml': '*അക്കൗണ്ട് നമ്പർ വീണ്ടും നൽകുക',
-    },
-    'hu0t5z8i': {
-      'en': '*IFSC-CODE',
-      'ml': '*IFSC-കോഡ്',
-    },
-    '5ymqva7k': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // ThatsIt
-  {
-    '9mygflgo': {
-      'en': 'Thats\'s it!',
-      'ml': 'അത്രമാത്രം!',
-    },
-    'aymq4bc0': {
-      'en':
-          'Upload your digital signature which will be\n   used on the invoices sent to customer.',
-      'ml':
-          'ഉപഭോക്താവിന് അയച്ച ഇൻവോയ്സുകളിൽ ഉപയോഗിക്കുന്ന നിങ്ങളുടെ ഡിജിറ്റൽ സിഗ്നേച്ചർ അപ്‌ലോഡ് ചെയ്യുക.',
-    },
-    'r9qq4lu5': {
-      'en': 'Proceed to camera',
-      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
-    },
-    '3ay18ze2': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // ProfileStatus
-  {
-    'l5igix9b': {
-      'en': 'Profile Status',
-      'ml': 'പ്രൊഫൈൽ നില',
-    },
-    'cp3o361y': {
-      'en': 'Verification Requested',
-      'ml': 'സ്ഥിരീകരണം അഭ്യർത്ഥിച്ചു',
-    },
-    'hjxk41e5': {
-      'en': 'KYC Pending',
-      'ml': 'KYC തീർപ്പാക്കിയിട്ടില്ല',
-    },
-    'vj19crki': {
-      'en': 'Verification Completed',
-      'ml': 'പരിശോധന പൂർത്തിയായി',
-    },
-    '3j8q70cs': {
-      'en':
-          'We will get back to you once the\nverification process is completed',
-      'ml':
-          'പരിശോധിച്ചുറപ്പിക്കൽ പ്രക്രിയ പൂർത്തിയായിക്കഴിഞ്ഞാൽ ഞങ്ങൾ നിങ്ങളെ ബന്ധപ്പെടും',
-    },
-    '0r4gwnht': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // ThankYou
-  {
-    't2g0clqr': {
-      'en': 'Thank you!',
-      'ml': 'നന്ദി!',
-    },
-    'k849y994': {
-      'en': 'Verification Pending',
-      'ml': 'പരിശോധിച്ചുറപ്പിക്കൽ ശേഷിക്കുന്നു',
-    },
-    'lymkql9f': {
-      'en': 'You will be contacted by the admin soon.',
-      'ml': 'ഉടൻ തന്നെ അഡ്മിൻ നിങ്ങളെ ബന്ധപ്പെടും.',
-    },
-    'qy7szyy9': {
-      'en': 'Track Status',
-      'ml': 'സ്റ്റാറ്റസ് ട്രാക്ക് ചെയ്യുക',
-    },
-    'bsifx5h1': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // MyStore
-  {
-    'x5k0grl6': {
-      'en': 'Vendor',
-      'ml': 'വെണ്ടർ',
-    },
-    'o68tiyhb': {
-      'en': 'MY STORE',
-      'ml': 'എന്റെ സ്റ്റോർ',
-    },
-    'gawo7j1i': {
-      'en': 'See Orders',
-      'ml': 'ഓർഡറുകൾ കാണുക',
-    },
-    'a8mh97gf': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // MyAccountDetails
-  {
-    'ttrkdvob': {
-      'en': 'FIRST NAME',
-      'ml': 'പേരിന്റെ ആദ്യഭാഗം',
-    },
-    'yhbwc7cw': {
-      'en': 'LAST NAME',
-      'ml': 'പേരിന്റെ അവസാന ഭാഗം',
-    },
-    'w19ehvb1': {
-      'en': 'MOBILE NUMBER',
-      'ml': 'മൊബൈൽ നമ്പർ',
-    },
-    'x5gl27na': {
-      'en': 'EMAIL ID  ',
-      'ml': 'ഇ - മെയിൽ ഐഡി',
-    },
-    'jo4jbunk': {
-      'en': '(optional)',
-      'ml': '(ഓപ്ഷണൽ)',
-    },
-    'v2vr8m1x': {
-      'en': 'DATE OF BIRTH',
-      'ml': 'ജനനത്തീയതി',
-    },
-    'k11vtyig': {
-      'en': 'Save Changes',
-      'ml': 'മാറ്റങ്ങൾ സൂക്ഷിക്കുക',
-    },
-    'dbz4hxxk': {
-      'en': 'My Account',
-      'ml': '',
-    },
-    '7sc1dxc3': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // VerificationCompleted
   {
     'fay9yvxp': {
@@ -582,103 +96,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // SelectCategory
-  {
-    'uda4xe0y': {
-      'en': 'Select Category',
-      'ml': 'ഇനം തിരഞ്ഞെടുക്കുക',
-    },
-    'j7dlscvg': {
-      'en': 'Your product comes under which category',
-      'ml': 'നിങ്ങളുടെ ഉൽപ്പന്നം ഏത് വിഭാഗത്തിലാണ് വരുന്നത്',
-    },
-    'gfosm9us': {
-      'en': 'Electronics',
-      'ml': 'ഇലക്ട്രോണിക്സ്',
-    },
-    'hosqc7vx': {
-      'en': 'Clothing and Accessories',
-      'ml': 'വസ്ത്രങ്ങളും അനുബന്ധ ഉപകരണങ്ങളും',
-    },
-    'lr96wp28': {
-      'en': 'Health and Beauty',
-      'ml': 'ആരോഗ്യവും സൗന്ദര്യവും',
-    },
-    '380l35ou': {
-      'en': 'Groceries',
-      'ml': 'പലചരക്ക് സാധനങ്ങൾ',
-    },
-    'xw35vlvg': {
-      'en': 'Fruits and Vegetables',
-      'ml': 'പഴങ്ങളും പച്ചക്കറികളും',
-    },
-    'b299i2fa': {
-      'en': 'Books',
-      'ml': 'പുസ്തകങ്ങൾ',
-    },
-    'g9xleood': {
-      'en': 'Home and Kitchen',
-      'ml': 'വീടും അടുക്കളയും',
-    },
-    'w4i8cx2u': {
-      'en': 'Sports and Outdoors',
-      'ml': 'സ്പോർട്സും ഔട്ട്ഡോറുകളും',
-    },
-    '53jr6cob': {
-      'en': 'Handicrafts',
-      'ml': 'കരകൗശലവസ്തുക്കൾ',
-    },
-    '0rz2dadl': {
-      'en': 'Dairy and Beverages',
-      'ml': 'പാലും പാനീയങ്ങളും',
-    },
-    'sguv88aj': {
-      'en': 'Packed Food',
-      'ml': 'പായ്ക്ക് ചെയ്ത ഭക്ഷണം',
-    },
-    'hfuh38bo': {
-      'en': 'Baby and Kids',
-      'ml': 'കുഞ്ഞും കുട്ടികളും',
-    },
-    'wdsfsr6p': {
-      'en': 'Footwear',
-      'ml': 'പാദരക്ഷകൾ',
-    },
-    '9yx3v144': {
-      'en': 'Stationary',
-      'ml': 'നിശ്ചലമായ',
-    },
-    'rgd7m09l': {
-      'en': 'Select',
-      'ml': 'തിരഞ്ഞെടുക്കുക',
-    },
-    'o52138kg': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // NewProduct
-  {
-    'xuwdzrqd': {
-      'en': 'New Product',
-      'ml': 'പുതിയ ഉൽപ്പന്നം',
-    },
-    'iia2mc8q': {
-      'en': 'Save',
-      'ml': 'രക്ഷിക്കും',
-    },
-    '6qhycnbc': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // MyProducts
   {
     'wod930mb': {
       'en': 'Search Product',
       'ml': 'ഉൽപ്പന്നം തിരയുക',
     },
-    'cx97rb1b': {
+    'l56cfk4k': {
       'en': 'My Product',
       'ml': '',
     },
@@ -717,7 +141,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '20% Off upto Rs. 200 on orders for Long Books',
       'ml': 'രൂപ വരെ 20% കിഴിവ്. ലോംഗ് ബുക്കുകൾക്കുള്ള ഓർഡറിൽ 200 രൂപ',
     },
-    '20820dxj': {
+    'lprxh3gc': {
       'en': 'My Offer',
       'ml': '',
     },
@@ -1124,185 +548,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // VerificationT
-  {
-    'cozhdi3v': {
-      'en': 'Verification',
-      'ml': 'സ്ഥിരീകരണം',
-    },
-    '9jbxxjyl': {
-      'en':
-          'Please enter the 4 digit verification\n                   code we sent you',
-      'ml': 'ഞങ്ങൾ നിങ്ങൾക്ക് അയച്ച 4 അക്ക സ്ഥിരീകരണ കോഡ് നൽകുക',
-    },
-    'aj5pw5e6': {
-      'en': 'Enter OTP',
-      'ml': 'OTP നൽകുക',
-    },
-    'vc91r0ft': {
-      'en': 'Don\'t have an account?',
-      'ml': 'അക്കൗണ്ട് ഇല്ലേ?',
-    },
-    'm22gn81t': {
-      'en': ' Resend',
-      'ml': 'വീണ്ടും അയയ്ക്കുക',
-    },
-    'i09hig98': {
-      'en': 'Confirm',
-      'ml': 'സ്ഥിരീകരിക്കുക',
-    },
-    '1yls6o5b': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // RegisterT
-  {
-    '6y775v24': {
-      'en': 'Register',
-      'ml': 'രജിസ്റ്റർ ചെയ്യുക',
-    },
-    'hlptproo': {
-      'en': 'Fill in the details to sign up',
-      'ml': 'സൈൻ അപ്പ് ചെയ്യുന്നതിന് വിശദാംശങ്ങൾ പൂരിപ്പിക്കുക',
-    },
-    'nysdr9sj': {
-      'en': 'ADD YOUR PROFILE PICTURE',
-      'ml': 'നിങ്ങളുടെ പ്രൊഫൈൽ ചിത്രം ചേർക്കുക',
-    },
-    '8052lqbp': {
-      'en': '*FULL NAME',
-      'ml': '*പൂർണ്ണമായ പേര്',
-    },
-    'j2ospoxu': {
-      'en': '*PHONE NUMBER',
-      'ml': '*ഫോൺ നമ്പർ',
-    },
-    'gbx7k4mh': {
-      'en': '*DATE OF BIRTH',
-      'ml': '*ജനനത്തീയതി',
-    },
-    'h9izy7ni': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // AddVehicleT
-  {
-    'ys2ovt9o': {
-      'en': 'Add Vehicle',
-      'ml': 'വാഹനം ചേർക്കുക',
-    },
-    'iz1upwtb': {
-      'en': 'Fill in your vehicle details below',
-      'ml': 'നിങ്ങളുടെ വാഹന വിശദാംശങ്ങൾ ചുവടെ പൂരിപ്പിക്കുക',
-    },
-    'w9ueh930': {
-      'en': '*UPLOAD A PHOTO OF YOUR VEHICLE',
-      'ml': '*നിങ്ങളുടെ വാഹനത്തിന്റെ ഒരു ഫോട്ടോ അപ്‌ലോഡ് ചെയ്യുക',
-    },
-    'pak4bhk3': {
-      'en': 'Proceed to camera',
-      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
-    },
-    'cjbjx6ig': {
-      'en': '*VEHICLE TYPE',
-      'ml': '*വാഹന തരം',
-    },
-    'x3zb0uip': {
-      'en': '2 - WHEELER',
-      'ml': '2 - വീലർ',
-    },
-    'ffxfliay': {
-      'en': '3 - WHEELER',
-      'ml': '3 - വീലർ',
-    },
-    '9y1bu7iv': {
-      'en': '*NAME',
-      'ml': '*NAME',
-    },
-    'jbezjjbb': {
-      'en': '*MODEL',
-      'ml': '* മോഡൽ',
-    },
-    's43pb6l6': {
-      'en': '*YEAR',
-      'ml': '*വർഷം',
-    },
-    'c0l52vsi': {
-      'en': '*LOADING CAPACITY',
-      'ml': '*ലോഡിംഗ് കപ്പാസിറ്റി',
-    },
-    'k8ytkci4': {
-      'en': '*MAXIMUM DELIVERY DISTANCE',
-      'ml': '*പരമാവധി ഡെലിവറി ദൂരം',
-    },
-    'fgeb7qs2': {
-      'en': '( In km )',
-      'ml': '(കിലോമീറ്ററിൽ)',
-    },
-    'vm7204no': {
-      'en': 'Save',
-      'ml': 'രക്ഷിക്കും',
-    },
-    '06i8187r': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // AlmostDoneT
-  {
-    'jbrx6lqr': {
-      'en': 'Almost done,',
-      'ml': 'ഏതാണ്ട് പൂർത്തിയായി,',
-    },
-    'i02q2imr': {
-      'en': 'What\'s your shop address?',
-      'ml': 'നിങ്ങളുടെ കടയുടെ വിലാസം എന്താണ്?',
-    },
-    'eqtrmww1': {
-      'en': '*ADDRESS',
-      'ml': '*വിലാസം',
-    },
-    '0d7hg1t3': {
-      'en':
-          '( Enter the same address as shown on your GST registration certificate )',
-      'ml':
-          '(നിങ്ങളുടെ GST രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റിൽ കാണിച്ചിരിക്കുന്ന അതേ വിലാസം നൽകുക)',
-    },
-    'zwp5oy19': {
-      'en': '*CITY',
-      'ml': '*സിറ്റി',
-    },
-    '0jx0t3i9': {
-      'en': '*STATE',
-      'ml': '*സംസ്ഥാനം',
-    },
-    'jg2reci7': {
-      'en': '*PIN CODE',
-      'ml': '*പിൻ കോഡ്',
-    },
-    'ee7txanz': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // ThatsItT
-  {
-    '0pzni3lr': {
-      'en': 'Thats\'s it!',
-      'ml': 'അത്രമാത്രം!',
-    },
-    '1seox8x3': {
-      'en': 'We just need to knoe, what vehicle you own.',
-      'ml':
-          'നിങ്ങളുടെ ഉടമസ്ഥതയിലുള്ള വാഹനം എന്താണെന്ന് ഞങ്ങൾക്ക് അറിയേണ്ടതുണ്ട്.',
-    },
-    '2lt08ipd': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // UploadDocumentsT
   {
     'im6s4ouu': {
@@ -1396,17 +641,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // VerificationCompletedT
-  {
-    'g9c8116l': {
-      'en': 'Verification\nCompleted!',
-      'ml': 'പരിശോധന പൂർത്തിയായി!',
-    },
-    'avcb35sb': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // TransporterHomeT
   {
     '9jzij3uy': {
@@ -1434,6 +668,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'എത്തിച്ചു',
     },
     'dtfvr6g8': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // VerificationCompletedT
+  {
+    'g9c8116l': {
+      'en': 'Verification\nCompleted!',
+      'ml': 'പരിശോധന പൂർത്തിയായി!',
+    },
+    'avcb35sb': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -1542,45 +787,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // MyAccountpageT
-  {
-    'eomlq1qi': {
-      'en': 'My Account',
-      'ml': 'എന്റെ അക്കൗണ്ട്',
-    },
-    '6lbefpgc': {
-      'en': 'FIRST NAME',
-      'ml': 'പേരിന്റെ ആദ്യഭാഗം',
-    },
-    'hkgj4f1y': {
-      'en': 'LAST NAME',
-      'ml': 'പേരിന്റെ അവസാന ഭാഗം',
-    },
-    '0nyubt90': {
-      'en': 'MOBILE NUMBER',
-      'ml': 'മൊബൈൽ നമ്പർ',
-    },
-    'mppnshkk': {
-      'en': 'EMAIL ID  ',
-      'ml': 'ഇ - മെയിൽ ഐഡി',
-    },
-    'd9804x08': {
-      'en': '(optional)',
-      'ml': '(ഓപ്ഷണൽ)',
-    },
-    '0chhjgln': {
-      'en': 'DATE OF BIRTH',
-      'ml': 'ജനനത്തീയതി',
-    },
-    'ls43n8yf': {
-      'en': 'Save Changes',
-      'ml': 'മാറ്റങ്ങൾ സൂക്ഷിക്കുക',
-    },
-    'bm969ojk': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // EditVehicleT
   {
     's29b35aq': {
@@ -1640,6 +846,45 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // MyAccountpageT
+  {
+    'eomlq1qi': {
+      'en': 'My Account',
+      'ml': 'എന്റെ അക്കൗണ്ട്',
+    },
+    '6lbefpgc': {
+      'en': 'FIRST NAME',
+      'ml': 'പേരിന്റെ ആദ്യഭാഗം',
+    },
+    'hkgj4f1y': {
+      'en': 'LAST NAME',
+      'ml': 'പേരിന്റെ അവസാന ഭാഗം',
+    },
+    '0nyubt90': {
+      'en': 'MOBILE NUMBER',
+      'ml': 'മൊബൈൽ നമ്പർ',
+    },
+    'mppnshkk': {
+      'en': 'EMAIL ID  ',
+      'ml': 'ഇ - മെയിൽ ഐഡി',
+    },
+    'd9804x08': {
+      'en': '(optional)',
+      'ml': '(ഓപ്ഷണൽ)',
+    },
+    '0chhjgln': {
+      'en': 'DATE OF BIRTH',
+      'ml': 'ജനനത്തീയതി',
+    },
+    'ls43n8yf': {
+      'en': 'Save Changes',
+      'ml': 'മാറ്റങ്ങൾ സൂക്ഷിക്കുക',
+    },
+    'bm969ojk': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // ThatsIt2T
   {
     '63b2oa0h': {
@@ -1664,29 +909,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വിശദാംശങ്ങൾ എഡിറ്റ് ചെയ്യുക',
     },
     '86al05gu': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
-  // WelcomeC
-  {
-    'td3x9x1v': {
-      'en': 'Welcome!',
-      'ml': 'സ്വാഗതം!',
-    },
-    'r3tr58aa': {
-      'en': 'Enter your mobile number to proceed',
-      'ml': 'തുടരാൻ നിങ്ങളുടെ മൊബൈൽ നമ്പർ നൽകുക',
-    },
-    'llmeufrb': {
-      'en': 'Enter Phone number',
-      'ml': 'ഫോൺ നമ്പർ നൽകുക',
-    },
-    '2o5zkyzv': {
-      'en': 'Proceed',
-      'ml': 'തുടരുക',
-    },
-    'efuxglxi': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -1718,6 +940,108 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // WelcomeC
+  {
+    'td3x9x1v': {
+      'en': 'Welcome!',
+      'ml': 'സ്വാഗതം!',
+    },
+    'r3tr58aa': {
+      'en': 'Enter your mobile number to proceed',
+      'ml': 'തുടരാൻ നിങ്ങളുടെ മൊബൈൽ നമ്പർ നൽകുക',
+    },
+    'llmeufrb': {
+      'en': 'Enter Phone number',
+      'ml': 'ഫോൺ നമ്പർ നൽകുക',
+    },
+    '2o5zkyzv': {
+      'en': 'Proceed',
+      'ml': 'തുടരുക',
+    },
+    'efuxglxi': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // AddVehicleT
+  {
+    'ys2ovt9o': {
+      'en': 'Add Vehicle',
+      'ml': 'വാഹനം ചേർക്കുക',
+    },
+    'iz1upwtb': {
+      'en': 'Fill in your vehicle details below',
+      'ml': 'നിങ്ങളുടെ വാഹന വിശദാംശങ്ങൾ ചുവടെ പൂരിപ്പിക്കുക',
+    },
+    'w9ueh930': {
+      'en': '*UPLOAD A PHOTO OF YOUR VEHICLE',
+      'ml': '*നിങ്ങളുടെ വാഹനത്തിന്റെ ഒരു ഫോട്ടോ അപ്‌ലോഡ് ചെയ്യുക',
+    },
+    'pak4bhk3': {
+      'en': 'Proceed to camera',
+      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
+    },
+    'cjbjx6ig': {
+      'en': '*VEHICLE TYPE',
+      'ml': '*വാഹന തരം',
+    },
+    'x3zb0uip': {
+      'en': '2 - WHEELER',
+      'ml': '2 - വീലർ',
+    },
+    'ffxfliay': {
+      'en': '3 - WHEELER',
+      'ml': '3 - വീലർ',
+    },
+    '9y1bu7iv': {
+      'en': '*NAME',
+      'ml': '*NAME',
+    },
+    'jbezjjbb': {
+      'en': '*MODEL',
+      'ml': '* മോഡൽ',
+    },
+    's43pb6l6': {
+      'en': '*YEAR',
+      'ml': '*വർഷം',
+    },
+    'c0l52vsi': {
+      'en': '*LOADING CAPACITY',
+      'ml': '*ലോഡിംഗ് കപ്പാസിറ്റി',
+    },
+    'k8ytkci4': {
+      'en': '*MAXIMUM DELIVERY DISTANCE',
+      'ml': '*പരമാവധി ഡെലിവറി ദൂരം',
+    },
+    'fgeb7qs2': {
+      'en': '( In km )',
+      'ml': '(കിലോമീറ്ററിൽ)',
+    },
+    'vm7204no': {
+      'en': 'Save',
+      'ml': 'രക്ഷിക്കും',
+    },
+    '06i8187r': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // ThatsItT
+  {
+    '0pzni3lr': {
+      'en': 'Thats\'s it!',
+      'ml': 'അത്രമാത്രം!',
+    },
+    '1seox8x3': {
+      'en': 'We just need to knoe, what vehicle you own.',
+      'ml':
+          'നിങ്ങളുടെ ഉടമസ്ഥതയിലുള്ള വാഹനം എന്താണെന്ന് ഞങ്ങൾക്ക് അറിയേണ്ടതുണ്ട്.',
+    },
+    '2lt08ipd': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // SelectAreaC
   {
     '9gwwzaa4': {
@@ -1737,7 +1061,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Locate on Map',
       'ml': 'മാപ്പിൽ കണ്ടെത്തുക',
     },
-    'n6ow5w0v': {
+    '4h9b3hwu': {
       'en': 'SELECT AREA',
       'ml': '',
     },
@@ -1984,6 +1308,101 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // SellerInformation
+  {
+    '9hum03jg': {
+      'en': 'Seller Information',
+      'ml': 'വിൽപ്പനക്കാരന്റെ വിവരങ്ങൾ',
+    },
+    '15b5vpay': {
+      'en': 'We just need to know, your shop details',
+      'ml': 'ഞങ്ങൾക്ക് അറിയേണ്ടത് നിങ്ങളുടെ ഷോപ്പിന്റെ വിശദാംശങ്ങൾ മാത്രമാണ്',
+    },
+    'g8ie3whp': {
+      'en': '*UPLOAD PHOTO OF YOUR SHIOP',
+      'ml': '*നിങ്ങളുടെ ഷിപ്പിന്റെ ഫോട്ടോ അപ്‌ലോഡ് ചെയ്യുക',
+    },
+    '46u8dcuq': {
+      'en': 'Proceed to camera',
+      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
+    },
+    'xffblyl4': {
+      'en': 'LOGO ( optonal )',
+      'ml': 'ലോഗോ (ഓപ്‌ടോണൽ)',
+    },
+    'avnp7jj5': {
+      'en': 'Proceed to camera',
+      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
+    },
+    '56whc172': {
+      'en': '*SHOP TYPE',
+      'ml': '*ഷോപ്പ് തരം',
+    },
+    'm5y1r9oi': {
+      'en': 'Electronics',
+      'ml': 'ഇലക്ട്രോണിക്സ്',
+    },
+    'qa3n0fif': {
+      'en': 'Clothing and Accessories',
+      'ml': 'വസ്ത്രങ്ങളും അനുബന്ധ ഉപകരണങ്ങളും',
+    },
+    '56ujfdm6': {
+      'en': 'Health and Beauty',
+      'ml': 'ആരോഗ്യവും സൗന്ദര്യവും',
+    },
+    'bso4hjag': {
+      'en': 'Groceries',
+      'ml': 'പലചരക്ക് സാധനങ്ങൾ',
+    },
+    'ubi6l16u': {
+      'en': 'Fruits and Vegetables',
+      'ml': 'പഴങ്ങളും പച്ചക്കറികളും',
+    },
+    '0bxal6ia': {
+      'en': 'Books',
+      'ml': 'പുസ്തകങ്ങൾ',
+    },
+    'z9xwmynd': {
+      'en': 'Home and Kitchen',
+      'ml': 'വീടും അടുക്കളയും',
+    },
+    't46jkw9f': {
+      'en': 'Sports and Outdoors',
+      'ml': 'സ്പോർട്സും ഔട്ട്ഡോറുകളും',
+    },
+    'hnazhwur': {
+      'en': 'Handicrafts',
+      'ml': 'കരകൗശലവസ്തുക്കൾ',
+    },
+    'gfhyp6kv': {
+      'en': 'Dairy and Beverages',
+      'ml': 'പാലും പാനീയങ്ങളും',
+    },
+    'khs4pbqg': {
+      'en': 'Packed Food',
+      'ml': 'പായ്ക്ക് ചെയ്ത ഭക്ഷണം',
+    },
+    'ert9e8c3': {
+      'en': 'Baby and Kids',
+      'ml': 'കുഞ്ഞും കുട്ടികളും',
+    },
+    '136idrg1': {
+      'en': 'Footwear',
+      'ml': 'പാദരക്ഷകൾ',
+    },
+    'bburc6v4': {
+      'en': 'Stationary',
+      'ml': 'നിശ്ചലമായ',
+    },
+    'lb63m5sw': {
+      'en': '*SHOP NAME ( as per your GST Certificate )',
+      'ml': '*ഷോപ്പ് പേര് (നിങ്ങളുടെ GST സർട്ടിഫിക്കറ്റ് അനുസരിച്ച്)',
+    },
+    'ei2hrlzn': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // CancellationRequested
   {
     '1seymq8q': {
@@ -2063,6 +1482,81 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // SelectCategory
+  {
+    'uda4xe0y': {
+      'en': 'Select Category',
+      'ml': 'ഇനം തിരഞ്ഞെടുക്കുക',
+    },
+    'j7dlscvg': {
+      'en': 'Your product comes under which category',
+      'ml': 'നിങ്ങളുടെ ഉൽപ്പന്നം ഏത് വിഭാഗത്തിലാണ് വരുന്നത്',
+    },
+    'gfosm9us': {
+      'en': 'Electronics',
+      'ml': 'ഇലക്ട്രോണിക്സ്',
+    },
+    'hosqc7vx': {
+      'en': 'Clothing and Accessories',
+      'ml': 'വസ്ത്രങ്ങളും അനുബന്ധ ഉപകരണങ്ങളും',
+    },
+    'lr96wp28': {
+      'en': 'Health and Beauty',
+      'ml': 'ആരോഗ്യവും സൗന്ദര്യവും',
+    },
+    '380l35ou': {
+      'en': 'Groceries',
+      'ml': 'പലചരക്ക് സാധനങ്ങൾ',
+    },
+    'xw35vlvg': {
+      'en': 'Fruits and Vegetables',
+      'ml': 'പഴങ്ങളും പച്ചക്കറികളും',
+    },
+    'b299i2fa': {
+      'en': 'Books',
+      'ml': 'പുസ്തകങ്ങൾ',
+    },
+    'g9xleood': {
+      'en': 'Home and Kitchen',
+      'ml': 'വീടും അടുക്കളയും',
+    },
+    'w4i8cx2u': {
+      'en': 'Sports and Outdoors',
+      'ml': 'സ്പോർട്സും ഔട്ട്ഡോറുകളും',
+    },
+    '53jr6cob': {
+      'en': 'Handicrafts',
+      'ml': 'കരകൗശലവസ്തുക്കൾ',
+    },
+    '0rz2dadl': {
+      'en': 'Dairy and Beverages',
+      'ml': 'പാലും പാനീയങ്ങളും',
+    },
+    'sguv88aj': {
+      'en': 'Packed Food',
+      'ml': 'പായ്ക്ക് ചെയ്ത ഭക്ഷണം',
+    },
+    'hfuh38bo': {
+      'en': 'Baby and Kids',
+      'ml': 'കുഞ്ഞും കുട്ടികളും',
+    },
+    'wdsfsr6p': {
+      'en': 'Footwear',
+      'ml': 'പാദരക്ഷകൾ',
+    },
+    '9yx3v144': {
+      'en': 'Stationary',
+      'ml': 'നിശ്ചലമായ',
+    },
+    'rgd7m09l': {
+      'en': 'Select',
+      'ml': 'തിരഞ്ഞെടുക്കുക',
+    },
+    'o52138kg': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // OrderDetailsProcessingC
   {
     'bwyiv4ag': {
@@ -2094,6 +1588,43 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'ഇൻവോയ്സ് ഡൗൺലോഡ് ചെയ്യുക',
     },
     'ywuzeq9k': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // BankAccountDetails
+  {
+    '2qkjiaxf': {
+      'en': 'Bank Account Details',
+      'ml': 'ബാങ്ക് അക്കൗണ്ട് വിശദാംശങ്ങൾ',
+    },
+    'd1atu2uz': {
+      'en':
+          'K-kada needs your bank account details to receive payments. Please provide the details of the bank account you use for your business, which is linked\nto your GST/PAN.',
+      'ml':
+          'പേയ്‌മെന്റുകൾ സ്വീകരിക്കാൻ കെ-കടയ്ക്ക് നിങ്ങളുടെ ബാങ്ക് അക്കൗണ്ട് വിശദാംശങ്ങൾ ആവശ്യമാണ്. നിങ്ങളുടെ GST/PAN-മായി ലിങ്ക് ചെയ്‌തിരിക്കുന്ന നിങ്ങളുടെ ബിസിനസ്സിനായി നിങ്ങൾ ഉപയോഗിക്കുന്ന ബാങ്ക് അക്കൗണ്ടിന്റെ വിശദാംശങ്ങൾ നൽകുക.',
+    },
+    'iiiid61t': {
+      'en': '*ACCOUNT HOLDER NAME',
+      'ml': '*അക്കൗണ്ട് ഹോൾഡറുടെ പേര്',
+    },
+    'hnhrnq53': {
+      'en': '*ACCOUNT TYPE',
+      'ml': '*അക്കൗണ്ട് തരം',
+    },
+    'pz92wqe6': {
+      'en': '*ACCOUNT NUMBER',
+      'ml': '*അക്കൗണ്ട് നമ്പർ',
+    },
+    'dshx1peg': {
+      'en': '*RE-ENTER ACCOUNT NUMBER',
+      'ml': '*അക്കൗണ്ട് നമ്പർ വീണ്ടും നൽകുക',
+    },
+    'hu0t5z8i': {
+      'en': '*IFSC-CODE',
+      'ml': '*IFSC-കോഡ്',
+    },
+    '5ymqva7k': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -2286,6 +1817,45 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // MyAccountDetails
+  {
+    'ttrkdvob': {
+      'en': 'FIRST NAME',
+      'ml': 'പേരിന്റെ ആദ്യഭാഗം',
+    },
+    'yhbwc7cw': {
+      'en': 'LAST NAME',
+      'ml': 'പേരിന്റെ അവസാന ഭാഗം',
+    },
+    'w19ehvb1': {
+      'en': 'MOBILE NUMBER',
+      'ml': 'മൊബൈൽ നമ്പർ',
+    },
+    'x5gl27na': {
+      'en': 'EMAIL ID  ',
+      'ml': 'ഇ - മെയിൽ ഐഡി',
+    },
+    'jo4jbunk': {
+      'en': '(optional)',
+      'ml': '(ഓപ്ഷണൽ)',
+    },
+    'v2vr8m1x': {
+      'en': 'DATE OF BIRTH',
+      'ml': 'ജനനത്തീയതി',
+    },
+    'k11vtyig': {
+      'en': 'Save Changes',
+      'ml': 'മാറ്റങ്ങൾ സൂക്ഷിക്കുക',
+    },
+    'va1pzkhg': {
+      'en': 'My Account',
+      'ml': '',
+    },
+    '7sc1dxc3': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // ProductSelectionDetailsC
   {
     'pbulfnqv': {
@@ -2307,6 +1877,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           '- 100 സ്റ്റേപ്പിളുകളുടെ ലോഡിംഗ് കപ്പാസിറ്റി. - 20 ഷീറ്റുകളുടെ സ്റ്റാപ്ലിംഗ് ശേഷി. - പ്ലാസ്റ്റിക് മുകളിലും താഴെയും സ്റ്റീൽ ഉപയോഗിച്ച് ഉറപ്പിച്ചിരിക്കുന്നു. - എഡ്ജ് സ്റ്റാപ്ലിംഗ്.',
     },
     'qq2tecg8': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // MyStore
+  {
+    'x5k0grl6': {
+      'en': 'Vendor',
+      'ml': 'വെണ്ടർ',
+    },
+    'o68tiyhb': {
+      'en': 'MY STORE',
+      'ml': 'എന്റെ സ്റ്റോർ',
+    },
+    'gawo7j1i': {
+      'en': 'See Orders',
+      'ml': 'ഓർഡറുകൾ കാണുക',
+    },
+    'a8mh97gf': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -2402,6 +1991,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // UploadDocuments
+  {
+    'ojo7o7j6': {
+      'en': 'Upload Documents',
+      'ml': 'പ്രമാണങ്ങൾ അപ്‌ലോഡ് ചെയ്യുക',
+    },
+    '7hg1mr93': {
+      'en':
+          'We need to check that you are really you,\nIt helps us fight fraud and keep your business secure',
+      'ml':
+          'നിങ്ങൾ യഥാർത്ഥത്തിൽ നിങ്ങളാണെന്ന് ഞങ്ങൾ പരിശോധിക്കേണ്ടതുണ്ട്, ഇത് വഞ്ചനയ്‌ക്കെതിരെ പോരാടാനും നിങ്ങളുടെ ബിസിനസ്സ് സുരക്ഷിതമായി നിലനിർത്താനും ഞങ്ങളെ സഹായിക്കുന്നു',
+    },
+    '6lgx161q': {
+      'en': '*ADHAAR CARD',
+      'ml': '*ആധാർ കാർഡ്',
+    },
+    'a6a62cek': {
+      'en': 'Proceed to camera',
+      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
+    },
+    'vah8wibs': {
+      'en': '*PAN CARD',
+      'ml': '*പാൻ കാർഡ്',
+    },
+    'sxounyyn': {
+      'en': 'Proceed to camera',
+      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
+    },
+    'aj060qzq': {
+      'en': '*FSSAI CERTIFICATE',
+      'ml': '*FSSAI സർട്ടിഫിക്കറ്റ്',
+    },
+    'fv6w8ld6': {
+      'en': 'Proceed to camera',
+      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
+    },
+    'jxgye1tu': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // ReturnWaitingC
   {
     '34vbxk4i': {
@@ -2449,6 +2079,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // TaxDetails
+  {
+    'xa274k0k': {
+      'en': 'Tax Details',
+      'ml': 'നികുതി വിശദാംശങ്ങൾ',
+    },
+    '08wb1woc': {
+      'en': 'Enter your Tax Details accurately',
+      'ml': 'നിങ്ങളുടെ നികുതി വിശദാംശങ്ങൾ കൃത്യമായി നൽകുക',
+    },
+    'd5g2uxc7': {
+      'en': '*GST Number',
+      'ml': '*ജിഎസ്ടി നമ്പർ',
+    },
+    'j72n8scg': {
+      'en': '*PAN Number',
+      'ml': '*പാൻ നമ്പർ',
+    },
+    'owbzzipw': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // SelfPickupC
   {
     '1s14ngvg': {
@@ -2460,6 +2113,100 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'ഷോപ്പ് വിലാസം',
     },
     'yp451n5b': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // Register
+  {
+    'ao3p8g75': {
+      'en': 'Register',
+      'ml': 'രജിസ്റ്റർ ചെയ്യുക',
+    },
+    'knptriw3': {
+      'en': 'Fill in the details to sign up',
+      'ml': 'സൈൻ അപ്പ് ചെയ്യുന്നതിന് വിശദാംശങ്ങൾ പൂരിപ്പിക്കുക',
+    },
+    'xbamvbl4': {
+      'en': 'ADD YOUR PROFILE PICTURE',
+      'ml': 'നിങ്ങളുടെ പ്രൊഫൈൽ ചിത്രം ചേർക്കുക',
+    },
+    '10deh2kv': {
+      'en': '*FULL NAME',
+      'ml': '*പൂർണ്ണമായ പേര്',
+    },
+    'zq4wnl0o': {
+      'en': '*PHONE NUMBER',
+      'ml': '*ഫോൺ നമ്പർ',
+    },
+    'm09gqt45': {
+      'en': '*DATE OF BIRTH',
+      'ml': '*ജനനത്തീയതി',
+    },
+    'zcgj7bsr': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // GetStarted
+  {
+    'u4rxuqjz': {
+      'en': 'Get Started!',
+      'ml': 'തുടങ്ങി!',
+    },
+    '1fbo4j9g': {
+      'en': 'Enter Phone number',
+      'ml': 'ഫോൺ നമ്പർ നൽകുക',
+    },
+    'c85sz70x': {
+      'en': 'Field is required',
+      'ml': '',
+    },
+    'pgwd7q2t': {
+      'en': 'Sign In',
+      'ml': 'സൈൻ ഇൻ',
+    },
+    '7rg9uud1': {
+      'en': 'Don\'t have an account?',
+      'ml': 'അക്കൗണ്ട് ഇല്ലേ?',
+    },
+    '81xwnz7v': {
+      'en': ' Sign up',
+      'ml': 'സൈൻ അപ്പ് ചെയ്യുക',
+    },
+    '2n1xk4tx': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // Verification
+  {
+    'flsrh0ca': {
+      'en': 'Verification',
+      'ml': 'സ്ഥിരീകരണം',
+    },
+    'hn34d9zj': {
+      'en':
+          'Please enter the 4 digit verification\n                   code we sent you',
+      'ml': 'ഞങ്ങൾ നിങ്ങൾക്ക് അയച്ച 4 അക്ക സ്ഥിരീകരണ കോഡ് നൽകുക',
+    },
+    'qh1snv6i': {
+      'en': 'Enter OTP',
+      'ml': 'OTP നൽകുക',
+    },
+    'q17tmdlt': {
+      'en': 'Don\'t have an account?',
+      'ml': 'അക്കൗണ്ട് ഇല്ലേ?',
+    },
+    'id8irn2h': {
+      'en': ' Resend',
+      'ml': 'വീണ്ടും അയയ്ക്കുക',
+    },
+    'kzn1hrux': {
+      'en': 'Confirm',
+      'ml': 'സ്ഥിരീകരിക്കുക',
+    },
+    'onkt0k6a': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -2487,6 +2234,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'ക്യാഷ് ഓൺ ഡെലിവറി',
     },
     'jricg1yl': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // ThankYou
+  {
+    't2g0clqr': {
+      'en': 'Thank you!',
+      'ml': 'നന്ദി!',
+    },
+    'k849y994': {
+      'en': 'Verification Pending',
+      'ml': 'പരിശോധിച്ചുറപ്പിക്കൽ ശേഷിക്കുന്നു',
+    },
+    'lymkql9f': {
+      'en': 'You will be contacted by the admin soon.',
+      'ml': 'ഉടൻ തന്നെ അഡ്മിൻ നിങ്ങളെ ബന്ധപ്പെടും.',
+    },
+    'qy7szyy9': {
+      'en': 'Track Status',
+      'ml': 'സ്റ്റാറ്റസ് ട്രാക്ക് ചെയ്യുക',
+    },
+    'bsifx5h1': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -2533,6 +2303,64 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // ThatsIt
+  {
+    '9mygflgo': {
+      'en': 'Thats\'s it!',
+      'ml': 'അത്രമാത്രം!',
+    },
+    'aymq4bc0': {
+      'en':
+          'Upload your digital signature which will be\n   used on the invoices sent to customer.',
+      'ml':
+          'ഉപഭോക്താവിന് അയച്ച ഇൻവോയ്സുകളിൽ ഉപയോഗിക്കുന്ന നിങ്ങളുടെ ഡിജിറ്റൽ സിഗ്നേച്ചർ അപ്‌ലോഡ് ചെയ്യുക.',
+    },
+    'r9qq4lu5': {
+      'en': 'Proceed to camera',
+      'ml': 'ക്യാമറയിലേക്ക് പോകുക',
+    },
+    '3ay18ze2': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // AlmostDone
+  {
+    '5wtrqxfq': {
+      'en': 'Almost done,',
+      'ml': 'ഏതാണ്ട് പൂർത്തിയായി,',
+    },
+    'lryd6cnr': {
+      'en': 'What\'s your shop address?',
+      'ml': 'നിങ്ങളുടെ കടയുടെ വിലാസം എന്താണ്?',
+    },
+    '04lx3sto': {
+      'en': '*ADDRESS',
+      'ml': '*വിലാസം',
+    },
+    'b3f5hqnd': {
+      'en':
+          '( Enter the same address as shown on your GST registration certificate )',
+      'ml':
+          '(നിങ്ങളുടെ GST രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റിൽ കാണിച്ചിരിക്കുന്ന അതേ വിലാസം നൽകുക)',
+    },
+    'jfrcbung': {
+      'en': '*CITY',
+      'ml': '*സിറ്റി',
+    },
+    'v40xcfoz': {
+      'en': '*STATE',
+      'ml': '*സംസ്ഥാനം',
+    },
+    'c8jwcwbb': {
+      'en': '*PIN CODE',
+      'ml': '*പിൻ കോഡ്',
+    },
+    '5vioqy0x': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
   // AllOffersSelectC
   {
     'ytm1avtu': {
@@ -2558,15 +2386,134 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // EditProductDetails
   {
-    'xxkd5rl4': {
+    'in2z9vud': {
       'en': 'Edit Product Details',
       'ml': '',
     },
-    '0jb1l7ln': {
+    'z4wxkoy2': {
       'en': 'Save',
       'ml': '',
     },
-    'fioy3qkx': {
+    'aqfln79y': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // AlmostDoneT
+  {
+    'jbrx6lqr': {
+      'en': 'Almost done,',
+      'ml': 'ഏതാണ്ട് പൂർത്തിയായി,',
+    },
+    'i02q2imr': {
+      'en': 'What\'s your shop address?',
+      'ml': 'നിങ്ങളുടെ കടയുടെ വിലാസം എന്താണ്?',
+    },
+    'eqtrmww1': {
+      'en': '*ADDRESS',
+      'ml': '*വിലാസം',
+    },
+    '0d7hg1t3': {
+      'en':
+          '( Enter the same address as shown on your GST registration certificate )',
+      'ml':
+          '(നിങ്ങളുടെ GST രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റിൽ കാണിച്ചിരിക്കുന്ന അതേ വിലാസം നൽകുക)',
+    },
+    'zwp5oy19': {
+      'en': '*CITY',
+      'ml': '*സിറ്റി',
+    },
+    '0jx0t3i9': {
+      'en': '*STATE',
+      'ml': '*സംസ്ഥാനം',
+    },
+    'jg2reci7': {
+      'en': '*PIN CODE',
+      'ml': '*പിൻ കോഡ്',
+    },
+    'ee7txanz': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // RegisterT
+  {
+    '6y775v24': {
+      'en': 'Register',
+      'ml': 'രജിസ്റ്റർ ചെയ്യുക',
+    },
+    'hlptproo': {
+      'en': 'Fill in the details to sign up',
+      'ml': 'സൈൻ അപ്പ് ചെയ്യുന്നതിന് വിശദാംശങ്ങൾ പൂരിപ്പിക്കുക',
+    },
+    'nysdr9sj': {
+      'en': 'ADD YOUR PROFILE PICTURE',
+      'ml': 'നിങ്ങളുടെ പ്രൊഫൈൽ ചിത്രം ചേർക്കുക',
+    },
+    '8052lqbp': {
+      'en': '*FULL NAME',
+      'ml': '*പൂർണ്ണമായ പേര്',
+    },
+    'j2ospoxu': {
+      'en': '*PHONE NUMBER',
+      'ml': '*ഫോൺ നമ്പർ',
+    },
+    'gbx7k4mh': {
+      'en': '*DATE OF BIRTH',
+      'ml': '*ജനനത്തീയതി',
+    },
+    'h9izy7ni': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // NewProduct
+  {
+    'xuwdzrqd': {
+      'en': 'New Product',
+      'ml': 'പുതിയ ഉൽപ്പന്നം',
+    },
+    'iia2mc8q': {
+      'en': 'Save',
+      'ml': 'രക്ഷിക്കും',
+    },
+    '6qhycnbc': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // ProfileStatus
+  {
+    'l5igix9b': {
+      'en': 'Profile Status',
+      'ml': 'പ്രൊഫൈൽ നില',
+    },
+    'cp3o361y': {
+      'en': 'Verification Requested',
+      'ml': 'സ്ഥിരീകരണം അഭ്യർത്ഥിച്ചു',
+    },
+    'hjxk41e5': {
+      'en': 'KYC Pending',
+      'ml': 'KYC തീർപ്പാക്കിയിട്ടില്ല',
+    },
+    'vj19crki': {
+      'en': 'Verification Completed',
+      'ml': 'പരിശോധന പൂർത്തിയായി',
+    },
+    '3j8q70cs': {
+      'en':
+          'We will get back to you once the\nverification process is completed',
+      'ml':
+          'പരിശോധിച്ചുറപ്പിക്കൽ പ്രക്രിയ പൂർത്തിയായിക്കഴിഞ്ഞാൽ ഞങ്ങൾ നിങ്ങളെ ബന്ധപ്പെടും',
+    },
+    '0r4gwnht': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // HomeNavigator
+  {
+    'ij5lshpw': {
       'en': 'Home',
       'ml': '',
     },

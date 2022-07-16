@@ -40,7 +40,9 @@ class _MyProductsWidgetState extends State<MyProductsWidget> {
           },
         ),
         title: Text(
-          'My Product',
+          FFLocalizations.of(context).getText(
+            'l56cfk4k' /* My Product */,
+          ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Lato',
                 color: FlutterFlowTheme.of(context).secondaryColor,

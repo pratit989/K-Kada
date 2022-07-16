@@ -37,7 +37,9 @@ class _SelectAreaCWidgetState extends State<SelectAreaCWidget> {
           },
         ),
         title: Text(
-          'SELECT AREA',
+          FFLocalizations.of(context).getText(
+            '4h9b3hwu' /* SELECT AREA */,
+          ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Lato',
                 color: FlutterFlowTheme.of(context).secondaryColor,
@@ -159,7 +161,7 @@ class _SelectAreaCWidgetState extends State<SelectAreaCWidget> {
                             color: Colors.transparent,
                             width: 1,
                           ),
-                          borderRadius: 12,
+                          borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                     ),
@@ -188,7 +190,7 @@ class _SelectAreaCWidgetState extends State<SelectAreaCWidget> {
                           color: Colors.transparent,
                           width: 1,
                         ),
-                        borderRadius: 12,
+                        borderRadius: BorderRadius.circular(12),
                       ),
                     ),
                   ],

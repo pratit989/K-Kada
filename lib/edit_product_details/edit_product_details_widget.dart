@@ -38,7 +38,9 @@ class _EditProductDetailsWidgetState extends State<EditProductDetailsWidget> {
           },
         ),
         title: Text(
-          'Edit Product Details',
+          FFLocalizations.of(context).getText(
+            'in2z9vud' /* Edit Product Details */,
+          ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Lato',
                 color: Colors.black,
@@ -149,7 +151,9 @@ class _EditProductDetailsWidgetState extends State<EditProductDetailsWidget> {
                 onPressed: () {
                   print('Button pressed ...');
                 },
-                text: 'Save',
+                text: FFLocalizations.of(context).getText(
+                  'z4wxkoy2' /* Save */,
+                ),
                 options: FFButtonOptions(
                   width: 130,
                   height: 40,
@@ -162,7 +166,7 @@ class _EditProductDetailsWidgetState extends State<EditProductDetailsWidget> {
                     color: Colors.transparent,
                     width: 1,
                   ),
-                  borderRadius: 12,
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
             ],

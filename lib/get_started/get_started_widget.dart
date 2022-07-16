@@ -1,9 +1,11 @@
+import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../register/register_widget.dart';
 import '../verification/verification_widget.dart';
+import '../custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,7 +17,9 @@ class GetStartedWidget extends StatefulWidget {
 }
 
 class _GetStartedWidgetState extends State<GetStartedWidget> {
+  String formattedPhoneNumber;
   TextEditingController textController;
+  final formKey = GlobalKey<FormState>();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -99,41 +103,60 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                           color: Color(0x58B6AF9A),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: TextFormField(
-                          controller: textController,
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            hintText: FFLocalizations.of(context).getText(
-                              '1fbo4j9g' /* Enter Phone number */,
+                        child: Form(
+                          key: formKey,
+                          autovalidateMode: AutovalidateMode.disabled,
+                          child: TextFormField(
+                            controller: textController,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              hintText: FFLocalizations.of(context).getText(
+                                '1fbo4j9g' /* Enter Phone number */,
+                              ),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Color(0x00000000),
+                                  width: 1,
+                                ),
+                                borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(4.0),
+                                  topRight: Radius.circular(4.0),
+                                ),
+                              ),
                             ),
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Open Sans',
+                                      color: Color(0xFFE4E4E4),
+                                      fontSize: 16,
+                                    ),
+                            textAlign: TextAlign.center,
+                            validator: (val) {
+                              if (val == null || val.isEmpty) {
+                                return 'Field is required';
+                              }
+                              if (val.length < 10) {
+                                return 'Requires at least 10 characters.';
+                              }
+
+                              if (!RegExp(
+                                      r"^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$")
+                                  .hasMatch(val)) {
+                                return 'Invalid text';
+                              }
+                              return null;
+                            },
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Open Sans',
-                                    color: Color(0xFFE4E4E4),
-                                    fontSize: 16,
-                                  ),
-                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),
@@ -148,12 +171,39 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => VerificationWidget(),
-                            ),
+                          formattedPhoneNumber =
+                              await actions.phoneNumberFormatter(
+                            textController.text,
                           );
+                          final phoneNumberVal = textController.text;
+                          if (phoneNumberVal == null ||
+                              phoneNumberVal.isEmpty ||
+                              !phoneNumberVal.startsWith('+')) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                    'Phone Number is required and has to start with +.'),
+                              ),
+                            );
+                            return;
+                          }
+                          await beginPhoneAuth(
+                            context: context,
+                            phoneNumber: phoneNumberVal,
+                            onCodeSent: () async {
+                              await Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => VerificationWidget(
+                                    phoneNumber: formattedPhoneNumber,
+                                  ),
+                                ),
+                                (r) => false,
+                              );
+                            },
+                          );
+
+                          setState(() {});
                         },
                         text: FFLocalizations.of(context).getText(
                           'pgwd7q2t' /* Sign In */,
@@ -172,7 +222,7 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                             color: Colors.transparent,
                             width: 1,
                           ),
-                          borderRadius: 12,
+                          borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                     ),

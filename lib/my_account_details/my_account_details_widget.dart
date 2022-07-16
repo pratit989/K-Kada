@@ -53,7 +53,9 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
           },
         ),
         title: Text(
-          'My Account',
+          FFLocalizations.of(context).getText(
+            'va1pzkhg' /* My Account */,
+          ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Lato',
                 color: Colors.black,
@@ -387,7 +389,7 @@ class _MyAccountDetailsWidgetState extends State<MyAccountDetailsWidget> {
                       color: Colors.transparent,
                       width: 1,
                     ),
-                    borderRadius: 12,
+                    borderRadius: BorderRadius.circular(12),
                   ),
                 ),
               ),

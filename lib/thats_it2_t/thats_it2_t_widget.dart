@@ -134,7 +134,7 @@ class _ThatsIt2TWidgetState extends State<ThatsIt2TWidget> {
                                     color: Colors.transparent,
                                     width: 1,
                                   ),
-                                  borderRadius: 12,
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
                               ),
                             ),

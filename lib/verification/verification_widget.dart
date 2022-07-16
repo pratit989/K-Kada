@@ -1,15 +1,19 @@
+import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../my_store/my_store_widget.dart';
-import '../select_area_c/select_area_c_widget.dart';
-import '../transporter_home_t/transporter_home_t_widget.dart';
+import '../home_navigator/home_navigator_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class VerificationWidget extends StatefulWidget {
-  const VerificationWidget({Key key}) : super(key: key);
+  const VerificationWidget({
+    Key key,
+    this.phoneNumber,
+  }) : super(key: key);
+
+  final String phoneNumber;
 
   @override
   _VerificationWidgetState createState() => _VerificationWidgetState();
@@ -142,14 +146,45 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        'id8irn2h' /*  Resend */,
+                    child: InkWell(
+                      onTap: () async {
+                        final phoneNumberVal = widget.phoneNumber;
+                        if (phoneNumberVal == null ||
+                            phoneNumberVal.isEmpty ||
+                            !phoneNumberVal.startsWith('+')) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                  'Phone Number is required and has to start with +.'),
+                            ),
+                          );
+                          return;
+                        }
+                        await beginPhoneAuth(
+                          context: context,
+                          phoneNumber: phoneNumberVal,
+                          onCodeSent: () async {
+                            await Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => VerificationWidget(
+                                  phoneNumber: widget.phoneNumber,
+                                ),
+                              ),
+                              (r) => false,
+                            );
+                          },
+                        );
+                      },
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'id8irn2h' /*  Resend */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                              fontFamily: 'Open Sans',
+                              color: Color(0xFFEEC643),
+                            ),
                       ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Open Sans',
-                            color: Color(0xFFEEC643),
-                          ),
                     ),
                   ),
                 ],
@@ -163,32 +198,30 @@ class _VerificationWidgetState extends State<VerificationWidget> {
               ),
               child: FFButtonWidget(
                 onPressed: () async {
-                  if ((FFAppState().userType) == 'Customer') {
-                    await Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SelectAreaCWidget(),
+                  final smsCodeVal = textController.text;
+                  if (smsCodeVal == null || smsCodeVal.isEmpty) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Enter SMS verification code.'),
                       ),
                     );
-                  } else {
-                    if ((FFAppState().userType) == 'Transporter') {
-                      await Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => TransporterHomeTWidget(),
-                        ),
-                        (r) => false,
-                      );
-                    } else {
-                      await Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => MyStoreWidget(),
-                        ),
-                        (r) => false,
-                      );
-                    }
+                    return;
                   }
+                  final phoneVerifiedUser = await verifySmsCode(
+                    context: context,
+                    smsCode: smsCodeVal,
+                  );
+                  if (phoneVerifiedUser == null) {
+                    return;
+                  }
+
+                  await Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeNavigatorWidget(),
+                    ),
+                    (r) => false,
+                  );
                 },
                 text: FFLocalizations.of(context).getText(
                   'kzn1hrux' /* Confirm */,
@@ -205,7 +238,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                     color: Colors.transparent,
                     width: 1,
                   ),
-                  borderRadius: 12,
+                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
             ),

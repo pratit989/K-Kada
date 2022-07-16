@@ -38,7 +38,9 @@ class _MyOffersWidgetState extends State<MyOffersWidget> {
           },
         ),
         title: Text(
-          'My Offer',
+          FFLocalizations.of(context).getText(
+            'lprxh3gc' /* My Offer */,
+          ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Lato',
                 color: FlutterFlowTheme.of(context).secondaryColor,
@@ -169,7 +171,7 @@ class _MyOffersWidgetState extends State<MyOffersWidget> {
                                           color: Colors.transparent,
                                           width: 1,
                                         ),
-                                        borderRadius: 12,
+                                        borderRadius: BorderRadius.circular(12),
                                       ),
                                     ),
                                   ),
@@ -296,7 +298,8 @@ class _MyOffersWidgetState extends State<MyOffersWidget> {
                                             color: Colors.transparent,
                                             width: 1,
                                           ),
-                                          borderRadius: 12,
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                       ),
                                     ),
