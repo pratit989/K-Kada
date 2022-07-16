@@ -1398,6 +1398,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '*SHOP NAME ( as per your GST Certificate )',
       'ml': '*ഷോപ്പ് പേര് (നിങ്ങളുടെ GST സർട്ടിഫിക്കറ്റ് അനുസരിച്ച്)',
     },
+    'qnhl2z83': {
+      'en': 'Field is required',
+      'ml': '',
+    },
     'ei2hrlzn': {
       'en': 'Home',
       'ml': 'വീട്',
@@ -1608,10 +1612,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '*ACCOUNT HOLDER NAME',
       'ml': '*അക്കൗണ്ട് ഹോൾഡറുടെ പേര്',
     },
-    'hnhrnq53': {
-      'en': '*ACCOUNT TYPE',
-      'ml': '*അക്കൗണ്ട് തരം',
-    },
     'pz92wqe6': {
       'en': '*ACCOUNT NUMBER',
       'ml': '*അക്കൗണ്ട് നമ്പർ',
@@ -1623,6 +1623,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hu0t5z8i': {
       'en': '*IFSC-CODE',
       'ml': '*IFSC-കോഡ്',
+    },
+    'mrb8hait': {
+      'en': 'Field is required',
+      'ml': '',
+    },
+    'x95buoif': {
+      'en': 'Field is required',
+      'ml': '',
+    },
+    'htm0sowh': {
+      'en': 'Field is required',
+      'ml': '',
+    },
+    'h66kjz6k': {
+      'en': 'Field is required',
+      'ml': '',
     },
     '5ymqva7k': {
       'en': 'Home',
@@ -2097,6 +2113,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '*PAN Number',
       'ml': '*പാൻ നമ്പർ',
     },
+    'u9mvhypl': {
+      'en': 'Field is required',
+      'ml': '',
+    },
+    'z5josoaf': {
+      'en': 'Field is required',
+      'ml': '',
+    },
     'owbzzipw': {
       'en': 'Home',
       'ml': 'വീട്',
@@ -2139,9 +2163,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '*PHONE NUMBER',
       'ml': '*ഫോൺ നമ്പർ',
     },
-    'm09gqt45': {
-      'en': '*DATE OF BIRTH',
-      'ml': '*ജനനത്തീയതി',
+    'gyfc9ej5': {
+      'en': 'Field is required',
+      'ml': '',
+    },
+    'yhsbdo0r': {
+      'en': 'Field is required',
+      'ml': '',
     },
     'zcgj7bsr': {
       'en': 'Home',
@@ -2158,21 +2186,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Enter Phone number',
       'ml': 'ഫോൺ നമ്പർ നൽകുക',
     },
-    'c85sz70x': {
+    '2sd8qpt8': {
       'en': 'Field is required',
       'ml': '',
     },
     'pgwd7q2t': {
       'en': 'Sign In',
       'ml': 'സൈൻ ഇൻ',
-    },
-    '7rg9uud1': {
-      'en': 'Don\'t have an account?',
-      'ml': 'അക്കൗണ്ട് ഇല്ലേ?',
-    },
-    '81xwnz7v': {
-      'en': ' Sign up',
-      'ml': 'സൈൻ അപ്പ് ചെയ്യുക',
     },
     '2n1xk4tx': {
       'en': 'Home',
@@ -2344,17 +2364,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml':
           '(നിങ്ങളുടെ GST രജിസ്ട്രേഷൻ സർട്ടിഫിക്കറ്റിൽ കാണിച്ചിരിക്കുന്ന അതേ വിലാസം നൽകുക)',
     },
-    'jfrcbung': {
-      'en': '*CITY',
-      'ml': '*സിറ്റി',
-    },
     'v40xcfoz': {
       'en': '*STATE',
       'ml': '*സംസ്ഥാനം',
     },
+    'jfrcbung': {
+      'en': '*CITY',
+      'ml': '*സിറ്റി',
+    },
     'c8jwcwbb': {
       'en': '*PIN CODE',
       'ml': '*പിൻ കോഡ്',
+    },
+    'gq17lq0a': {
+      'en': 'Field is required',
+      'ml': '',
+    },
+    '13ghhj0u': {
+      'en': 'Field is required',
+      'ml': '',
     },
     '5vioqy0x': {
       'en': 'Home',
@@ -2511,9 +2539,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
+  // RegistrationNavigator
+  {
+    'k2eclz3v': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
   // HomeNavigator
   {
-    'ij5lshpw': {
+    'g78t809o': {
+      'en': 'Home',
+      'ml': '',
+    },
+  },
+  // RegisteredCheck
+  {
+    'i2kiee1a': {
       'en': 'Home',
       'ml': '',
     },

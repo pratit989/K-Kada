@@ -1,23 +1,25 @@
 import '../auth/auth_util.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../my_store/my_store_widget.dart';
-import '../select_area_c/select_area_c_widget.dart';
-import '../transporter_home_t/transporter_home_t_widget.dart';
+import '../register/register_widget.dart';
+import '../register_c/register_c_widget.dart';
+import '../register_t/register_t_widget.dart';
 import '../welcome/welcome_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
-class HomeNavigatorWidget extends StatefulWidget {
-  const HomeNavigatorWidget({Key key}) : super(key: key);
+class RegistrationNavigatorWidget extends StatefulWidget {
+  const RegistrationNavigatorWidget({Key key}) : super(key: key);
 
   @override
-  _HomeNavigatorWidgetState createState() => _HomeNavigatorWidgetState();
+  _RegistrationNavigatorWidgetState createState() =>
+      _RegistrationNavigatorWidgetState();
 }
 
-class _HomeNavigatorWidgetState extends State<HomeNavigatorWidget> {
+class _RegistrationNavigatorWidgetState
+    extends State<RegistrationNavigatorWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -29,26 +31,24 @@ class _HomeNavigatorWidgetState extends State<HomeNavigatorWidget> {
         await Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => SelectAreaCWidget(),
+            builder: (context) => RegisterCWidget(),
           ),
         );
       } else {
         if ((FFAppState().userType) == 'Transporter') {
-          await Navigator.pushAndRemoveUntil(
+          await Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => TransporterHomeTWidget(),
+              builder: (context) => RegisterTWidget(),
             ),
-            (r) => false,
           );
         } else {
           if ((FFAppState().userType) == 'Vendor') {
-            await Navigator.pushAndRemoveUntil(
+            await Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => MyStoreWidget(),
+                builder: (context) => RegisterWidget(),
               ),
-              (r) => false,
             );
           } else {
             await signOut();

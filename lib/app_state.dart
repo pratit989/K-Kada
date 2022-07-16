@@ -25,6 +25,16 @@ class FFAppState {
     _userType = _value;
     prefs.setString('ff_userType', _value);
   }
+
+  bool uploadedShopPhoto = false;
+
+  bool uploadedShopLogo = false;
+
+  bool aadharUpload = false;
+
+  bool panCardUpload = false;
+
+  bool fssaiCertificateUpload = false;
 }
 
 LatLng _latLngFromString(String val) {

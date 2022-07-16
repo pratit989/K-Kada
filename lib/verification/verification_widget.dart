@@ -96,6 +96,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                 ),
                 child: TextFormField(
                   controller: textController,
+                  autofocus: true,
                   obscureText: false,
                   decoration: InputDecoration(
                     hintText: FFLocalizations.of(context).getText(

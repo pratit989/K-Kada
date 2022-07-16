@@ -117,4 +117,8 @@ export 'almost_done_t/almost_done_t_widget.dart' show AlmostDoneTWidget;
 export 'register_t/register_t_widget.dart' show RegisterTWidget;
 export 'new_product/new_product_widget.dart' show NewProductWidget;
 export 'profile_status/profile_status_widget.dart' show ProfileStatusWidget;
+export 'registration_navigator/registration_navigator_widget.dart'
+    show RegistrationNavigatorWidget;
 export 'home_navigator/home_navigator_widget.dart' show HomeNavigatorWidget;
+export 'registered_check/registered_check_widget.dart'
+    show RegisteredCheckWidget;

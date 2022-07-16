@@ -3,7 +3,6 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../register/register_widget.dart';
 import '../verification/verification_widget.dart';
 import '../custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
@@ -73,24 +72,21 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(40, 20, 40, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    flex: 2,
-                    child: Align(
-                      alignment: AlignmentDirectional(0, 1),
-                      child: Text(
-                        FFLocalizations.of(context).getText(
-                          'u4rxuqjz' /* Get Started! */,
-                        ),
-                        style: FlutterFlowTheme.of(context).subtitle2.override(
-                              fontFamily: 'Lato',
-                              color: FlutterFlowTheme.of(context).tertiaryColor,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                            ),
+                  Align(
+                    alignment: AlignmentDirectional(0, 1),
+                    child: Text(
+                      FFLocalizations.of(context).getText(
+                        'u4rxuqjz' /* Get Started! */,
                       ),
+                      style: FlutterFlowTheme.of(context).subtitle2.override(
+                            fontFamily: 'Lato',
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                   ),
                   Align(
@@ -143,7 +139,9 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                             textAlign: TextAlign.center,
                             validator: (val) {
                               if (val == null || val.isEmpty) {
-                                return 'Field is required';
+                                return FFLocalizations.of(context).getText(
+                                  '2sd8qpt8' /* Field is required */,
+                                );
                               }
                               if (val.length < 10) {
                                 return 'Requires at least 10 characters.';
@@ -171,6 +169,11 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
+                          if (formKey.currentState == null ||
+                              !formKey.currentState.validate()) {
+                            return;
+                          }
+
                           formattedPhoneNumber =
                               await actions.phoneNumberFormatter(
                             textController.text,
@@ -223,53 +226,6 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                             width: 1,
                           ),
                           borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: Align(
-                      alignment: AlignmentDirectional(0, -1),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                '7rg9uud1' /* Don't have an account? */,
-                              ),
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyText1
-                                  .override(
-                                    fontFamily: 'Open Sans',
-                                    color: Color(0xFFE4E4E4),
-                                  ),
-                            ),
-                            InkWell(
-                              onTap: () async {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => RegisterWidget(),
-                                  ),
-                                );
-                              },
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  '81xwnz7v' /*  Sign up */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Open Sans',
-                                      color: Color(0xFFEEC643),
-                                    ),
-                              ),
-                            ),
-                          ],
                         ),
                       ),
                     ),
