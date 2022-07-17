@@ -149,7 +149,10 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                         }
                       }
 
-                      setState(() => FFAppState().uploadedShopPhoto = true);
+                      if ((uploadedFileUrl1 != null &&
+                          uploadedFileUrl1 != '')) {
+                        setState(() => FFAppState().uploadedShopPhoto = true);
+                      }
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.8,
@@ -255,7 +258,10 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                         }
                       }
 
-                      setState(() => FFAppState().uploadedShopLogo = true);
+                      if ((uploadedFileUrl2 != null &&
+                          uploadedFileUrl2 != '')) {
+                        setState(() => FFAppState().uploadedShopLogo = true);
+                      }
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.8,
