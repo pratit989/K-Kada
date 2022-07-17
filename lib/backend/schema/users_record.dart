@@ -57,6 +57,20 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
   DocumentReference get customerRef;
 
   @nullable
+  String get signature;
+
+  @nullable
+  @BuiltValueField(wireName: 'verification_requested')
+  bool get verificationRequested;
+
+  @nullable
+  @BuiltValueField(wireName: 'kyc_completed')
+  bool get kycCompleted;
+
+  @nullable
+  bool get verified;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -68,7 +82,11 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..phoneNumber = ''
     ..transporterRegistered = false
     ..vendorRegistered = false
-    ..customerRegistered = false;
+    ..customerRegistered = false
+    ..signature = ''
+    ..verificationRequested = false
+    ..kycCompleted = false
+    ..verified = false;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('Users');
@@ -105,6 +123,10 @@ Map<String, dynamic> createUsersRecordData({
   DocumentReference vendorRef,
   DocumentReference transporterRef,
   DocumentReference customerRef,
+  String signature,
+  bool verificationRequested,
+  bool kycCompleted,
+  bool verified,
 }) =>
     serializers.toFirestore(
         UsersRecord.serializer,
@@ -121,4 +143,8 @@ Map<String, dynamic> createUsersRecordData({
           ..dateOfBirth = dateOfBirth
           ..vendorRef = vendorRef
           ..transporterRef = transporterRef
-          ..customerRef = customerRef));
+          ..customerRef = customerRef
+          ..signature = signature
+          ..verificationRequested = verificationRequested
+          ..kycCompleted = kycCompleted
+          ..verified = verified));

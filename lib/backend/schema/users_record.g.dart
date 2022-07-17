@@ -113,6 +113,34 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
             specifiedType: const FullType(
                 DocumentReference, const [const FullType(Object)])));
     }
+    value = object.signature;
+    if (value != null) {
+      result
+        ..add('signature')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
+    value = object.verificationRequested;
+    if (value != null) {
+      result
+        ..add('verification_requested')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.kycCompleted;
+    if (value != null) {
+      result
+        ..add('kyc_completed')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
+    value = object.verified;
+    if (value != null) {
+      result
+        ..add('verified')
+        ..add(
+            serializers.serialize(value, specifiedType: const FullType(bool)));
+    }
     value = object.reference;
     if (value != null) {
       result
@@ -193,6 +221,22 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
                       DocumentReference, const [const FullType(Object)]))
               as DocumentReference<Object>;
           break;
+        case 'signature':
+          result.signature = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'verification_requested':
+          result.verificationRequested = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'kyc_completed':
+          result.kycCompleted = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'verified':
+          result.verified = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'Document__Reference__Field':
           result.reference = serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -234,6 +278,14 @@ class _$UsersRecord extends UsersRecord {
   @override
   final DocumentReference<Object> customerRef;
   @override
+  final String signature;
+  @override
+  final bool verificationRequested;
+  @override
+  final bool kycCompleted;
+  @override
+  final bool verified;
+  @override
   final DocumentReference<Object> reference;
 
   factory _$UsersRecord([void Function(UsersRecordBuilder) updates]) =>
@@ -253,6 +305,10 @@ class _$UsersRecord extends UsersRecord {
       this.vendorRef,
       this.transporterRef,
       this.customerRef,
+      this.signature,
+      this.verificationRequested,
+      this.kycCompleted,
+      this.verified,
       this.reference})
       : super._();
 
@@ -280,6 +336,10 @@ class _$UsersRecord extends UsersRecord {
         vendorRef == other.vendorRef &&
         transporterRef == other.transporterRef &&
         customerRef == other.customerRef &&
+        signature == other.signature &&
+        verificationRequested == other.verificationRequested &&
+        kycCompleted == other.kycCompleted &&
+        verified == other.verified &&
         reference == other.reference;
   }
 
@@ -297,19 +357,35 @@ class _$UsersRecord extends UsersRecord {
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc($jc(0, email.hashCode),
-                                                        displayName.hashCode),
-                                                    photoUrl.hashCode),
-                                                uid.hashCode),
-                                            createdTime.hashCode),
-                                        phoneNumber.hashCode),
-                                    transporterRegistered.hashCode),
-                                vendorRegistered.hashCode),
-                            customerRegistered.hashCode),
-                        dateOfBirth.hashCode),
-                    vendorRef.hashCode),
-                transporterRef.hashCode),
-            customerRef.hashCode),
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    $jc(
+                                                                        $jc(
+                                                                            0,
+                                                                            email
+                                                                                .hashCode),
+                                                                        displayName
+                                                                            .hashCode),
+                                                                    photoUrl
+                                                                        .hashCode),
+                                                                uid.hashCode),
+                                                            createdTime
+                                                                .hashCode),
+                                                        phoneNumber.hashCode),
+                                                    transporterRegistered
+                                                        .hashCode),
+                                                vendorRegistered.hashCode),
+                                            customerRegistered.hashCode),
+                                        dateOfBirth.hashCode),
+                                    vendorRef.hashCode),
+                                transporterRef.hashCode),
+                            customerRef.hashCode),
+                        signature.hashCode),
+                    verificationRequested.hashCode),
+                kycCompleted.hashCode),
+            verified.hashCode),
         reference.hashCode));
   }
 
@@ -329,6 +405,10 @@ class _$UsersRecord extends UsersRecord {
           ..add('vendorRef', vendorRef)
           ..add('transporterRef', transporterRef)
           ..add('customerRef', customerRef)
+          ..add('signature', signature)
+          ..add('verificationRequested', verificationRequested)
+          ..add('kycCompleted', kycCompleted)
+          ..add('verified', verified)
           ..add('reference', reference))
         .toString();
   }
@@ -395,6 +475,23 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
   set customerRef(DocumentReference<Object> customerRef) =>
       _$this._customerRef = customerRef;
 
+  String _signature;
+  String get signature => _$this._signature;
+  set signature(String signature) => _$this._signature = signature;
+
+  bool _verificationRequested;
+  bool get verificationRequested => _$this._verificationRequested;
+  set verificationRequested(bool verificationRequested) =>
+      _$this._verificationRequested = verificationRequested;
+
+  bool _kycCompleted;
+  bool get kycCompleted => _$this._kycCompleted;
+  set kycCompleted(bool kycCompleted) => _$this._kycCompleted = kycCompleted;
+
+  bool _verified;
+  bool get verified => _$this._verified;
+  set verified(bool verified) => _$this._verified = verified;
+
   DocumentReference<Object> _reference;
   DocumentReference<Object> get reference => _$this._reference;
   set reference(DocumentReference<Object> reference) =>
@@ -420,6 +517,10 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
       _vendorRef = $v.vendorRef;
       _transporterRef = $v.transporterRef;
       _customerRef = $v.customerRef;
+      _signature = $v.signature;
+      _verificationRequested = $v.verificationRequested;
+      _kycCompleted = $v.kycCompleted;
+      _verified = $v.verified;
       _reference = $v.reference;
       _$v = null;
     }
@@ -454,6 +555,10 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
             vendorRef: vendorRef,
             transporterRef: transporterRef,
             customerRef: customerRef,
+            signature: signature,
+            verificationRequested: verificationRequested,
+            kycCompleted: kycCompleted,
+            verified: verified,
             reference: reference);
     replace(_$result);
     return _$result;

@@ -1,3 +1,5 @@
+import '../auth/auth_util.dart';
+import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -86,50 +88,97 @@ Completed! */
                           child: Padding(
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(40, 20, 40, 0),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Image.asset(
-                                  'assets/images/Group_476.png',
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.25,
-                                  fit: BoxFit.contain,
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 40, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '4d6c6c8g' /* 'ANAND STATIONARY' */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Lato',
-                                          fontSize: 22,
-                                          fontWeight: FontWeight.bold,
+                            child: AuthUserStreamWidget(
+                              child: StreamBuilder<VendorsRecord>(
+                                stream: VendorsRecord.getDocument(
+                                    currentUserDocument?.vendorRef),
+                                builder: (context, snapshot) {
+                                  // Customize what your widget looks like when it's loading.
+                                  if (!snapshot.hasData) {
+                                    return Center(
+                                      child: SizedBox(
+                                        width: 50,
+                                        height: 50,
+                                        child: CircularProgressIndicator(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryColor,
                                         ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 40, 0, 0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'v6ouqyxz' /* Set up your store! */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Open Sans',
-                                          color: Color(0xFF949496),
-                                          fontSize: 20,
+                                      ),
+                                    );
+                                  }
+                                  final columnVendorsRecord = snapshot.data;
+                                  return Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        'assets/images/Group_476.png',
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.25,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 40, 0, 0),
+                                        child: StreamBuilder<ShopsRecord>(
+                                          stream: ShopsRecord.getDocument(
+                                              columnVendorsRecord.shopRef),
+                                          builder: (context, snapshot) {
+                                            // Customize what your widget looks like when it's loading.
+                                            if (!snapshot.hasData) {
+                                              return Center(
+                                                child: SizedBox(
+                                                  width: 50,
+                                                  height: 50,
+                                                  child:
+                                                      CircularProgressIndicator(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryColor,
+                                                  ),
+                                                ),
+                                              );
+                                            }
+                                            final textShopsRecord =
+                                                snapshot.data;
+                                            return Text(
+                                              textShopsRecord.shopName,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Lato',
+                                                        fontSize: 22,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                      ),
+                                            );
+                                          },
                                         ),
-                                  ),
-                                ),
-                              ],
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0, 40, 0, 0),
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            'v6ouqyxz' /* Set up your store! */,
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'Open Sans',
+                                                color: Color(0xFF949496),
+                                                fontSize: 20,
+                                              ),
+                                        ),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              ),
                             ),
                           ),
                         ),
@@ -182,6 +231,12 @@ Completed! */
                   size: 25,
                 ),
                 onPressed: () async {
+                  await pageViewController.animateToPage(
+                    1,
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.ease,
+                  );
+                  await Future.delayed(const Duration(milliseconds: 1000));
                   await Navigator.push(
                     context,
                     MaterialPageRoute(

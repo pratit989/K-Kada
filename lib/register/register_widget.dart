@@ -347,7 +347,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                           AuthUserStreamWidget(
                             child: Text(
                               valueOrDefault<String>(
-                                currentUserDocument?.dateOfBirth.toString(),
+                                dateTimeFormat(
+                                    'd/M/y', currentUserDocument?.dateOfBirth),
                                 '*DATE OF BIRTH',
                               ),
                               style: FlutterFlowTheme.of(context)

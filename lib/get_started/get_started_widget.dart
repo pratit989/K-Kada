@@ -169,16 +169,11 @@ class _GetStartedWidgetState extends State<GetStartedWidget> {
                       ),
                       child: FFButtonWidget(
                         onPressed: () async {
-                          if (formKey.currentState == null ||
-                              !formKey.currentState.validate()) {
-                            return;
-                          }
-
                           formattedPhoneNumber =
                               await actions.phoneNumberFormatter(
                             textController.text,
                           );
-                          final phoneNumberVal = textController.text;
+                          final phoneNumberVal = formattedPhoneNumber;
                           if (phoneNumberVal == null ||
                               phoneNumberVal.isEmpty ||
                               !phoneNumberVal.startsWith('+')) {

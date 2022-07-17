@@ -1,5 +1,5 @@
+import '../components/account_switcher_widget.dart';
 import '../components/my_account_widget.dart';
-import '../components/vand_c_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -48,7 +48,7 @@ class _MyStoreWidgetState extends State<MyStoreWidget> {
                           builder: (context) {
                             return Padding(
                               padding: MediaQuery.of(context).viewInsets,
-                              child: VandCWidget(),
+                              child: AccountSwitcherWidget(),
                             );
                           },
                         );

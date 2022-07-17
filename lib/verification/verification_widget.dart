@@ -3,7 +3,7 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../home_navigator/home_navigator_widget.dart';
+import '../registered_check/registered_check_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -74,11 +74,9 @@ class _VerificationWidgetState extends State<VerificationWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 20),
+              padding: EdgeInsetsDirectional.fromSTEB(60, 10, 60, 20),
               child: Text(
-                FFLocalizations.of(context).getText(
-                  'hn34d9zj' /* Please enter the 4 digit verif... */,
-                ),
+                'Please enter the 6 digit verification code we have sent you on ${widget.phoneNumber}',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).bodyText1.override(
                       fontFamily: 'Lato',
@@ -219,7 +217,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
                   await Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomeNavigatorWidget(),
+                      builder: (context) => RegisteredCheckWidget(),
                     ),
                     (r) => false,
                   );

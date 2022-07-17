@@ -83,10 +83,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Verification\nCompleted!',
       'ml': 'പരിശോധന പൂർത്തിയായി!',
     },
-    '4d6c6c8g': {
-      'en': '\'ANAND STATIONARY\'',
-      'ml': '&#39;ആനന്ദ് സ്റ്റേഷനറി&#39;',
-    },
     'v6ouqyxz': {
       'en': 'Set up your store!',
       'ml': 'നിങ്ങളുടെ സ്റ്റോർ സജ്ജമാക്കുക!',
@@ -1624,19 +1620,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '*IFSC-CODE',
       'ml': '*IFSC-കോഡ്',
     },
-    'mrb8hait': {
+    'r5puck37': {
       'en': 'Field is required',
       'ml': '',
     },
-    'x95buoif': {
+    '2sm6yl0u': {
       'en': 'Field is required',
       'ml': '',
     },
-    'htm0sowh': {
+    'kvskzzpr': {
       'en': 'Field is required',
       'ml': '',
     },
-    'h66kjz6k': {
+    'gagee6kc': {
       'en': 'Field is required',
       'ml': '',
     },
@@ -2205,11 +2201,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Verification',
       'ml': 'സ്ഥിരീകരണം',
     },
-    'hn34d9zj': {
-      'en':
-          'Please enter the 4 digit verification\n                   code we sent you',
-      'ml': 'ഞങ്ങൾ നിങ്ങൾക്ക് അയച്ച 4 അക്ക സ്ഥിരീകരണ കോഡ് നൽകുക',
-    },
     'qh1snv6i': {
       'en': 'Enter OTP',
       'ml': 'OTP നൽകുക',
@@ -2331,12 +2322,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'aymq4bc0': {
       'en':
-          'Upload your digital signature which will be\n   used on the invoices sent to customer.',
+          'Provide your digital signature which will be\n   used on the invoices sent to customer.',
       'ml':
           'ഉപഭോക്താവിന് അയച്ച ഇൻവോയ്സുകളിൽ ഉപയോഗിക്കുന്ന നിങ്ങളുടെ ഡിജിറ്റൽ സിഗ്നേച്ചർ അപ്‌ലോഡ് ചെയ്യുക.',
     },
+    'rjhtv1co': {
+      'en': 'SIGN IN THE BOX',
+      'ml': '',
+    },
     'r9qq4lu5': {
-      'en': 'Proceed to camera',
+      'en': 'SAVE YOUR SIGNATURE',
       'ml': 'ക്യാമറയിലേക്ക് പോകുക',
     },
     '3ay18ze2': {
@@ -2376,11 +2371,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '*PIN CODE',
       'ml': '*പിൻ കോഡ്',
     },
-    'gq17lq0a': {
+    'ibcq6oke': {
       'en': 'Field is required',
       'ml': '',
     },
-    '13ghhj0u': {
+    '2rc270la': {
       'en': 'Field is required',
       'ml': '',
     },
@@ -2521,7 +2516,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'സ്ഥിരീകരണം അഭ്യർത്ഥിച്ചു',
     },
     'hjxk41e5': {
-      'en': 'KYC Pending',
+      'en': 'KYC Completed',
       'ml': 'KYC തീർപ്പാക്കിയിട്ടില്ല',
     },
     'vj19crki': {
@@ -2558,29 +2553,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'i2kiee1a': {
       'en': 'Home',
       'ml': '',
-    },
-  },
-  // VandC
-  {
-    'fcsi1yti': {
-      'en': 'Vendor',
-      'ml': 'വെണ്ടർ',
-    },
-    '60sbvaw8': {
-      'en': ' Anand Stationary',
-      'ml': 'ആനന്ദ് സ്റ്റേഷനറി',
-    },
-    '5h2qaaqz': {
-      'en': 'Customer',
-      'ml': 'ഉപഭോക്താവ്',
-    },
-    'to03l269': {
-      'en': ' Anand Shetty',
-      'ml': 'ആനന്ദ് ഷെട്ടി',
-    },
-    '6y0kg3lz': {
-      'en': 'Add User',
-      'ml': 'ഉപയോക്താവിനെ ചേർക്കുക',
     },
   },
   // MyAccount
@@ -2962,14 +2934,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '5tey1oby': {
       'en': ' Anand Stationary',
       'ml': 'ആനന്ദ് സ്റ്റേഷനറി',
-    },
-    'cmiwofai': {
-      'en': 'Transporter',
-      'ml': 'ട്രാൻസ്പോർട്ടർ',
-    },
-    'qz727qqs': {
-      'en': ' Anand Shetty',
-      'ml': 'ആനന്ദ് ഷെട്ടി',
     },
     '6ee2y861': {
       'en': 'Add User',
@@ -3477,6 +3441,33 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'verysnmi': {
       'en': 'SELECT',
       'ml': 'തിരഞ്ഞെടുക്കുക',
+    },
+  },
+  // AccountSwitcher
+  {
+    'fcsi1yti': {
+      'en': 'Vendor',
+      'ml': 'വെണ്ടർ',
+    },
+    '5h2qaaqz': {
+      'en': 'Customer',
+      'ml': 'ഉപഭോക്താവ്',
+    },
+    'to03l269': {
+      'en': ' Anand Shetty',
+      'ml': 'ആനന്ദ് ഷെട്ടി',
+    },
+    'e5diwr38': {
+      'en': 'Transporter',
+      'ml': 'ട്രാൻസ്പോർട്ടർ',
+    },
+    'x727qvh9': {
+      'en': ' Anand Shetty',
+      'ml': 'ആനന്ദ് ഷെട്ടി',
+    },
+    '6y0kg3lz': {
+      'en': 'Add User',
+      'ml': 'ഉപയോക്താവിനെ ചേർക്കുക',
     },
   },
 ].reduce((a, b) => a..addAll(b));

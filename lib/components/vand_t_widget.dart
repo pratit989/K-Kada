@@ -72,48 +72,6 @@ class _VandTWidgetState extends State<VandTWidget> {
                 ],
               ),
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                    child: Icon(
-                      Icons.brightness_1,
-                      color: Color(0xFF65B9C3),
-                      size: 50,
-                    ),
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'cmiwofai' /* Transporter */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Lato',
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'qz727qqs' /*  Anand Shetty */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Open Sans',
-                              color: Color(0xFF949496),
-                              fontSize: 12,
-                            ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
