@@ -154,14 +154,20 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
                           child: AuthUserStreamWidget(
-                            child: Image.network(
-                              valueOrDefault<String>(
-                                currentUserPhoto,
-                                'https://icons-for-free.com/iconfiles/png/512/add+profile+seo+user+icon-1320191017476245273.png',
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
                               ),
-                              width: MediaQuery.of(context).size.width * 0.2,
-                              height: MediaQuery.of(context).size.height * 0.08,
-                              fit: BoxFit.contain,
+                              child: Image.network(
+                                valueOrDefault<String>(
+                                  currentUserPhoto,
+                                  'https://icons-for-free.com/iconfiles/png/512/add+profile+seo+user+icon-1320191017476245273.png',
+                                ),
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
