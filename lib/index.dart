@@ -71,7 +71,6 @@ export 'trancsporter_details_c/trancsporter_details_c_widget.dart'
     show TrancsporterDetailsCWidget;
 export 'order_details_delivered_c/order_details_delivered_c_widget.dart'
     show OrderDetailsDeliveredCWidget;
-export 'select_category/select_category_widget.dart' show SelectCategoryWidget;
 export 'order_details_processing_c/order_details_processing_c_widget.dart'
     show OrderDetailsProcessingCWidget;
 export 'bank_account_details/bank_account_details_widget.dart'
@@ -116,6 +115,7 @@ export 'edit_product_details/edit_product_details_widget.dart'
 export 'almost_done_t/almost_done_t_widget.dart' show AlmostDoneTWidget;
 export 'register_t/register_t_widget.dart' show RegisterTWidget;
 export 'new_product/new_product_widget.dart' show NewProductWidget;
+export 'select_category/select_category_widget.dart' show SelectCategoryWidget;
 export 'profile_status/profile_status_widget.dart' show ProfileStatusWidget;
 export 'registration_navigator/registration_navigator_widget.dart'
     show RegistrationNavigatorWidget;

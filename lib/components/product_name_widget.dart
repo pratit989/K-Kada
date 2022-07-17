@@ -1,5 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -75,32 +77,79 @@ class _ProductNameWidgetState extends State<ProductNameWidget> {
                   width: 0.5,
                 ),
               ),
-              child: TextFormField(
-                controller: textController,
-                obscureText: false,
-                decoration: InputDecoration(
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                child: TextFormField(
+                  controller: textController,
+                  onChanged: (_) => EasyDebounce.debounce(
+                    'textController',
+                    Duration(milliseconds: 2000),
+                    () => setState(() {}),
                   ),
-                  focusedBorder: UnderlineInputBorder(
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x00000000),
+                        width: 1,
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(4.0),
+                        topRight: Radius.circular(4.0),
+                      ),
+                    ),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x00000000),
+                        width: 1,
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(4.0),
+                        topRight: Radius.circular(4.0),
+                      ),
+                    ),
+                    suffixIcon: textController.text.isNotEmpty
+                        ? InkWell(
+                            onTap: () => setState(
+                              () => textController?.clear(),
+                            ),
+                            child: Icon(
+                              Icons.clear,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              size: 22,
+                            ),
+                          )
+                        : null,
+                  ),
+                  style: FlutterFlowTheme.of(context).bodyText1,
+                ),
+              ),
+            ),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                child: FFButtonWidget(
+                  onPressed: () async {
+                    setState(
+                        () => FFAppState().productName = textController.text);
+                  },
+                  text: 'Save',
+                  options: FFButtonOptions(
+                    width: 130,
+                    height: 40,
+                    color: FlutterFlowTheme.of(context).primaryColor,
+                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                          fontFamily: 'Lato',
+                          color: Colors.white,
+                        ),
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
+                      color: Colors.transparent,
                       width: 1,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                style: FlutterFlowTheme.of(context).bodyText1,
               ),
             ),
           ],

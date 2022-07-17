@@ -14,12 +14,15 @@ class PriceofProductWidget extends StatefulWidget {
 class _PriceofProductWidgetState extends State<PriceofProductWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
+  TextEditingController textController3;
+  TextEditingController textController4;
 
   @override
   void initState() {
     super.initState();
-    textController1 = TextEditingController();
     textController2 = TextEditingController();
+    textController3 = TextEditingController();
+    textController4 = TextEditingController();
   }
 
   @override
@@ -67,86 +70,273 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                     ),
               ),
             ),
-            Row(
+            Column(
               mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 70, 0),
-                  child: Container(
-                    width: 123,
-                    height: 28,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).tertiaryColor,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: Color(0xFF707070),
-                        width: 0.5,
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      height: 100,
+                      decoration: BoxDecoration(),
+                      child: Builder(
+                        builder: (context) {
+                          final variants = FFAppState()
+                                  .variantNames
+                                  .map((e) => e)
+                                  .toList()
+                                  ?.toList() ??
+                              [];
+                          return ListView.builder(
+                            padding: EdgeInsets.zero,
+                            shrinkWrap: true,
+                            scrollDirection: Axis.vertical,
+                            itemCount: variants.length,
+                            itemBuilder: (context, variantsIndex) {
+                              final variantsItem = variants[variantsIndex];
+                              return Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 70, 0),
+                                      child: Container(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.35,
+                                        height: 28,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          border: Border.all(
+                                            color: Color(0xFF707070),
+                                            width: 0.5,
+                                          ),
+                                        ),
+                                        child: TextFormField(
+                                          controller: textController1 ??=
+                                              TextEditingController(
+                                            text: variantsItem,
+                                          ),
+                                          obscureText: false,
+                                          decoration: InputDecoration(
+                                            hintText:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'ao1kfh7n' /* Enter Variant Name */,
+                                            ),
+                                            enabledBorder: InputBorder.none,
+                                            focusedBorder: InputBorder.none,
+                                            contentPadding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0, 0, 0, 20),
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyText1
+                                              .override(
+                                                fontFamily: 'Open Sans',
+                                                color: Color(0xFFBEBEBE),
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          );
+                        },
                       ),
                     ),
-                    child: TextFormField(
-                      controller: textController1,
-                      obscureText: false,
-                      decoration: InputDecoration(
-                        hintText: FFLocalizations.of(context).getText(
-                          'ao1kfh7n' /* Enter Variant */,
-                        ),
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                        contentPadding:
-                            EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.29,
+                      height: 100,
+                      decoration: BoxDecoration(),
+                      child: Builder(
+                        builder: (context) {
+                          final variantPrices = FFAppState()
+                                  .variantPrices
+                                  .map((e) => e)
+                                  .toList()
+                                  ?.toList() ??
+                              [];
+                          return ListView.builder(
+                            padding: EdgeInsets.zero,
+                            scrollDirection: Axis.vertical,
+                            itemCount: variantPrices.length,
+                            itemBuilder: (context, variantPricesIndex) {
+                              final variantPricesItem =
+                                  variantPrices[variantPricesIndex];
+                              return Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 0, 10, 0),
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'acfhfhi5' /* ₹ */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Lato',
+                                              color: Color(0xFF707070),
+                                              fontSize: 20,
+                                            ),
+                                      ),
+                                    ),
+                                    Container(
+                                      width: MediaQuery.of(context).size.width *
+                                          0.2,
+                                      height: 28,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .tertiaryColor,
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color: Color(0xFF707070),
+                                          width: 0.5,
+                                        ),
+                                      ),
+                                      child: TextFormField(
+                                        controller: textController2,
+                                        obscureText: false,
+                                        decoration: InputDecoration(
+                                          hintText: 'Price',
+                                          enabledBorder: InputBorder.none,
+                                          focusedBorder: InputBorder.none,
+                                          contentPadding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0, 0, 0, 20),
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Open Sans',
+                                              color: Color(0xFFBEBEBE),
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                        textAlign: TextAlign.center,
+                                        keyboardType: TextInputType.number,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          );
+                        },
                       ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Open Sans',
-                            color: Color(0xFFBEBEBE),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 70, 0),
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.35,
+                          height: 28,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: Color(0xFF707070),
+                              width: 0.5,
+                            ),
                           ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                  child: Text(
-                    FFLocalizations.of(context).getText(
-                      'acfhfhi5' /* ₹ */,
-                    ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Lato',
-                          color: Color(0xFF707070),
-                          fontSize: 20,
+                          child: TextFormField(
+                            controller: textController3,
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              hintText: FFLocalizations.of(context).getText(
+                                'qc3m639b' /* Enter Variant Name */,
+                              ),
+                              enabledBorder: InputBorder.none,
+                              focusedBorder: InputBorder.none,
+                              contentPadding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                            ),
+                            style:
+                                FlutterFlowTheme.of(context).bodyText1.override(
+                                      fontFamily: 'Open Sans',
+                                      color: Color(0xFFBEBEBE),
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                  ),
-                ),
-                Container(
-                  width: 92,
-                  height: 28,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).tertiaryColor,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      color: Color(0xFF707070),
-                      width: 0.5,
-                    ),
-                  ),
-                  child: TextFormField(
-                    controller: textController2,
-                    obscureText: false,
-                    decoration: InputDecoration(
-                      enabledBorder: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                      contentPadding:
-                          EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
-                    ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Open Sans',
-                          color: Color(0xFFBEBEBE),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'zgvr0427' /* ₹ */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Lato',
+                                    color: Color(0xFF707070),
+                                    fontSize: 20,
+                                  ),
                         ),
-                    textAlign: TextAlign.center,
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.2,
+                        height: 28,
+                        decoration: BoxDecoration(
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: Color(0xFF707070),
+                            width: 0.5,
+                          ),
+                        ),
+                        child: TextFormField(
+                          controller: textController4,
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            hintText: 'Price',
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                            contentPadding:
+                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyText1.override(
+                                    fontFamily: 'Open Sans',
+                                    color: Color(0xFFBEBEBE),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                          textAlign: TextAlign.center,
+                          keyboardType: TextInputType.number,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -166,8 +356,12 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
               ),
             ),
             FFButtonWidget(
-              onPressed: () {
-                print('Button pressed ...');
+              onPressed: () async {
+                setState(
+                    () => FFAppState().variantNames.add(textController3.text));
+                setState(() => FFAppState()
+                    .variantPrices
+                    .add(int.parse(textController4.text)));
               },
               text: FFLocalizations.of(context).getText(
                 'h1i883sk' /* Add Variant */,

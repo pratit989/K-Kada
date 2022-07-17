@@ -135,7 +135,9 @@ class _BankAccountDetailsWidgetState extends State<BankAccountDetailsWidget> {
                         ),
                     validator: (val) {
                       if (val == null || val.isEmpty) {
-                        return 'Field is required';
+                        return FFLocalizations.of(context).getText(
+                          'tcrqa2l4' /* Field is required */,
+                        );
                       }
                       if (val.length < 3) {
                         return 'Requires at least 3 characters.';
@@ -190,7 +192,9 @@ class _BankAccountDetailsWidgetState extends State<BankAccountDetailsWidget> {
                         ),
                     validator: (val) {
                       if (val == null || val.isEmpty) {
-                        return 'Field is required';
+                        return FFLocalizations.of(context).getText(
+                          '6vb0w4zy' /* Field is required */,
+                        );
                       }
                       if (val.length < 8) {
                         return 'Requires at least 8 characters.';
@@ -248,7 +252,9 @@ class _BankAccountDetailsWidgetState extends State<BankAccountDetailsWidget> {
                         ),
                     validator: (val) {
                       if (val == null || val.isEmpty) {
-                        return 'Field is required';
+                        return FFLocalizations.of(context).getText(
+                          't7vfsz6i' /* Field is required */,
+                        );
                       }
                       if (val.length < 8) {
                         return 'Requires at least 8 characters.';
@@ -306,7 +312,9 @@ class _BankAccountDetailsWidgetState extends State<BankAccountDetailsWidget> {
                         ),
                     validator: (val) {
                       if (val == null || val.isEmpty) {
-                        return 'Field is required';
+                        return FFLocalizations.of(context).getText(
+                          'a4aq9hxr' /* Field is required */,
+                        );
                       }
                       if (val.length < 11) {
                         return 'Requires at least 11 characters.';

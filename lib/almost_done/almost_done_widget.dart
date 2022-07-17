@@ -157,7 +157,9 @@ class _AlmostDoneWidgetState extends State<AlmostDoneWidget> {
                           maxLines: 3,
                           validator: (val) {
                             if (val == null || val.isEmpty) {
-                              return 'Field is required';
+                              return FFLocalizations.of(context).getText(
+                                'g8za2ptz' /* Field is required */,
+                              );
                             }
                             if (val.length < 3) {
                               return 'Requires at least 3 characters.';
@@ -309,7 +311,9 @@ class _AlmostDoneWidgetState extends State<AlmostDoneWidget> {
                         keyboardType: TextInputType.number,
                         validator: (val) {
                           if (val == null || val.isEmpty) {
-                            return 'Field is required';
+                            return FFLocalizations.of(context).getText(
+                              '4l3avl6w' /* Field is required */,
+                            );
                           }
                           if (val.length < 6) {
                             return 'Requires at least 6 characters.';

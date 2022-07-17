@@ -35,6 +35,32 @@ class FFAppState {
   bool panCardUpload = false;
 
   bool fssaiCertificateUpload = false;
+
+  List<String> productImages = [];
+
+  String productName = '';
+
+  List<String> variantNames = [];
+
+  List<int> variantPrices = [];
+
+  bool addedProductName = false;
+
+  bool addedProductVaraint = false;
+
+  List<String> selectedColours = [];
+
+  bool addedColours = false;
+
+  bool addedDescription = false;
+
+  String description = '';
+
+  bool addedStockDetails = false;
+
+  String stockDetails = '';
+
+  bool addedSize = false;
 }
 
 LatLng _latLngFromString(String val) {

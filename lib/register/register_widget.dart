@@ -5,6 +5,7 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/upload_media.dart';
+import '../seller_information/seller_information_widget.dart';
 import '../welcome/welcome_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -381,8 +382,18 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                       color: FlutterFlowTheme.of(context).tertiaryColor,
                       size: 25,
                     ),
-                    onPressed: () {
-                      print('IconButton pressed ...');
+                    onPressed: () async {
+                      final usersUpdateData = createUsersRecordData(
+                        displayName: textController1.text,
+                        dateOfBirth: datePicked,
+                      );
+                      await currentUserReference.update(usersUpdateData);
+                      await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SellerInformationWidget(),
+                        ),
+                      );
                     },
                   ),
                 ),

@@ -90,7 +90,9 @@ class _ThatsItWidgetState extends State<ThatsItWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 20),
                 child: Text(
-                  'SIGN IN THE BOX',
+                  FFLocalizations.of(context).getText(
+                    'syqbo4yy' /* SIGN IN THE BOX */,
+                  ),
                   style: FlutterFlowTheme.of(context).bodyText1.override(
                         fontFamily: 'Lato',
                         fontWeight: FontWeight.bold,

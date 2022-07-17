@@ -1,5 +1,6 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,6 +13,7 @@ class ProductDetailsWidget extends StatefulWidget {
 
 class _ProductDetailsWidgetState extends State<ProductDetailsWidget> {
   TextEditingController textController;
+  final formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -75,32 +77,84 @@ class _ProductDetailsWidgetState extends State<ProductDetailsWidget> {
                   width: 0.5,
                 ),
               ),
-              child: TextFormField(
-                controller: textController,
-                obscureText: false,
-                decoration: InputDecoration(
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
+              child: Form(
+                key: formKey,
+                autovalidateMode: AutovalidateMode.disabled,
+                child: TextFormField(
+                  controller: textController,
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x00000000),
+                        width: 1,
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(4.0),
+                        topRight: Radius.circular(4.0),
+                      ),
                     ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Color(0x00000000),
+                        width: 1,
+                      ),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(4.0),
+                        topRight: Radius.circular(4.0),
+                      ),
                     ),
                   ),
-                  focusedBorder: UnderlineInputBorder(
+                  style: FlutterFlowTheme.of(context).bodyText1,
+                  maxLines: 5,
+                  validator: (val) {
+                    if (val == null || val.isEmpty) {
+                      return 'Field is required';
+                    }
+                    if (val.length < 10) {
+                      return 'Requires at least 10 characters.';
+                    }
+                    if (val.length > 100) {
+                      return 'Maximum 100 characters allowed, currently ${val.length}.';
+                    }
+
+                    return null;
+                  },
+                ),
+              ),
+            ),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                child: FFButtonWidget(
+                  onPressed: () async {
+                    if (formKey.currentState == null ||
+                        !formKey.currentState.validate()) {
+                      return;
+                    }
+
+                    setState(
+                        () => FFAppState().description = textController.text);
+                    setState(() => FFAppState().addedDescription = true);
+                    Navigator.pop(context);
+                  },
+                  text: 'Save',
+                  options: FFButtonOptions(
+                    width: 130,
+                    height: 40,
+                    color: FlutterFlowTheme.of(context).primaryColor,
+                    textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                          fontFamily: 'Lato',
+                          color: Colors.white,
+                        ),
                     borderSide: BorderSide(
-                      color: Color(0x00000000),
+                      color: Colors.transparent,
                       width: 1,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(4.0),
-                      topRight: Radius.circular(4.0),
-                    ),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                style: FlutterFlowTheme.of(context).bodyText1,
               ),
             ),
           ],

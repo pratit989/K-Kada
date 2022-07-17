@@ -1482,81 +1482,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'വീട്',
     },
   },
-  // SelectCategory
-  {
-    'uda4xe0y': {
-      'en': 'Select Category',
-      'ml': 'ഇനം തിരഞ്ഞെടുക്കുക',
-    },
-    'j7dlscvg': {
-      'en': 'Your product comes under which category',
-      'ml': 'നിങ്ങളുടെ ഉൽപ്പന്നം ഏത് വിഭാഗത്തിലാണ് വരുന്നത്',
-    },
-    'gfosm9us': {
-      'en': 'Electronics',
-      'ml': 'ഇലക്ട്രോണിക്സ്',
-    },
-    'hosqc7vx': {
-      'en': 'Clothing and Accessories',
-      'ml': 'വസ്ത്രങ്ങളും അനുബന്ധ ഉപകരണങ്ങളും',
-    },
-    'lr96wp28': {
-      'en': 'Health and Beauty',
-      'ml': 'ആരോഗ്യവും സൗന്ദര്യവും',
-    },
-    '380l35ou': {
-      'en': 'Groceries',
-      'ml': 'പലചരക്ക് സാധനങ്ങൾ',
-    },
-    'xw35vlvg': {
-      'en': 'Fruits and Vegetables',
-      'ml': 'പഴങ്ങളും പച്ചക്കറികളും',
-    },
-    'b299i2fa': {
-      'en': 'Books',
-      'ml': 'പുസ്തകങ്ങൾ',
-    },
-    'g9xleood': {
-      'en': 'Home and Kitchen',
-      'ml': 'വീടും അടുക്കളയും',
-    },
-    'w4i8cx2u': {
-      'en': 'Sports and Outdoors',
-      'ml': 'സ്പോർട്സും ഔട്ട്ഡോറുകളും',
-    },
-    '53jr6cob': {
-      'en': 'Handicrafts',
-      'ml': 'കരകൗശലവസ്തുക്കൾ',
-    },
-    '0rz2dadl': {
-      'en': 'Dairy and Beverages',
-      'ml': 'പാലും പാനീയങ്ങളും',
-    },
-    'sguv88aj': {
-      'en': 'Packed Food',
-      'ml': 'പായ്ക്ക് ചെയ്ത ഭക്ഷണം',
-    },
-    'hfuh38bo': {
-      'en': 'Baby and Kids',
-      'ml': 'കുഞ്ഞും കുട്ടികളും',
-    },
-    'wdsfsr6p': {
-      'en': 'Footwear',
-      'ml': 'പാദരക്ഷകൾ',
-    },
-    '9yx3v144': {
-      'en': 'Stationary',
-      'ml': 'നിശ്ചലമായ',
-    },
-    'rgd7m09l': {
-      'en': 'Select',
-      'ml': 'തിരഞ്ഞെടുക്കുക',
-    },
-    'o52138kg': {
-      'en': 'Home',
-      'ml': 'വീട്',
-    },
-  },
   // OrderDetailsProcessingC
   {
     'bwyiv4ag': {
@@ -1620,19 +1545,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '*IFSC-CODE',
       'ml': '*IFSC-കോഡ്',
     },
-    'r5puck37': {
+    'tcrqa2l4': {
       'en': 'Field is required',
       'ml': '',
     },
-    '2sm6yl0u': {
+    '6vb0w4zy': {
       'en': 'Field is required',
       'ml': '',
     },
-    'kvskzzpr': {
+    't7vfsz6i': {
       'en': 'Field is required',
       'ml': '',
     },
-    'gagee6kc': {
+    'a4aq9hxr': {
       'en': 'Field is required',
       'ml': '',
     },
@@ -1832,12 +1757,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // MyAccountDetails
   {
     'ttrkdvob': {
-      'en': 'FIRST NAME',
+      'en': 'DISPLAY NAME',
       'ml': 'പേരിന്റെ ആദ്യഭാഗം',
-    },
-    'yhbwc7cw': {
-      'en': 'LAST NAME',
-      'ml': 'പേരിന്റെ അവസാന ഭാഗം',
     },
     'w19ehvb1': {
       'en': 'MOBILE NUMBER',
@@ -2326,7 +2247,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml':
           'ഉപഭോക്താവിന് അയച്ച ഇൻവോയ്സുകളിൽ ഉപയോഗിക്കുന്ന നിങ്ങളുടെ ഡിജിറ്റൽ സിഗ്നേച്ചർ അപ്‌ലോഡ് ചെയ്യുക.',
     },
-    'rjhtv1co': {
+    'syqbo4yy': {
       'en': 'SIGN IN THE BOX',
       'ml': '',
     },
@@ -2371,11 +2292,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '*PIN CODE',
       'ml': '*പിൻ കോഡ്',
     },
-    'ibcq6oke': {
+    'g8za2ptz': {
       'en': 'Field is required',
       'ml': '',
     },
-    '2rc270la': {
+    '4l3avl6w': {
       'en': 'Field is required',
       'ml': '',
     },
@@ -2492,15 +2413,114 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // NewProduct
   {
-    'xuwdzrqd': {
-      'en': 'New Product',
-      'ml': 'പുതിയ ഉൽപ്പന്നം',
+    'a4yfxn5p': {
+      'en': 'PRODUCT NAME*',
+      'ml': '',
+    },
+    'p7st00jo': {
+      'en': 'PRIZE*',
+      'ml': '',
+    },
+    'dzvcs85m': {
+      'en': 'COLOUR AVAILABLITY*',
+      'ml': '',
+    },
+    'n546rtfn': {
+      'en': 'DESCRIPTION*',
+      'ml': '',
+    },
+    'd5bqvyse': {
+      'en': 'STOCK AVAILABLITY',
+      'ml': '',
+    },
+    'rb869eza': {
+      'en': 'SIZE*',
+      'ml': '',
     },
     'iia2mc8q': {
       'en': 'Save',
       'ml': 'രക്ഷിക്കും',
     },
+    'crbzahxb': {
+      'en': 'New Product',
+      'ml': '',
+    },
     '6qhycnbc': {
+      'en': 'Home',
+      'ml': 'വീട്',
+    },
+  },
+  // SelectCategory
+  {
+    'uda4xe0y': {
+      'en': 'Select Category',
+      'ml': 'ഇനം തിരഞ്ഞെടുക്കുക',
+    },
+    'j7dlscvg': {
+      'en': 'Your product comes under which category',
+      'ml': 'നിങ്ങളുടെ ഉൽപ്പന്നം ഏത് വിഭാഗത്തിലാണ് വരുന്നത്',
+    },
+    'gfosm9us': {
+      'en': 'Electronics',
+      'ml': 'ഇലക്ട്രോണിക്സ്',
+    },
+    'hosqc7vx': {
+      'en': 'Clothing and Accessories',
+      'ml': 'വസ്ത്രങ്ങളും അനുബന്ധ ഉപകരണങ്ങളും',
+    },
+    'lr96wp28': {
+      'en': 'Health and Beauty',
+      'ml': 'ആരോഗ്യവും സൗന്ദര്യവും',
+    },
+    '380l35ou': {
+      'en': 'Groceries',
+      'ml': 'പലചരക്ക് സാധനങ്ങൾ',
+    },
+    'xw35vlvg': {
+      'en': 'Fruits and Vegetables',
+      'ml': 'പഴങ്ങളും പച്ചക്കറികളും',
+    },
+    'b299i2fa': {
+      'en': 'Books',
+      'ml': 'പുസ്തകങ്ങൾ',
+    },
+    'g9xleood': {
+      'en': 'Home and Kitchen',
+      'ml': 'വീടും അടുക്കളയും',
+    },
+    'w4i8cx2u': {
+      'en': 'Sports and Outdoors',
+      'ml': 'സ്പോർട്സും ഔട്ട്ഡോറുകളും',
+    },
+    '53jr6cob': {
+      'en': 'Handicrafts',
+      'ml': 'കരകൗശലവസ്തുക്കൾ',
+    },
+    '0rz2dadl': {
+      'en': 'Dairy and Beverages',
+      'ml': 'പാലും പാനീയങ്ങളും',
+    },
+    'sguv88aj': {
+      'en': 'Packed Food',
+      'ml': 'പായ്ക്ക് ചെയ്ത ഭക്ഷണം',
+    },
+    'hfuh38bo': {
+      'en': 'Baby and Kids',
+      'ml': 'കുഞ്ഞും കുട്ടികളും',
+    },
+    'wdsfsr6p': {
+      'en': 'Footwear',
+      'ml': 'പാദരക്ഷകൾ',
+    },
+    '9yx3v144': {
+      'en': 'Stationary',
+      'ml': 'നിശ്ചലമായ',
+    },
+    'rgd7m09l': {
+      'en': 'Select',
+      'ml': 'തിരഞ്ഞെടുക്കുക',
+    },
+    'o52138kg': {
       'en': 'Home',
       'ml': 'വീട്',
     },
@@ -2711,6 +2731,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Enter your product name',
       'ml': 'നിങ്ങളുടെ ഉൽപ്പന്നത്തിന്റെ പേര് നൽകുക',
     },
+    '2wx30rif': {
+      'en': 'Save',
+      'ml': '',
+    },
   },
   // PriceofProduct
   {
@@ -2719,12 +2743,28 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ml': 'നിങ്ങളുടെ ഉൽപ്പന്നത്തിന്റെ വില നൽകുക',
     },
     'ao1kfh7n': {
-      'en': 'Enter Variant',
+      'en': 'Enter Variant Name',
       'ml': 'വേരിയന്റ് നൽകുക',
     },
     'acfhfhi5': {
       'en': '₹',
       'ml': '₹',
+    },
+    '5gtgfafy': {
+      'en': 'Price',
+      'ml': '',
+    },
+    'qc3m639b': {
+      'en': 'Enter Variant Name',
+      'ml': 'വേരിയന്റ് നൽകുക',
+    },
+    'zgvr0427': {
+      'en': '₹',
+      'ml': '₹',
+    },
+    'gm9fl8am': {
+      'en': 'Price',
+      'ml': '',
     },
     'kd8h9uuz': {
       'en': 'eg. 1 unit, 1kg, pack of 5, 20ml, etc',
@@ -2776,9 +2816,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Select Colour Availability for\nthis product.',
       'ml': 'ഈ ഉൽപ്പന്നത്തിന് വർണ്ണ ലഭ്യത തിരഞ്ഞെടുക്കുക.',
     },
-    'jf9609p9': {
+    'w6malafc': {
       'en': 'Tick if not applicable',
-      'ml': 'ബാധകമല്ലെങ്കിൽ ടിക്ക് ചെയ്യുക',
+      'ml': '',
+    },
+    'yhvfahw6': {
+      'en': 'Save',
+      'ml': '',
     },
   },
   // ProductDetails
@@ -2787,12 +2831,28 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Enter Product Details',
       'ml': 'ഉൽപ്പന്ന വിശദാംശങ്ങൾ നൽകുക',
     },
+    '4xxkngvx': {
+      'en': 'Field is required',
+      'ml': '',
+    },
+    'of5qfxhn': {
+      'en': 'Save',
+      'ml': '',
+    },
   },
   // StockDetails
   {
     'o61rxc1f': {
       'en': 'Enter Stock Details',
       'ml': 'സ്റ്റോക്ക് വിശദാംശങ്ങൾ നൽകുക',
+    },
+    '4dvkxkol': {
+      'en': 'Field is required',
+      'ml': '',
+    },
+    'oqyaidye': {
+      'en': 'Save',
+      'ml': '',
     },
   },
   // Size

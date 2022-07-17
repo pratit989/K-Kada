@@ -1,6 +1,9 @@
 import '../flutter_flow/flutter_flow_theme.dart';
+import '../flutter_flow/flutter_flow_toggle_icon.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ColorsWidget extends StatefulWidget {
@@ -11,8 +14,6 @@ class ColorsWidget extends StatefulWidget {
 }
 
 class _ColorsWidgetState extends State<ColorsWidget> {
-  bool checkboxListTileValue;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -81,10 +82,52 @@ class _ColorsWidgetState extends State<ColorsWidget> {
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: FlutterFlowTheme.of(context).secondaryColor,
-                        size: 40,
+                      child: ToggleIcon(
+                        onPressed: () async {
+                          setState(
+                            () => FFAppState().selectedColours.contains('Black')
+                                ? FFAppState().selectedColours.remove('Black')
+                                : FFAppState().selectedColours.add('Black'),
+                          );
+                        },
+                        value: FFAppState().selectedColours.contains('Black'),
+                        onIcon: Icon(
+                          Icons.check_circle,
+                          color: Colors.black,
+                          size: 30,
+                        ),
+                        offIcon: Icon(
+                          Icons.brightness_1,
+                          color: Colors.black,
+                          size: 30,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      width: 45,
+                      height: 45,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                      ),
+                      child: ToggleIcon(
+                        onPressed: () async {
+                          setState(
+                            () => FFAppState().selectedColours.contains('White')
+                                ? FFAppState().selectedColours.remove('White')
+                                : FFAppState().selectedColours.add('White'),
+                          );
+                        },
+                        value: FFAppState().selectedColours.contains('White'),
+                        onIcon: Icon(
+                          Icons.check_circle,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          size: 30,
+                        ),
+                        offIcon: Icon(
+                          Icons.brightness_1,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          size: 30,
+                        ),
                       ),
                     ),
                     Container(
@@ -94,10 +137,25 @@ class _ColorsWidgetState extends State<ColorsWidget> {
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                        size: 40,
+                      child: ToggleIcon(
+                        onPressed: () async {
+                          setState(
+                            () => FFAppState().selectedColours.contains('Green')
+                                ? FFAppState().selectedColours.remove('Green')
+                                : FFAppState().selectedColours.add('Green'),
+                          );
+                        },
+                        value: FFAppState().selectedColours.contains('Green'),
+                        onIcon: Icon(
+                          Icons.check_circle,
+                          color: Color(0xFF00FF00),
+                          size: 30,
+                        ),
+                        offIcon: Icon(
+                          Icons.brightness_1,
+                          color: Color(0xFF00FF00),
+                          size: 30,
+                        ),
                       ),
                     ),
                     Container(
@@ -107,10 +165,27 @@ class _ColorsWidgetState extends State<ColorsWidget> {
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: Color(0xFF037034),
-                        size: 40,
+                      child: ToggleIcon(
+                        onPressed: () async {
+                          setState(
+                            () => FFAppState()
+                                    .selectedColours
+                                    .contains('Yellow')
+                                ? FFAppState().selectedColours.remove('Yellow')
+                                : FFAppState().selectedColours.add('Yellow'),
+                          );
+                        },
+                        value: FFAppState().selectedColours.contains('Yellow'),
+                        onIcon: Icon(
+                          Icons.check_circle,
+                          color: Color(0xFFFFCB37),
+                          size: 30,
+                        ),
+                        offIcon: Icon(
+                          Icons.brightness_1,
+                          color: Color(0xFFFFCB37),
+                          size: 30,
+                        ),
                       ),
                     ),
                     Container(
@@ -120,10 +195,27 @@ class _ColorsWidgetState extends State<ColorsWidget> {
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: Color(0xFFEEC643),
-                        size: 40,
+                      child: ToggleIcon(
+                        onPressed: () async {
+                          setState(
+                            () => FFAppState()
+                                    .selectedColours
+                                    .contains('Violet')
+                                ? FFAppState().selectedColours.remove('Violet')
+                                : FFAppState().selectedColours.add('Violet'),
+                          );
+                        },
+                        value: FFAppState().selectedColours.contains('Violet'),
+                        onIcon: Icon(
+                          Icons.check_circle,
+                          color: Color(0xFFC21678),
+                          size: 30,
+                        ),
+                        offIcon: Icon(
+                          Icons.brightness_1,
+                          color: Color(0xFFC21678),
+                          size: 30,
+                        ),
                       ),
                     ),
                     Container(
@@ -133,10 +225,27 @@ class _ColorsWidgetState extends State<ColorsWidget> {
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: Color(0xFFC21678),
-                        size: 40,
+                      child: ToggleIcon(
+                        onPressed: () async {
+                          setState(
+                            () => FFAppState()
+                                    .selectedColours
+                                    .contains('Violet')
+                                ? FFAppState().selectedColours.remove('Violet')
+                                : FFAppState().selectedColours.add('Violet'),
+                          );
+                        },
+                        value: FFAppState().selectedColours.contains('Violet'),
+                        onIcon: Icon(
+                          Icons.check_circle,
+                          color: Color(0xFF399FB3),
+                          size: 30,
+                        ),
+                        offIcon: Icon(
+                          Icons.brightness_1,
+                          color: Color(0xFF399FB3),
+                          size: 30,
+                        ),
                       ),
                     ),
                     Container(
@@ -146,75 +255,27 @@ class _ColorsWidgetState extends State<ColorsWidget> {
                         color: FlutterFlowTheme.of(context).tertiaryColor,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: Color(0xFF399FB3),
-                        size: 40,
-                      ),
-                    ),
-                    Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: Color(0xFF0C73B7),
-                        size: 40,
-                      ),
-                    ),
-                    Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: Color(0xFF59008B),
-                        size: 40,
-                      ),
-                    ),
-                    Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: Color(0xFF99A5AE),
-                        size: 40,
-                      ),
-                    ),
-                    Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: Color(0xFFD68203),
-                        size: 40,
-                      ),
-                    ),
-                    Container(
-                      width: 45,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Icon(
-                        Icons.brightness_1,
-                        color: Color(0xFFE09EE2),
-                        size: 40,
+                      child: ToggleIcon(
+                        onPressed: () async {
+                          setState(
+                            () => FFAppState()
+                                    .selectedColours
+                                    .contains('Violet')
+                                ? FFAppState().selectedColours.remove('Violet')
+                                : FFAppState().selectedColours.add('Violet'),
+                          );
+                        },
+                        value: FFAppState().selectedColours.contains('Violet'),
+                        onIcon: Icon(
+                          Icons.check_circle,
+                          color: Color(0xFF0C73B7),
+                          size: 30,
+                        ),
+                        offIcon: Icon(
+                          Icons.brightness_1,
+                          color: Color(0xFF0C73B7),
+                          size: 30,
+                        ),
                       ),
                     ),
                   ],
@@ -223,36 +284,54 @@ class _ColorsWidgetState extends State<ColorsWidget> {
             ),
             Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-              child: Theme(
-                data: ThemeData(
-                  checkboxTheme: CheckboxThemeData(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  ToggleIcon(
+                    onPressed: () async {
+                      setState(() => FFAppState().addedColours =
+                          !FFAppState().addedColours);
+                    },
+                    value: FFAppState().addedColours,
+                    onIcon: Icon(
+                      Icons.check_circle,
+                      color: Colors.black,
+                      size: 25,
+                    ),
+                    offIcon: FaIcon(
+                      FontAwesomeIcons.circle,
+                      color: Colors.black,
+                      size: 25,
                     ),
                   ),
-                  unselectedWidgetColor: Color(0xFF707070),
-                ),
-                child: CheckboxListTile(
-                  value: checkboxListTileValue ??= false,
-                  onChanged: (newValue) =>
-                      setState(() => checkboxListTileValue = newValue),
-                  title: Text(
-                    FFLocalizations.of(context).getText(
-                      'jf9609p9' /* Tick if not applicable */,
-                    ),
-                    textAlign: TextAlign.start,
-                    style: FlutterFlowTheme.of(context).title3.override(
-                          fontFamily: 'Open Sans',
-                          color: Color(0xFF949496),
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                        ),
+                  Text(
+                    'Tick if not applicable',
+                    style: FlutterFlowTheme.of(context).bodyText1,
                   ),
-                  tileColor: FlutterFlowTheme.of(context).tertiaryColor,
-                  activeColor: FlutterFlowTheme.of(context).secondaryColor,
-                  checkColor: FlutterFlowTheme.of(context).tertiaryColor,
-                  dense: false,
-                  controlAffinity: ListTileControlAffinity.leading,
+                ],
+              ),
+            ),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: FFButtonWidget(
+                onPressed: () async {
+                  setState(() => FFAppState().addedColours = true);
+                  Navigator.pop(context);
+                },
+                text: 'Save',
+                options: FFButtonOptions(
+                  width: 130,
+                  height: 40,
+                  color: FlutterFlowTheme.of(context).primaryColor,
+                  textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                        fontFamily: 'Lato',
+                        color: Colors.white,
+                      ),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(8),
                 ),
               ),
             ),
