@@ -2731,7 +2731,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Enter your product name',
       'ml': 'നിങ്ങളുടെ ഉൽപ്പന്നത്തിന്റെ പേര് നൽകുക',
     },
-    'dsz8kzrg': {
+    'n4p2qwrp': {
       'en': 'Save',
       'ml': '',
     },
@@ -2750,7 +2750,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '₹',
       'ml': '₹',
     },
-    'nflz3ttj': {
+    '4ptebds2': {
       'en': 'Price',
       'ml': '',
     },
@@ -2762,7 +2762,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '₹',
       'ml': '₹',
     },
-    '78q6t514': {
+    'dv43x04e': {
       'en': 'Price',
       'ml': '',
     },
@@ -2816,11 +2816,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Select Colour Availability for\nthis product.',
       'ml': 'ഈ ഉൽപ്പന്നത്തിന് വർണ്ണ ലഭ്യത തിരഞ്ഞെടുക്കുക.',
     },
-    '5ojz4dew': {
+    '0gca5t7r': {
       'en': 'Tick if not applicable',
       'ml': '',
     },
-    'fva2hl45': {
+    's0frtgrc': {
       'en': 'Save',
       'ml': '',
     },
@@ -2831,11 +2831,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Enter Product Details',
       'ml': 'ഉൽപ്പന്ന വിശദാംശങ്ങൾ നൽകുക',
     },
-    'olmucd71': {
+    '2s37uxrw': {
       'en': 'Field is required',
       'ml': '',
     },
-    '9ir8f2ix': {
+    'bqx6l5s2': {
       'en': 'Save',
       'ml': '',
     },
@@ -2846,11 +2846,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Enter Stock Details',
       'ml': 'സ്റ്റോക്ക് വിശദാംശങ്ങൾ നൽകുക',
     },
-    'gdoapr95': {
+    'mylw1qv2': {
       'en': 'Field is required',
       'ml': '',
     },
-    '14ngct5t': {
+    '3vl1epic': {
       'en': 'Save',
       'ml': '',
     },

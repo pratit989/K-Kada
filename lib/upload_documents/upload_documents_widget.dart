@@ -42,8 +42,8 @@ class _UploadDocumentsWidgetState extends State<UploadDocumentsWidget> {
             color: FlutterFlowTheme.of(context).secondaryColor,
             size: 30,
           ),
-          onPressed: () async {
-            Navigator.pop(context);
+          onPressed: () {
+            print('IconButton pressed ...');
           },
         ),
         actions: [],

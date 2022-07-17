@@ -459,6 +459,9 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                         return 'Requires at least 3 characters.';
                       }
 
+                      if (!RegExp(kTextValidatorUsernameRegex).hasMatch(val)) {
+                        return 'Must start with a letter and can only contain letters, digits and - or _.';
+                      }
                       return null;
                     },
                   ),

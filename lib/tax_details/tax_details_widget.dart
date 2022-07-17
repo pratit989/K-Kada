@@ -207,8 +207,7 @@ class _TaxDetailsWidgetState extends State<TaxDetailsWidget> {
                       if (val.length > 10) {
                         return 'Maximum 10 characters allowed, currently ${val.length}.';
                       }
-                      if (!RegExp(
-                              r"^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$")
+                      if (!RegExp(r"^[A-Z]{5}[0-9]{4}[A-Z]{1}$")
                           .hasMatch(val)) {
                         return 'Invalid text';
                       }
