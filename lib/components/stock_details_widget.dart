@@ -110,7 +110,9 @@ class _StockDetailsWidgetState extends State<StockDetailsWidget> {
                   keyboardType: TextInputType.number,
                   validator: (val) {
                     if (val == null || val.isEmpty) {
-                      return 'Field is required';
+                      return FFLocalizations.of(context).getText(
+                        'lsdg8o1n' /* Field is required */,
+                      );
                     }
 
                     return null;
@@ -134,7 +136,9 @@ class _StockDetailsWidgetState extends State<StockDetailsWidget> {
                     setState(() => FFAppState().addedStockDetails = true);
                     Navigator.pop(context);
                   },
-                  text: 'Save',
+                  text: FFLocalizations.of(context).getText(
+                    'aanv8ah7' /* Save */,
+                  ),
                   options: FFButtonOptions(
                     width: 130,
                     height: 40,

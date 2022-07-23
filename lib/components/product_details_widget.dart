@@ -109,7 +109,9 @@ class _ProductDetailsWidgetState extends State<ProductDetailsWidget> {
                   maxLines: 5,
                   validator: (val) {
                     if (val == null || val.isEmpty) {
-                      return 'Field is required';
+                      return FFLocalizations.of(context).getText(
+                        'jj2vv7oc' /* Field is required */,
+                      );
                     }
                     if (val.length < 10) {
                       return 'Requires at least 10 characters.';
@@ -139,7 +141,9 @@ class _ProductDetailsWidgetState extends State<ProductDetailsWidget> {
                     setState(() => FFAppState().addedDescription = true);
                     Navigator.pop(context);
                   },
-                  text: 'Save',
+                  text: FFLocalizations.of(context).getText(
+                    'np83bv9q' /* Save */,
+                  ),
                   options: FFButtonOptions(
                     width: 130,
                     height: 40,

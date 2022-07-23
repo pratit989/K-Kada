@@ -134,7 +134,9 @@ class _ProductNameWidgetState extends State<ProductNameWidget> {
                     setState(
                         () => FFAppState().productName = textController.text);
                   },
-                  text: 'Save',
+                  text: FFLocalizations.of(context).getText(
+                    'zofjywfc' /* Save */,
+                  ),
                   options: FFButtonOptions(
                     width: 130,
                     height: 40,

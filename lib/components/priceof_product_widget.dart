@@ -218,7 +218,10 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                                         controller: textController2,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          hintText: 'Price',
+                                          hintText: FFLocalizations.of(context)
+                                              .getText(
+                                            'tm0li3xe' /* Price */,
+                                          ),
                                           enabledBorder: InputBorder.none,
                                           focusedBorder: InputBorder.none,
                                           contentPadding:
@@ -319,7 +322,9 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                           controller: textController4,
                           obscureText: false,
                           decoration: InputDecoration(
-                            hintText: 'Price',
+                            hintText: FFLocalizations.of(context).getText(
+                              'aojbkn1v' /* Price */,
+                            ),
                             enabledBorder: InputBorder.none,
                             focusedBorder: InputBorder.none,
                             contentPadding:

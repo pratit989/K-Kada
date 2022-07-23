@@ -102,10 +102,11 @@ class _ProfileStatusWidgetState extends State<ProfileStatusWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                           child: ToggleIcon(
                             onPressed: () async {
-                              final usersUpdateData = createUsersRecordData(
-                                verificationRequested: !profileStatusUsersRecord
-                                    .verificationRequested,
-                              );
+                              final usersUpdateData = {
+                                'verification_requested':
+                                    !profileStatusUsersRecord
+                                        .verificationRequested,
+                              };
                               await profileStatusUsersRecord.reference
                                   .update(usersUpdateData);
                             },
@@ -148,10 +149,10 @@ class _ProfileStatusWidgetState extends State<ProfileStatusWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                           child: ToggleIcon(
                             onPressed: () async {
-                              final usersUpdateData = createUsersRecordData(
-                                kycCompleted:
+                              final usersUpdateData = {
+                                'kyc_completed':
                                     !profileStatusUsersRecord.kycCompleted,
-                              );
+                              };
                               await profileStatusUsersRecord.reference
                                   .update(usersUpdateData);
                             },
@@ -191,9 +192,9 @@ class _ProfileStatusWidgetState extends State<ProfileStatusWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                         child: ToggleIcon(
                           onPressed: () async {
-                            final usersUpdateData = createUsersRecordData(
-                              verified: !profileStatusUsersRecord.verified,
-                            );
+                            final usersUpdateData = {
+                              'verified': !profileStatusUsersRecord.verified,
+                            };
                             await profileStatusUsersRecord.reference
                                 .update(usersUpdateData);
                           },

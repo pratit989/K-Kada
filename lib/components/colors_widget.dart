@@ -305,7 +305,9 @@ class _ColorsWidgetState extends State<ColorsWidget> {
                     ),
                   ),
                   Text(
-                    'Tick if not applicable',
+                    FFLocalizations.of(context).getText(
+                      'veb09xi6' /* Tick if not applicable */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodyText1,
                   ),
                 ],
@@ -318,7 +320,9 @@ class _ColorsWidgetState extends State<ColorsWidget> {
                   setState(() => FFAppState().addedColours = true);
                   Navigator.pop(context);
                 },
-                text: 'Save',
+                text: FFLocalizations.of(context).getText(
+                  'cog58anl' /* Save */,
+                ),
                 options: FFButtonOptions(
                   width: 130,
                   height: 40,

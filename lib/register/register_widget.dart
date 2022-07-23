@@ -331,7 +331,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                           (l) =>
                               l.name ==
                               FFLocalizations.of(context).languageCode,
-                          orElse: null,
+                          orElse: () => LocaleType.en,
                         ),
                       );
 

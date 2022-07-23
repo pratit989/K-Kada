@@ -4,12 +4,12 @@ import 'api_manager.dart';
 
 export 'api_manager.dart' show ApiCallResponse;
 
-class CountriesAndStatesCall {
+class StatesAndCitiesCall {
   static Future<ApiCallResponse> call() {
     return ApiManager.instance.makeApiCall(
-      callName: 'Countries and States',
+      callName: 'States and Cities',
       apiUrl:
-          'https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries%2Bstates%2Bcities.json',
+          'https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/states%2Bcities.json',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
@@ -19,10 +19,6 @@ class CountriesAndStatesCall {
 
   static dynamic states(dynamic response) => getJsonField(
         response,
-        r'''$..[?(@.name=="India")].states..name''',
-      );
-  static dynamic cities(dynamic response) => getJsonField(
-        response,
-        r'''$..[?(@.name=="India")].states..cities..name''',
+        r'''$..[?(@.country_id==101)]..name''',
       );
 }
