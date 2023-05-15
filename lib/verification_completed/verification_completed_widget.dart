@@ -1,15 +1,19 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../my_store/my_store_widget.dart';
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/my_store/my_store_widget.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart'
+    as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:provider/provider.dart';
+import 'verification_completed_model.dart';
+export 'verification_completed_model.dart';
 
 class VerificationCompletedWidget extends StatefulWidget {
-  const VerificationCompletedWidget({Key key}) : super(key: key);
+  const VerificationCompletedWidget({Key? key}) : super(key: key);
 
   @override
   _VerificationCompletedWidgetState createState() =>
@@ -18,14 +22,35 @@ class VerificationCompletedWidget extends StatefulWidget {
 
 class _VerificationCompletedWidgetState
     extends State<VerificationCompletedWidget> {
-  PageController pageViewController;
+  late VerificationCompletedModel _model;
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  int get pageViewCurrentIndex => _model.pageViewController != null &&
+          _model.pageViewController!.hasClients &&
+          _model.pageViewController!.page != null
+      ? _model.pageViewController!.page!.round()
+      : 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => VerificationCompletedModel());
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
+      backgroundColor: FlutterFlowTheme.of(context).tertiary,
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -36,34 +61,34 @@ class _VerificationCompletedWidgetState
               child: Stack(
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 50),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
                     child: PageView(
-                      controller: pageViewController ??=
+                      controller: _model.pageViewController ??=
                           PageController(initialPage: 0),
                       scrollDirection: Axis.horizontal,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(40, 20, 40, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                40.0, 20.0, 40.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 100, 0, 0),
+                                      0.0, 100.0, 0.0, 0.0),
                                   child: Icon(
                                     Icons.check_circle_sharp,
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
-                                    size: 100,
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    size: 100.0,
                                   ),
                                 ),
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 50, 0, 0),
+                                      0.0, 50.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       'fay9yvxp' /* Verification
@@ -71,10 +96,10 @@ Completed! */
                                       ,
                                     ),
                                     style: FlutterFlowTheme.of(context)
-                                        .bodyText1
+                                        .bodyMedium
                                         .override(
                                           fontFamily: 'Lato',
-                                          fontSize: 26,
+                                          fontSize: 26.0,
                                           fontWeight: FontWeight.w500,
                                         ),
                                   ),
@@ -84,29 +109,30 @@ Completed! */
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0, 0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(40, 20, 40, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                40.0, 20.0, 40.0, 0.0),
                             child: AuthUserStreamWidget(
-                              child: StreamBuilder<VendorsRecord>(
+                              builder: (context) =>
+                                  StreamBuilder<VendorsRecord>(
                                 stream: VendorsRecord.getDocument(
-                                    currentUserDocument?.vendorRef),
+                                    currentUserDocument!.vendorRef!),
                                 builder: (context, snapshot) {
                                   // Customize what your widget looks like when it's loading.
                                   if (!snapshot.hasData) {
                                     return Center(
                                       child: SizedBox(
-                                        width: 50,
-                                        height: 50,
+                                        width: 50.0,
+                                        height: 50.0,
                                         child: CircularProgressIndicator(
                                           color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
+                                              .primary,
                                         ),
                                       ),
                                     );
                                   }
-                                  final columnVendorsRecord = snapshot.data;
+                                  final columnVendorsRecord = snapshot.data!;
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -122,36 +148,36 @@ Completed! */
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 40, 0, 0),
+                                            0.0, 40.0, 0.0, 0.0),
                                         child: StreamBuilder<ShopsRecord>(
                                           stream: ShopsRecord.getDocument(
-                                              columnVendorsRecord.shopRef),
+                                              columnVendorsRecord.shopRef!),
                                           builder: (context, snapshot) {
                                             // Customize what your widget looks like when it's loading.
                                             if (!snapshot.hasData) {
                                               return Center(
                                                 child: SizedBox(
-                                                  width: 50,
-                                                  height: 50,
+                                                  width: 50.0,
+                                                  height: 50.0,
                                                   child:
                                                       CircularProgressIndicator(
                                                     color: FlutterFlowTheme.of(
                                                             context)
-                                                        .primaryColor,
+                                                        .primary,
                                                   ),
                                                 ),
                                               );
                                             }
                                             final textShopsRecord =
-                                                snapshot.data;
+                                                snapshot.data!;
                                             return Text(
-                                              textShopsRecord.shopName,
+                                              textShopsRecord.shopName!,
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyText1
+                                                      .bodyMedium
                                                       .override(
                                                         fontFamily: 'Lato',
-                                                        fontSize: 22,
+                                                        fontSize: 22.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -161,17 +187,17 @@ Completed! */
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0, 40, 0, 0),
+                                            0.0, 40.0, 0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'v6ouqyxz' /* Set up your store! */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyText1
+                                              .bodyMedium
                                               .override(
                                                 fontFamily: 'Open Sans',
                                                 color: Color(0xFF949496),
-                                                fontSize: 20,
+                                                fontSize: 20.0,
                                               ),
                                         ),
                                       ),
@@ -186,29 +212,29 @@ Completed! */
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0, 1),
+                    alignment: AlignmentDirectional(0.0, 1.0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
-                      child: SmoothPageIndicator(
-                        controller: pageViewController ??=
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                      child: smooth_page_indicator.SmoothPageIndicator(
+                        controller: _model.pageViewController ??=
                             PageController(initialPage: 0),
                         count: 2,
                         axisDirection: Axis.horizontal,
-                        onDotClicked: (i) {
-                          pageViewController.animateToPage(
+                        onDotClicked: (i) async {
+                          await _model.pageViewController!.animateToPage(
                             i,
                             duration: Duration(milliseconds: 500),
                             curve: Curves.ease,
                           );
                         },
-                        effect: SlideEffect(
-                          spacing: 8,
-                          radius: 16,
-                          dotWidth: 12,
-                          dotHeight: 12,
+                        effect: smooth_page_indicator.SlideEffect(
+                          spacing: 8.0,
+                          radius: 16.0,
+                          dotWidth: 12.0,
+                          dotHeight: 12.0,
                           dotColor: Color(0xFFBEBEBE),
-                          activeDotColor:
-                              FlutterFlowTheme.of(context).primaryColor,
+                          activeDotColor: FlutterFlowTheme.of(context).primary,
                           paintStyle: PaintingStyle.fill,
                         ),
                       ),
@@ -218,20 +244,20 @@ Completed! */
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 70, 0, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
-                borderRadius: 30,
-                borderWidth: 1,
-                buttonSize: 50,
-                fillColor: FlutterFlowTheme.of(context).primaryColor,
+                borderRadius: 30.0,
+                borderWidth: 1.0,
+                buttonSize: 50.0,
+                fillColor: FlutterFlowTheme.of(context).primary,
                 icon: Icon(
                   Icons.arrow_forward_ios,
-                  color: FlutterFlowTheme.of(context).tertiaryColor,
-                  size: 25,
+                  color: FlutterFlowTheme.of(context).tertiary,
+                  size: 25.0,
                 ),
                 onPressed: () async {
-                  await pageViewController.animateToPage(
+                  await _model.pageViewController?.animateToPage(
                     1,
                     duration: Duration(milliseconds: 500),
                     curve: Curves.ease,

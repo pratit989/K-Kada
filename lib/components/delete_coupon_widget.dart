@@ -1,38 +1,64 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'delete_coupon_model.dart';
+export 'delete_coupon_model.dart';
 
 class DeleteCouponWidget extends StatefulWidget {
-  const DeleteCouponWidget({Key key}) : super(key: key);
+  const DeleteCouponWidget({Key? key}) : super(key: key);
 
   @override
   _DeleteCouponWidgetState createState() => _DeleteCouponWidgetState();
 }
 
 class _DeleteCouponWidgetState extends State<DeleteCouponWidget> {
+  late DeleteCouponModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => DeleteCouponModel());
+  }
+
+  @override
+  void dispose() {
+    _model.maybeDispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 1,
+      width: MediaQuery.of(context).size.width * 1.0,
+      height: MediaQuery.of(context).size.height * 1.0,
       decoration: BoxDecoration(
         color: Color(0xDE000000),
       ),
       child: Align(
-        alignment: AlignmentDirectional(0, 0),
+        alignment: AlignmentDirectional(0.0, 0.0),
         child: Container(
-          width: 320,
-          height: 158,
+          width: 320.0,
+          height: 158.0,
           decoration: BoxDecoration(
-            color: FlutterFlowTheme.of(context).tertiaryColor,
-            borderRadius: BorderRadius.circular(10),
+            color: FlutterFlowTheme.of(context).tertiary,
+            borderRadius: BorderRadius.circular(10.0),
           ),
           child: Align(
-            alignment: AlignmentDirectional(0, 0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -41,22 +67,23 @@ class _DeleteCouponWidgetState extends State<DeleteCouponWidget> {
                     FFLocalizations.of(context).getText(
                       'vsddm2vn' /* Are You sure you want to delet... */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Lato',
-                          fontSize: 16,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.bold,
                         ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 20),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 20.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         '3039l9zy' /* Coupon will be deleted forever */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Lato',
                             color: Color(0xFF696969),
-                            fontSize: 12,
+                            fontSize: 12.0,
                           ),
                     ),
                   ),
@@ -65,7 +92,8 @@ class _DeleteCouponWidgetState extends State<DeleteCouponWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () {
                             print('Button pressed ...');
@@ -74,21 +102,27 @@ class _DeleteCouponWidgetState extends State<DeleteCouponWidget> {
                             'lucj8wv9' /* NO */,
                           ),
                           options: FFButtonOptions(
-                            width: 100,
-                            height: 30,
-                            color: FlutterFlowTheme.of(context).secondaryColor,
-                            textStyle:
-                                FlutterFlowTheme.of(context).subtitle2.override(
-                                      fontFamily: 'Lato',
-                                      color: Colors.white,
-                                      fontSize: 9,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                            width: 100.0,
+                            height: 30.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).secondary,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Lato',
+                                  color: Colors.white,
+                                  fontSize: 9.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                            elevation: 2.0,
                             borderSide: BorderSide(
                               color: Colors.transparent,
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
                       ),
@@ -100,21 +134,26 @@ class _DeleteCouponWidgetState extends State<DeleteCouponWidget> {
                           'ut1vz036' /* YES */,
                         ),
                         options: FFButtonOptions(
-                          width: 100,
-                          height: 30,
-                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          width: 100.0,
+                          height: 30.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: FlutterFlowTheme.of(context).tertiary,
                           textStyle:
-                              FlutterFlowTheme.of(context).subtitle2.override(
+                              FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Lato',
                                     color: Colors.black,
-                                    fontSize: 9,
+                                    fontSize: 9.0,
                                     fontWeight: FontWeight.bold,
                                   ),
+                          elevation: 2.0,
                           borderSide: BorderSide(
                             color: Color(0xFF707070),
-                            width: 1,
+                            width: 1.0,
                           ),
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
                     ],

@@ -1,71 +1,88 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'priceof_product_model.dart';
+export 'priceof_product_model.dart';
 
 class PriceofProductWidget extends StatefulWidget {
-  const PriceofProductWidget({Key key}) : super(key: key);
+  const PriceofProductWidget({Key? key}) : super(key: key);
 
   @override
   _PriceofProductWidgetState createState() => _PriceofProductWidgetState();
 }
 
 class _PriceofProductWidgetState extends State<PriceofProductWidget> {
-  TextEditingController textController1;
-  TextEditingController textController2;
-  TextEditingController textController3;
-  TextEditingController textController4;
+  late PriceofProductModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
 
   @override
   void initState() {
     super.initState();
-    textController2 = TextEditingController();
-    textController3 = TextEditingController();
-    textController4 = TextEditingController();
+    _model = createModel(context, () => PriceofProductModel());
+
+    _model.textController2 ??= TextEditingController();
+    _model.textController3 ??= TextEditingController();
+    _model.textController4 ??= TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _model.maybeDispose();
+
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height * 1,
+      width: MediaQuery.of(context).size.width * 1.0,
+      height: MediaQuery.of(context).size.height * 1.0,
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).tertiaryColor,
+        color: FlutterFlowTheme.of(context).tertiary,
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(0),
-          bottomRight: Radius.circular(0),
-          topLeft: Radius.circular(10),
-          topRight: Radius.circular(10),
+          bottomLeft: Radius.circular(0.0),
+          bottomRight: Radius.circular(0.0),
+          topLeft: Radius.circular(10.0),
+          topRight: Radius.circular(10.0),
         ),
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
+        padding: EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 0.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Align(
-              alignment: AlignmentDirectional(0, 0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Icon(
                   Icons.keyboard_arrow_down_sharp,
-                  color: FlutterFlowTheme.of(context).primaryColor,
-                  size: 40,
+                  color: FlutterFlowTheme.of(context).primary,
+                  size: 40.0,
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'pyq6cr13' /* Enter Price for your Product */,
                 ),
-                style: FlutterFlowTheme.of(context).bodyText1.override(
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Open Sans',
                       color: Color(0xD9000000),
-                      fontSize: 16,
+                      fontSize: 16.0,
                       fontWeight: FontWeight.w600,
                     ),
               ),
@@ -79,16 +96,12 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width * 0.5,
-                      height: 100,
+                      height: 100.0,
                       decoration: BoxDecoration(),
                       child: Builder(
                         builder: (context) {
-                          final variants = FFAppState()
-                                  .variantNames
-                                  .map((e) => e)
-                                  .toList()
-                                  ?.toList() ??
-                              [];
+                          final variants =
+                              FFAppState().variantNames.map((e) => e).toList();
                           return ListView.builder(
                             padding: EdgeInsets.zero,
                             shrinkWrap: true,
@@ -97,8 +110,8 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                             itemBuilder: (context, variantsIndex) {
                               final variantsItem = variants[variantsIndex];
                               return Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 5.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -106,24 +119,24 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                                   children: [
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 70, 0),
+                                          0.0, 0.0, 70.0, 0.0),
                                       child: Container(
                                         width:
                                             MediaQuery.of(context).size.width *
                                                 0.35,
-                                        height: 28,
+                                        height: 28.0,
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
-                                              .tertiaryColor,
+                                              .tertiary,
                                           borderRadius:
-                                              BorderRadius.circular(10),
+                                              BorderRadius.circular(10.0),
                                           border: Border.all(
                                             color: Color(0xFF707070),
                                             width: 0.5,
                                           ),
                                         ),
                                         child: TextFormField(
-                                          controller: textController1 ??=
+                                          controller: _model.textController1 ??=
                                               TextEditingController(
                                             text: variantsItem,
                                           ),
@@ -136,19 +149,25 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                                             ),
                                             enabledBorder: InputBorder.none,
                                             focusedBorder: InputBorder.none,
+                                            errorBorder: InputBorder.none,
+                                            focusedErrorBorder:
+                                                InputBorder.none,
                                             contentPadding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0, 0, 0, 20),
+                                                    0.0, 0.0, 0.0, 20.0),
                                           ),
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyText1
+                                              .bodyMedium
                                               .override(
                                                 fontFamily: 'Open Sans',
                                                 color: Color(0xFFBEBEBE),
-                                                fontSize: 12,
+                                                fontSize: 12.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
                                           textAlign: TextAlign.center,
+                                          validator: _model
+                                              .textController1Validator
+                                              .asValidator(context),
                                         ),
                                       ),
                                     ),
@@ -162,16 +181,12 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.29,
-                      height: 100,
+                      height: 100.0,
                       decoration: BoxDecoration(),
                       child: Builder(
                         builder: (context) {
-                          final variantPrices = FFAppState()
-                                  .variantPrices
-                                  .map((e) => e)
-                                  .toList()
-                                  ?.toList() ??
-                              [];
+                          final variantPrices =
+                              FFAppState().variantPrices.map((e) => e).toList();
                           return ListView.builder(
                             padding: EdgeInsets.zero,
                             scrollDirection: Axis.vertical,
@@ -180,42 +195,43 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                               final variantPricesItem =
                                   variantPrices[variantPricesIndex];
                               return Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 5.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 0, 10, 0),
+                                          0.0, 0.0, 10.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           'acfhfhi5' /* ₹ */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText1
+                                            .bodyMedium
                                             .override(
                                               fontFamily: 'Lato',
                                               color: Color(0xFF707070),
-                                              fontSize: 20,
+                                              fontSize: 20.0,
                                             ),
                                       ),
                                     ),
                                     Container(
                                       width: MediaQuery.of(context).size.width *
                                           0.2,
-                                      height: 28,
+                                      height: 28.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
-                                            .tertiaryColor,
-                                        borderRadius: BorderRadius.circular(10),
+                                            .tertiary,
+                                        borderRadius:
+                                            BorderRadius.circular(10.0),
                                         border: Border.all(
                                           color: Color(0xFF707070),
                                           width: 0.5,
                                         ),
                                       ),
                                       child: TextFormField(
-                                        controller: textController2,
+                                        controller: _model.textController2,
                                         obscureText: false,
                                         decoration: InputDecoration(
                                           hintText: FFLocalizations.of(context)
@@ -224,20 +240,25 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                                           ),
                                           enabledBorder: InputBorder.none,
                                           focusedBorder: InputBorder.none,
+                                          errorBorder: InputBorder.none,
+                                          focusedErrorBorder: InputBorder.none,
                                           contentPadding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0, 0, 0, 20),
+                                                  0.0, 0.0, 0.0, 20.0),
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText1
+                                            .bodyMedium
                                             .override(
                                               fontFamily: 'Open Sans',
                                               color: Color(0xFFBEBEBE),
-                                              fontSize: 12,
+                                              fontSize: 12.0,
                                               fontWeight: FontWeight.w600,
                                             ),
                                         textAlign: TextAlign.center,
                                         keyboardType: TextInputType.number,
+                                        validator: _model
+                                            .textController2Validator
+                                            .asValidator(context),
                                       ),
                                     ),
                                   ],
@@ -251,27 +272,28 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 70, 0),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 70.0, 0.0),
                         child: Container(
                           width: MediaQuery.of(context).size.width * 0.35,
-                          height: 28,
+                          height: 28.0,
                           decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).tertiaryColor,
-                            borderRadius: BorderRadius.circular(10),
+                            color: FlutterFlowTheme.of(context).tertiary,
+                            borderRadius: BorderRadius.circular(10.0),
                             border: Border.all(
                               color: Color(0xFF707070),
                               width: 0.5,
                             ),
                           ),
                           child: TextFormField(
-                            controller: textController3,
+                            controller: _model.textController3,
                             obscureText: false,
                             decoration: InputDecoration(
                               hintText: FFLocalizations.of(context).getText(
@@ -279,47 +301,53 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                               ),
                               enabledBorder: InputBorder.none,
                               focusedBorder: InputBorder.none,
-                              contentPadding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                              errorBorder: InputBorder.none,
+                              focusedErrorBorder: InputBorder.none,
+                              contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 20.0),
                             ),
-                            style:
-                                FlutterFlowTheme.of(context).bodyText1.override(
-                                      fontFamily: 'Open Sans',
-                                      color: Color(0xFFBEBEBE),
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Open Sans',
+                                  color: Color(0xFFBEBEBE),
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
                             textAlign: TextAlign.center,
+                            validator: _model.textController3Validator
+                                .asValidator(context),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'zgvr0427' /* ₹ */,
                           ),
                           style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
+                              FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Lato',
                                     color: Color(0xFF707070),
-                                    fontSize: 20,
+                                    fontSize: 20.0,
                                   ),
                         ),
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width * 0.2,
-                        height: 28,
+                        height: 28.0,
                         decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).tertiaryColor,
-                          borderRadius: BorderRadius.circular(10),
+                          color: FlutterFlowTheme.of(context).tertiary,
+                          borderRadius: BorderRadius.circular(10.0),
                           border: Border.all(
                             color: Color(0xFF707070),
                             width: 0.5,
                           ),
                         ),
                         child: TextFormField(
-                          controller: textController4,
+                          controller: _model.textController4,
                           obscureText: false,
                           decoration: InputDecoration(
                             hintText: FFLocalizations.of(context).getText(
@@ -327,18 +355,22 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
                             ),
                             enabledBorder: InputBorder.none,
                             focusedBorder: InputBorder.none,
-                            contentPadding:
-                                EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                            errorBorder: InputBorder.none,
+                            focusedErrorBorder: InputBorder.none,
+                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 20.0),
                           ),
                           style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
+                              FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Open Sans',
                                     color: Color(0xFFBEBEBE),
-                                    fontSize: 12,
+                                    fontSize: 12.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                           textAlign: TextAlign.center,
                           keyboardType: TextInputType.number,
+                          validator: _model.textController4Validator
+                              .asValidator(context),
                         ),
                       ),
                     ],
@@ -347,50 +379,54 @@ class _PriceofProductWidgetState extends State<PriceofProductWidget> {
               ],
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 40),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 40.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'kd8h9uuz' /* eg. 1 unit, 1kg, pack of 5, 20... */,
                 ),
-                style: FlutterFlowTheme.of(context).bodyText1.override(
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Open Sans',
                       color: Color(0xFF949496),
-                      fontSize: 8,
+                      fontSize: 8.0,
                       fontWeight: FontWeight.w600,
                     ),
               ),
             ),
             FFButtonWidget(
               onPressed: () async {
-                setState(
-                    () => FFAppState().variantNames.add(textController3.text));
-                setState(() => FFAppState()
-                    .variantPrices
-                    .add(int.parse(textController4.text)));
+                FFAppState().update(() {
+                  FFAppState().addToVariantNames(_model.textController3.text);
+                  FFAppState().addToVariantPrices(
+                      int.parse(_model.textController4.text));
+                });
               },
               text: FFLocalizations.of(context).getText(
                 'h1i883sk' /* Add Variant */,
               ),
               icon: Icon(
                 Icons.add_circle_outline,
-                color: FlutterFlowTheme.of(context).primaryColor,
-                size: 15,
+                color: FlutterFlowTheme.of(context).primary,
+                size: 15.0,
               ),
               options: FFButtonOptions(
-                width: 160,
-                height: 37,
-                color: FlutterFlowTheme.of(context).secondaryColor,
-                textStyle: FlutterFlowTheme.of(context).subtitle2.override(
+                width: 160.0,
+                height: 37.0,
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                iconPadding:
+                    EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                color: FlutterFlowTheme.of(context).secondary,
+                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                       fontFamily: 'Lato',
                       color: Colors.white,
-                      fontSize: 12,
+                      fontSize: 12.0,
                       fontWeight: FontWeight.bold,
                     ),
+                elevation: 2.0,
                 borderSide: BorderSide(
                   color: Colors.transparent,
-                  width: 1,
+                  width: 1.0,
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(12.0),
               ),
             ),
           ],

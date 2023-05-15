@@ -1,19 +1,23 @@
-import '../auth/auth_util.dart';
-import '../backend/backend.dart';
-import '../backend/firebase_storage/storage.dart';
-import '../flutter_flow/flutter_flow_drop_down.dart';
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_toggle_icon.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/upload_media.dart';
-import '../tax_details/tax_details_widget.dart';
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
+import '/backend/firebase_storage/storage.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_toggle_icon.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
+import '/flutter_flow/upload_data.dart';
+import '/tax_details/tax_details_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'seller_information_model.dart';
+export 'seller_information_model.dart';
 
 class SellerInformationWidget extends StatefulWidget {
-  const SellerInformationWidget({Key key}) : super(key: key);
+  const SellerInformationWidget({Key? key}) : super(key: key);
 
   @override
   _SellerInformationWidgetState createState() =>
@@ -21,37 +25,44 @@ class SellerInformationWidget extends StatefulWidget {
 }
 
 class _SellerInformationWidgetState extends State<SellerInformationWidget> {
-  ShopsRecord newShopRef;
-  VendorsRecord newVendorRef;
-  String uploadedFileUrl1 = '';
-  String uploadedFileUrl2 = '';
-  String dropDownValue;
-  TextEditingController textController;
-  final formKey = GlobalKey<FormState>();
+  late SellerInformationModel _model;
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController = TextEditingController();
+    _model = createModel(context, () => SellerInformationModel());
+
+    _model.textController ??= TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Scaffold(
       key: scaffoldKey,
+      backgroundColor: FlutterFlowTheme.of(context).tertiary,
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).alternate,
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
           icon: Icon(
             Icons.arrow_back_ios_sharp,
-            color: FlutterFlowTheme.of(context).secondaryColor,
-            size: 30,
+            color: FlutterFlowTheme.of(context).secondary,
+            size: 30.0,
           ),
           onPressed: () async {
             Navigator.pop(context);
@@ -59,15 +70,14 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
         ),
         actions: [],
         centerTitle: true,
-        elevation: 0,
+        elevation: 0.0,
       ),
-      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
       body: SafeArea(
         child: Form(
-          key: formKey,
+          key: _model.formKey,
           autovalidateMode: AutovalidateMode.disabled,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(40, 20, 40, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(40.0, 20.0, 40.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -75,16 +85,16 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 5),
+                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         '9hum03jg' /* Seller Information */,
                       ),
                       textAlign: TextAlign.center,
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Lato',
                             color: Colors.black,
-                            fontSize: 24,
+                            fontSize: 24.0,
                             fontWeight: FontWeight.bold,
                           ),
                     ),
@@ -93,18 +103,19 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                     FFLocalizations.of(context).getText(
                       '15b5vpay' /* We just need to know, your sho... */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Lato',
                           color: Color(0xFF949496),
                         ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 10),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 10.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'g8ie3whp' /* *UPLOAD PHOTO OF YOUR SHIOP */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Lato',
                             color: Color(0xFF696969),
                             fontWeight: FontWeight.w500,
@@ -112,6 +123,10 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                     ),
                   ),
                   InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
                     onTap: () async {
                       final selectedMedia =
                           await selectMediaWithSourceBottomSheet(
@@ -122,50 +137,74 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                       if (selectedMedia != null &&
                           selectedMedia.every((m) =>
                               validateFileFormat(m.storagePath, context))) {
-                        showUploadMessage(
-                          context,
-                          'Uploading file...',
-                          showLoading: true,
-                        );
-                        final downloadUrls = (await Future.wait(
-                                selectedMedia.map((m) async =>
-                                    await uploadData(m.storagePath, m.bytes))))
-                            .where((u) => u != null)
-                            .toList();
-                        ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                        if (downloadUrls != null &&
+                        setState(() => _model.isDataUploading1 = true);
+                        var selectedUploadedFiles = <FFUploadedFile>[];
+                        var downloadUrls = <String>[];
+                        try {
+                          showUploadMessage(
+                            context,
+                            'Uploading file...',
+                            showLoading: true,
+                          );
+                          selectedUploadedFiles = selectedMedia
+                              .map((m) => FFUploadedFile(
+                                    name: m.storagePath.split('/').last,
+                                    bytes: m.bytes,
+                                    height: m.dimensions?.height,
+                                    width: m.dimensions?.width,
+                                    blurHash: m.blurHash,
+                                  ))
+                              .toList();
+
+                          downloadUrls = (await Future.wait(
+                            selectedMedia.map(
+                              (m) async =>
+                                  await uploadData(m.storagePath, m.bytes),
+                            ),
+                          ))
+                              .where((u) => u != null)
+                              .map((u) => u!)
+                              .toList();
+                        } finally {
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                          _model.isDataUploading1 = false;
+                        }
+                        if (selectedUploadedFiles.length ==
+                                selectedMedia.length &&
                             downloadUrls.length == selectedMedia.length) {
-                          setState(() => uploadedFileUrl1 = downloadUrls.first);
-                          showUploadMessage(
-                            context,
-                            'Success!',
-                          );
+                          setState(() {
+                            _model.uploadedLocalFile1 =
+                                selectedUploadedFiles.first;
+                            _model.uploadedFileUrl1 = downloadUrls.first;
+                          });
+                          showUploadMessage(context, 'Success!');
                         } else {
-                          showUploadMessage(
-                            context,
-                            'Failed to upload media',
-                          );
+                          setState(() {});
+                          showUploadMessage(context, 'Failed to upload data');
                           return;
                         }
                       }
 
-                      if ((uploadedFileUrl1 != null &&
-                          uploadedFileUrl1 != '')) {
-                        setState(() => FFAppState().uploadedShopPhoto = true);
+                      if (_model.uploadedFileUrl1 != null &&
+                          _model.uploadedFileUrl1 != '') {
+                        FFAppState().update(() {
+                          FFAppState().uploadedShopPhoto = true;
+                        });
                       }
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       decoration: BoxDecoration(
                         color: Color(0x00FFFFFF),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(10.0),
                         border: Border.all(
                           color: Color(0xFF707070),
                           width: 0.3,
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            10.0, 10.0, 10.0, 10.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -177,15 +216,13 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                               value: FFAppState().uploadedShopPhoto,
                               onIcon: Icon(
                                 Icons.check_box,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                size: 25,
+                                color: FlutterFlowTheme.of(context).primary,
+                                size: 25.0,
                               ),
                               offIcon: Icon(
                                 Icons.photo_camera_outlined,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                size: 25,
+                                color: FlutterFlowTheme.of(context).primary,
+                                size: 25.0,
                               ),
                             ),
                             Text(
@@ -194,11 +231,10 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                               ),
                               textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context)
-                                  .bodyText1
+                                  .bodyMedium
                                   .override(
                                     fontFamily: 'Open Sans',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryColor,
+                                    color: FlutterFlowTheme.of(context).primary,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -208,12 +244,13 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 10),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 10.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'xffblyl4' /* LOGO ( optonal ) */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Lato',
                             color: Color(0xFF696969),
                             fontWeight: FontWeight.w500,
@@ -221,6 +258,10 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                     ),
                   ),
                   InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
                     onTap: () async {
                       final selectedMedia =
                           await selectMediaWithSourceBottomSheet(
@@ -231,50 +272,74 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                       if (selectedMedia != null &&
                           selectedMedia.every((m) =>
                               validateFileFormat(m.storagePath, context))) {
-                        showUploadMessage(
-                          context,
-                          'Uploading file...',
-                          showLoading: true,
-                        );
-                        final downloadUrls = (await Future.wait(
-                                selectedMedia.map((m) async =>
-                                    await uploadData(m.storagePath, m.bytes))))
-                            .where((u) => u != null)
-                            .toList();
-                        ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                        if (downloadUrls != null &&
+                        setState(() => _model.isDataUploading2 = true);
+                        var selectedUploadedFiles = <FFUploadedFile>[];
+                        var downloadUrls = <String>[];
+                        try {
+                          showUploadMessage(
+                            context,
+                            'Uploading file...',
+                            showLoading: true,
+                          );
+                          selectedUploadedFiles = selectedMedia
+                              .map((m) => FFUploadedFile(
+                                    name: m.storagePath.split('/').last,
+                                    bytes: m.bytes,
+                                    height: m.dimensions?.height,
+                                    width: m.dimensions?.width,
+                                    blurHash: m.blurHash,
+                                  ))
+                              .toList();
+
+                          downloadUrls = (await Future.wait(
+                            selectedMedia.map(
+                              (m) async =>
+                                  await uploadData(m.storagePath, m.bytes),
+                            ),
+                          ))
+                              .where((u) => u != null)
+                              .map((u) => u!)
+                              .toList();
+                        } finally {
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                          _model.isDataUploading2 = false;
+                        }
+                        if (selectedUploadedFiles.length ==
+                                selectedMedia.length &&
                             downloadUrls.length == selectedMedia.length) {
-                          setState(() => uploadedFileUrl2 = downloadUrls.first);
-                          showUploadMessage(
-                            context,
-                            'Success!',
-                          );
+                          setState(() {
+                            _model.uploadedLocalFile2 =
+                                selectedUploadedFiles.first;
+                            _model.uploadedFileUrl2 = downloadUrls.first;
+                          });
+                          showUploadMessage(context, 'Success!');
                         } else {
-                          showUploadMessage(
-                            context,
-                            'Failed to upload media',
-                          );
+                          setState(() {});
+                          showUploadMessage(context, 'Failed to upload data');
                           return;
                         }
                       }
 
-                      if ((uploadedFileUrl2 != null &&
-                          uploadedFileUrl2 != '')) {
-                        setState(() => FFAppState().uploadedShopLogo = true);
+                      if (_model.uploadedFileUrl2 != null &&
+                          _model.uploadedFileUrl2 != '') {
+                        FFAppState().update(() {
+                          FFAppState().uploadedShopLogo = true;
+                        });
                       }
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       decoration: BoxDecoration(
                         color: Color(0x00FFFFFF),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(10.0),
                         border: Border.all(
                           color: Color(0xFF707070),
                           width: 0.3,
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            10.0, 10.0, 10.0, 10.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -286,31 +351,29 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                               value: FFAppState().uploadedShopLogo,
                               onIcon: Icon(
                                 Icons.check_box,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                size: 25,
+                                color: FlutterFlowTheme.of(context).primary,
+                                size: 25.0,
                               ),
                               offIcon: Icon(
                                 Icons.photo_camera_outlined,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                size: 25,
+                                color: FlutterFlowTheme.of(context).primary,
+                                size: 25.0,
                               ),
                             ),
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  10.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   'avnp7jj5' /* Proceed to camera */,
                                 ),
                                 textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
-                                    .bodyText1
+                                    .bodyMedium
                                     .override(
                                       fontFamily: 'Open Sans',
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),
@@ -321,12 +384,13 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         '56whc172' /* *SHOP TYPE */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Lato',
                             color: Color(0xFF696969),
                             fontWeight: FontWeight.w500,
@@ -334,11 +398,13 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                     ),
                   ),
                   Container(
-                    width: MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width * 1.0,
                     decoration: BoxDecoration(
                       color: Color(0x00FFFFFF),
                     ),
-                    child: FlutterFlowDropDown(
+                    child: FlutterFlowDropDown<String>(
+                      controller: _model.dropDownValueController ??=
+                          FormFieldController<String>(null),
                       options: [
                         FFLocalizations.of(context).getText(
                           'm5y1r9oi' /* Electronics */,
@@ -383,35 +449,39 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                           'bburc6v4' /* Stationary */,
                         )
                       ],
-                      onChanged: (val) => setState(() => dropDownValue = val),
-                      width: MediaQuery.of(context).size.width,
+                      onChanged: (val) =>
+                          setState(() => _model.dropDownValue = val),
+                      width: MediaQuery.of(context).size.width * 1.0,
                       textStyle:
-                          FlutterFlowTheme.of(context).bodyText1.override(
+                          FlutterFlowTheme.of(context).bodyMedium.override(
                                 fontFamily: 'Lato',
                                 color: Colors.black,
-                                fontSize: 18,
+                                fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
                               ),
                       icon: Icon(
                         Icons.keyboard_arrow_down_sharp,
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        size: 15,
+                        color: FlutterFlowTheme.of(context).primary,
+                        size: 15.0,
                       ),
-                      fillColor: FlutterFlowTheme.of(context).tertiaryColor,
-                      elevation: 0,
+                      fillColor: FlutterFlowTheme.of(context).tertiary,
+                      elevation: 0.0,
                       borderColor: Color(0x00B6AF9A),
-                      borderWidth: 0,
-                      borderRadius: 10,
-                      margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                      borderWidth: 0.0,
+                      borderRadius: 10.0,
+                      margin:
+                          EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
+                      isSearchable: false,
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'lb63m5sw' /* *SHOP NAME ( as per your GST C... */,
                       ),
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Lato',
                             color: Color(0xFF696969),
                             fontWeight: FontWeight.w500,
@@ -419,7 +489,7 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                     ),
                   ),
                   TextFormField(
-                    controller: textController,
+                    controller: _model.textController,
                     obscureText: false,
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
@@ -434,7 +504,27 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                       ),
                       focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
-                          color: Color(0xFF183C28),
+                          color: Color(0x00000000),
+                          width: 0.3,
+                        ),
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(4.0),
+                          topRight: Radius.circular(4.0),
+                        ),
+                      ),
+                      errorBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0x00000000),
+                          width: 0.3,
+                        ),
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(4.0),
+                          topRight: Radius.circular(4.0),
+                        ),
+                      ),
+                      focusedErrorBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color(0x00000000),
                           width: 0.3,
                         ),
                         borderRadius: const BorderRadius.only(
@@ -443,49 +533,40 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                         ),
                       ),
                     ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Lato',
                           color: Colors.black,
-                          fontSize: 18,
+                          fontSize: 18.0,
                           fontWeight: FontWeight.bold,
                         ),
-                    validator: (val) {
-                      if (val == null || val.isEmpty) {
-                        return FFLocalizations.of(context).getText(
-                          'qnhl2z83' /* Field is required */,
-                        );
-                      }
-                      if (val.length < 3) {
-                        return 'Requires at least 3 characters.';
-                      }
-
-                      return null;
-                    },
+                    validator:
+                        _model.textControllerValidator.asValidator(context),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                     child: FlutterFlowIconButton(
                       borderColor: Colors.transparent,
-                      borderRadius: 30,
-                      borderWidth: 1,
-                      buttonSize: 50,
-                      fillColor: FlutterFlowTheme.of(context).primaryColor,
+                      borderRadius: 30.0,
+                      borderWidth: 1.0,
+                      buttonSize: 50.0,
+                      fillColor: FlutterFlowTheme.of(context).primary,
                       icon: Icon(
                         Icons.arrow_forward_ios,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                        size: 25,
+                        color: FlutterFlowTheme.of(context).tertiary,
+                        size: 25.0,
                       ),
                       onPressed: () async {
-                        if (formKey.currentState == null ||
-                            !formKey.currentState.validate()) {
+                        if (_model.formKey.currentState == null ||
+                            !_model.formKey.currentState!.validate()) {
                           return;
                         }
-
-                        if (dropDownValue == null) {
+                        if (_model.uploadedFileUrl1 == null ||
+                            _model.uploadedFileUrl1.isEmpty) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Please select  a valid shop type',
+                                'Upload a valid photo of your shop',
                                 style: TextStyle(),
                               ),
                               duration: Duration(milliseconds: 4000),
@@ -494,13 +575,11 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                           );
                           return;
                         }
-
-                        if (uploadedFileUrl1 == null ||
-                            uploadedFileUrl1.isEmpty) {
+                        if (_model.dropDownValue == null) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
-                                'Upload a valid photo of your shop',
+                                'Please select  a valid shop type',
                                 style: TextStyle(),
                               ),
                               duration: Duration(milliseconds: 4000),
@@ -517,31 +596,31 @@ class _SellerInformationWidgetState extends State<SellerInformationWidget> {
                         var vendorsRecordReference =
                             VendorsRecord.collection.doc();
                         await vendorsRecordReference.set(vendorsCreateData);
-                        newVendorRef = VendorsRecord.getDocumentFromData(
+                        _model.newVendorRef = VendorsRecord.getDocumentFromData(
                             vendorsCreateData, vendorsRecordReference);
 
                         final usersUpdateData = createUsersRecordData(
-                          vendorRef: newVendorRef.reference,
+                          vendorRef: _model.newVendorRef!.reference,
                         );
-                        await currentUserReference.update(usersUpdateData);
+                        await currentUserReference!.update(usersUpdateData);
 
                         final shopsCreateData = createShopsRecordData(
-                          vendorRef: newVendorRef.reference,
+                          vendorRef: _model.newVendorRef!.reference,
                           userRef: currentUserReference,
-                          shopPhoto: uploadedFileUrl1,
-                          shopLogo: uploadedFileUrl2,
-                          shopName: textController.text,
-                          shopCategory: dropDownValue,
+                          shopPhoto: _model.uploadedFileUrl1,
+                          shopLogo: _model.uploadedFileUrl2,
+                          shopName: _model.textController.text,
+                          shopCategory: _model.dropDownValue,
                         );
                         var shopsRecordReference = ShopsRecord.collection.doc();
                         await shopsRecordReference.set(shopsCreateData);
-                        newShopRef = ShopsRecord.getDocumentFromData(
+                        _model.newShopRef = ShopsRecord.getDocumentFromData(
                             shopsCreateData, shopsRecordReference);
 
                         final vendorsUpdateData = createVendorsRecordData(
-                          shopRef: newShopRef.reference,
+                          shopRef: _model.newShopRef!.reference,
                         );
-                        await currentUserDocument?.vendorRef
+                        await currentUserDocument!.vendorRef!
                             .update(vendorsUpdateData);
                         await Navigator.push(
                           context,

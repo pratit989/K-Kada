@@ -1,12 +1,15 @@
-import '../components/check_list_order_details_widget.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '/components/check_list_order_details_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'order_picked_successful_model.dart';
+export 'order_picked_successful_model.dart';
 
 class OrderPickedSuccessfulWidget extends StatefulWidget {
-  const OrderPickedSuccessfulWidget({Key key}) : super(key: key);
+  const OrderPickedSuccessfulWidget({Key? key}) : super(key: key);
 
   @override
   _OrderPickedSuccessfulWidgetState createState() =>
@@ -15,18 +18,37 @@ class OrderPickedSuccessfulWidget extends StatefulWidget {
 
 class _OrderPickedSuccessfulWidgetState
     extends State<OrderPickedSuccessfulWidget> {
+  late OrderPickedSuccessfulModel _model;
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _unfocusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => OrderPickedSuccessfulModel());
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    _unfocusNode.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
+    context.watch<FFAppState>();
+
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).tertiary,
+        body: SafeArea(
           child: Align(
-            alignment: AlignmentDirectional(0, 0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -39,24 +61,28 @@ class _OrderPickedSuccessfulWidgetState
                   fit: BoxFit.contain,
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'hpqa8idq' /* Order Packed Successfully! */,
                     ),
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Lato',
-                          fontSize: 16,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.bold,
                         ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                  child: CheckListOrderDetailsWidget(),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                  child: wrapWithModel(
+                    model: _model.checkListOrderDetailsModel,
+                    updateCallback: () => setState(() {}),
+                    child: CheckListOrderDetailsWidget(),
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () {
                       print('Button pressed ...');
@@ -65,21 +91,26 @@ class _OrderPickedSuccessfulWidgetState
                       'qbiblx9o' /* Go back to orders list */,
                     ),
                     options: FFButtonOptions(
-                      width: 166,
-                      height: 34,
-                      color: FlutterFlowTheme.of(context).secondaryColor,
+                      width: 166.0,
+                      height: 34.0,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: FlutterFlowTheme.of(context).secondary,
                       textStyle:
-                          FlutterFlowTheme.of(context).subtitle2.override(
+                          FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Lato',
                                 color: Colors.white,
-                                fontSize: 14,
+                                fontSize: 14.0,
                                 fontWeight: FontWeight.bold,
                               ),
+                      elevation: 2.0,
                       borderSide: BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.0),
                     ),
                   ),
                 ),

@@ -1,11 +1,14 @@
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'set_delivery_location_c_model.dart';
+export 'set_delivery_location_c_model.dart';
 
 class SetDeliveryLocationCWidget extends StatefulWidget {
-  const SetDeliveryLocationCWidget({Key key}) : super(key: key);
+  const SetDeliveryLocationCWidget({Key? key}) : super(key: key);
 
   @override
   _SetDeliveryLocationCWidgetState createState() =>
@@ -14,18 +17,37 @@ class SetDeliveryLocationCWidget extends StatefulWidget {
 
 class _SetDeliveryLocationCWidgetState
     extends State<SetDeliveryLocationCWidget> {
+  late SetDeliveryLocationCModel _model;
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _unfocusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => SetDeliveryLocationCModel());
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    _unfocusNode.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
+    context.watch<FFAppState>();
+
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).tertiary,
+        body: SafeArea(
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,11 +61,12 @@ class _SetDeliveryLocationCWidgetState
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(40, 0, 50, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              40.0, 0.0, 50.0, 0.0),
                           child: Icon(
                             Icons.arrow_back_ios_sharp,
-                            color: FlutterFlowTheme.of(context).secondaryColor,
-                            size: 30,
+                            color: FlutterFlowTheme.of(context).secondary,
+                            size: 30.0,
                           ),
                         ),
                         Text(
@@ -52,30 +75,31 @@ class _SetDeliveryLocationCWidgetState
                           ),
                           textAlign: TextAlign.center,
                           style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
+                              FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Lato',
-                                    fontSize: 20,
+                                    fontSize: 20.0,
                                     fontWeight: FontWeight.bold,
                                   ),
                         ),
                       ],
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.8,
                         height: MediaQuery.of(context).size.height * 0.06,
                         decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          color: FlutterFlowTheme.of(context).tertiary,
                           boxShadow: [
                             BoxShadow(
-                              blurRadius: 2,
+                              blurRadius: 2.0,
                               color: Color(0x19000000),
-                              offset: Offset(0, 2),
-                              spreadRadius: 0,
+                              offset: Offset(0.0, 2.0),
+                              spreadRadius: 0.0,
                             )
                           ],
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10.0),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -83,26 +107,26 @@ class _SetDeliveryLocationCWidgetState
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(10, 0, 20, 0),
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  10.0, 0.0, 20.0, 0.0),
                               child: Icon(
                                 Icons.search,
                                 color: Color(0xFF9F9F9F),
-                                size: 20,
+                                size: 20.0,
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0, 0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   'irsaumug' /* Search location */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
-                                    .bodyText1
+                                    .bodyMedium
                                     .override(
                                       fontFamily: 'Lato',
                                       color: Color(0xFF9F9F9F),
-                                      fontSize: 16,
+                                      fontSize: 16.0,
                                       fontWeight: FontWeight.normal,
                                     ),
                               ),
@@ -114,13 +138,14 @@ class _SetDeliveryLocationCWidgetState
                   ],
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0, 0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () {
                             print('Button pressed ...');
@@ -130,23 +155,29 @@ class _SetDeliveryLocationCWidgetState
                           ),
                           icon: Icon(
                             Icons.my_location,
-                            size: 15,
+                            size: 15.0,
                           ),
                           options: FFButtonOptions(
-                            width: 164,
-                            height: 47,
-                            color: FlutterFlowTheme.of(context).secondaryColor,
-                            textStyle:
-                                FlutterFlowTheme.of(context).subtitle2.override(
-                                      fontFamily: 'Lato',
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                    ),
+                            width: 164.0,
+                            height: 47.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).secondary,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Lato',
+                                  color: Colors.white,
+                                  fontSize: 14.0,
+                                ),
+                            elevation: 2.0,
                             borderSide: BorderSide(
                               color: Colors.transparent,
-                              width: 1,
+                              width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(12.0),
                           ),
                         ),
                       ),
@@ -159,23 +190,28 @@ class _SetDeliveryLocationCWidgetState
                         ),
                         icon: Icon(
                           Icons.location_on_outlined,
-                          size: 15,
+                          size: 15.0,
                         ),
                         options: FFButtonOptions(
-                          width: 164,
-                          height: 47,
-                          color: FlutterFlowTheme.of(context).secondaryColor,
+                          width: 164.0,
+                          height: 47.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 0.0, 0.0),
+                          color: FlutterFlowTheme.of(context).secondary,
                           textStyle:
-                              FlutterFlowTheme.of(context).subtitle2.override(
+                              FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Lato',
                                     color: Colors.white,
-                                    fontSize: 14,
+                                    fontSize: 14.0,
                                   ),
+                          elevation: 2.0,
                           borderSide: BorderSide(
                             color: Colors.transparent,
-                            width: 1,
+                            width: 1.0,
                           ),
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(12.0),
                         ),
                       ),
                     ],

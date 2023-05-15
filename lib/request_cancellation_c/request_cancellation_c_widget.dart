@@ -1,13 +1,17 @@
-import '../components/check_list_order_details_widget.dart';
-import '../flutter_flow/flutter_flow_drop_down.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
-import '../flutter_flow/flutter_flow_widgets.dart';
+import '/components/check_list_order_details_widget.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'request_cancellation_c_model.dart';
+export 'request_cancellation_c_model.dart';
 
 class RequestCancellationCWidget extends StatefulWidget {
-  const RequestCancellationCWidget({Key key}) : super(key: key);
+  const RequestCancellationCWidget({Key? key}) : super(key: key);
 
   @override
   _RequestCancellationCWidgetState createState() =>
@@ -16,42 +20,62 @@ class RequestCancellationCWidget extends StatefulWidget {
 
 class _RequestCancellationCWidgetState
     extends State<RequestCancellationCWidget> {
-  String dropDownValue;
+  late RequestCancellationCModel _model;
+
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _unfocusNode = FocusNode();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => RequestCancellationCModel());
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    _unfocusNode.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).tertiaryColor,
-      body: SafeArea(
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
+    context.watch<FFAppState>();
+
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).tertiary,
+        body: SafeArea(
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 0, 40, 30),
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 30.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                         child: Icon(
                           Icons.arrow_back_ios_sharp,
-                          color: FlutterFlowTheme.of(context).secondaryColor,
-                          size: 30,
+                          color: FlutterFlowTheme.of(context).secondary,
+                          size: 30.0,
                         ),
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
                           'qj0gm7c7' /* Request Cancellation */,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Lato',
-                              fontSize: 20,
+                              fontSize: 20.0,
                               fontWeight: FontWeight.bold,
                             ),
                       ),
@@ -59,23 +83,24 @@ class _RequestCancellationCWidgetState
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(40, 0, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5, 30),
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 30.0),
                         child: Icon(
                           Icons.error_outlined,
                           color: Color(0xFF686868),
-                          size: 13,
+                          size: 13.0,
                         ),
                       ),
                       Text(
                         FFLocalizations.of(context).getText(
                           'z0cj5u5q' /* Please refuse the order if the... */,
                         ),
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Lato',
                               color: Color(0xFF949496),
                             ),
@@ -84,12 +109,18 @@ class _RequestCancellationCWidgetState
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                  child: CheckListOrderDetailsWidget(),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                  child: wrapWithModel(
+                    model: _model.checkListOrderDetailsModel,
+                    updateCallback: () => setState(() {}),
+                    child: CheckListOrderDetailsWidget(),
+                  ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
-                  child: FlutterFlowDropDown(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                  child: FlutterFlowDropDown<String>(
+                    controller: _model.dropDownValueController ??=
+                        FormFieldController<String>(null),
                     options: [
                       FFLocalizations.of(context).getText(
                         '5azp3qhh' /* Order created by mistake */,
@@ -113,28 +144,31 @@ class _RequestCancellationCWidgetState
                         '95mvfkvi' /* Other */,
                       )
                     ],
-                    onChanged: (val) => setState(() => dropDownValue = val),
-                    width: 320,
-                    height: 47,
-                    textStyle: FlutterFlowTheme.of(context).bodyText1.override(
+                    onChanged: (val) =>
+                        setState(() => _model.dropDownValue = val),
+                    width: 320.0,
+                    height: 47.0,
+                    textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Lato',
                           color: Color(0xFF949496),
-                          fontSize: 16,
+                          fontSize: 16.0,
                         ),
                     hintText: FFLocalizations.of(context).getText(
                       'mht9mbst' /* Cancellation reason (optional) */,
                     ),
                     fillColor: Colors.white,
-                    elevation: 2,
+                    elevation: 2.0,
                     borderColor: Colors.transparent,
-                    borderWidth: 0,
-                    borderRadius: 0,
-                    margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
+                    borderWidth: 0.0,
+                    borderRadius: 0.0,
+                    margin:
+                        EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
                     hidesUnderline: true,
+                    isSearchable: false,
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () {
                       print('Button pressed ...');
@@ -143,21 +177,25 @@ class _RequestCancellationCWidgetState
                       'wc5rak38' /* Request Cancellation */,
                     ),
                     options: FFButtonOptions(
-                      width: 181,
-                      height: 37,
-                      color: FlutterFlowTheme.of(context).secondaryColor,
-                      textStyle: FlutterFlowTheme.of(context)
-                          .subtitle2
-                          .override(
-                            fontFamily: 'Lato',
-                            color: FlutterFlowTheme.of(context).tertiaryColor,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      width: 181.0,
+                      height: 37.0,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: FlutterFlowTheme.of(context).secondary,
+                      textStyle:
+                          FlutterFlowTheme.of(context).titleSmall.override(
+                                fontFamily: 'Lato',
+                                color: FlutterFlowTheme.of(context).tertiary,
+                                fontWeight: FontWeight.bold,
+                              ),
+                      elevation: 2.0,
                       borderSide: BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.0),
                     ),
                   ),
                 ),

@@ -11,17 +11,15 @@ abstract class TransportersRecord
   static Serializer<TransportersRecord> get serializer =>
       _$transportersRecordSerializer;
 
-  @nullable
   @BuiltValueField(wireName: 'user_ref')
-  DocumentReference get userRef;
+  DocumentReference? get userRef;
 
-  @nullable
   @BuiltValueField(wireName: 'registration_completed')
-  bool get registrationCompleted;
+  bool? get registrationCompleted;
 
-  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference get reference;
+  DocumentReference? get ffRef;
+  DocumentReference get reference => ffRef!;
 
   static void _initializeBuilder(TransportersRecordBuilder builder) =>
       builder..registrationCompleted = false;
@@ -31,11 +29,11 @@ abstract class TransportersRecord
 
   static Stream<TransportersRecord> getDocument(DocumentReference ref) => ref
       .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   static Future<TransportersRecord> getDocumentOnce(DocumentReference ref) =>
       ref.get().then(
-          (s) => serializers.deserializeWith(serializer, serializedData(s)));
+          (s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   TransportersRecord._();
   factory TransportersRecord(
@@ -45,15 +43,21 @@ abstract class TransportersRecord
   static TransportersRecord getDocumentFromData(
           Map<String, dynamic> data, DocumentReference reference) =>
       serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference});
+          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
 }
 
 Map<String, dynamic> createTransportersRecordData({
-  DocumentReference userRef,
-  bool registrationCompleted,
-}) =>
-    serializers.toFirestore(
-        TransportersRecord.serializer,
-        TransportersRecord((t) => t
-          ..userRef = userRef
-          ..registrationCompleted = registrationCompleted));
+  DocumentReference? userRef,
+  bool? registrationCompleted,
+}) {
+  final firestoreData = serializers.toFirestore(
+    TransportersRecord.serializer,
+    TransportersRecord(
+      (t) => t
+        ..userRef = userRef
+        ..registrationCompleted = registrationCompleted,
+    ),
+  );
+
+  return firestoreData;
+}

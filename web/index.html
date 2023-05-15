@@ -15,18 +15,32 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="K-Kada">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  
+
+  <meta name="robots" content="noindex" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>K-Kada</title>
+  <!-- Open Graph & SEO tags -->
+  <meta property="og:title" content="K-Kada" />
+  <meta property="og:description" content="Built with FlutterFlow." />
+  <meta property="og:image" content="https://storage.googleapis.com/flutterflow-prod-hosting/og_splash_gradient.png" /> 
+  <meta name="twitter:title" content="K-Kada" />
+  <meta name="twitter:description" content="Built with FlutterFlow." />
+  <meta name="twitter:image" content="https://storage.googleapis.com/flutterflow-prod-hosting/og_splash_gradient.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title> K-Kada </title>
+  <meta name="description" content="Built with FlutterFlow." />
+    
+
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
@@ -39,26 +53,10 @@
         navigator.serviceWorker.register('flutter_service_worker.js');
       });
     }
+    
   </script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   
   
-
-  <script>
-    const firebaseConfig = {
-    apiKey: "AIzaSyDspx75i5PtS6xBIoxF-_Py_veeLqvDIjM",
-      authDomain: "k-kada.firebaseapp.com",
-      projectId: "k-kada",
-      storageBucket: "k-kada.appspot.com",
-      messagingSenderId: "779163958114",
-      appId: "1:779163958114:web:f6e7212ae33915fc334a3b"
-    }
-    firebase.initializeApp(firebaseConfig);
-  </script>
   
   
   <script src="main.dart.js" type="application/javascript"></script>

@@ -9,45 +9,35 @@ part 'shops_record.g.dart';
 abstract class ShopsRecord implements Built<ShopsRecord, ShopsRecordBuilder> {
   static Serializer<ShopsRecord> get serializer => _$shopsRecordSerializer;
 
-  @nullable
   @BuiltValueField(wireName: 'vendor_ref')
-  DocumentReference get vendorRef;
+  DocumentReference? get vendorRef;
 
-  @nullable
   @BuiltValueField(wireName: 'user_ref')
-  DocumentReference get userRef;
+  DocumentReference? get userRef;
 
-  @nullable
   @BuiltValueField(wireName: 'shop_photo')
-  String get shopPhoto;
+  String? get shopPhoto;
 
-  @nullable
   @BuiltValueField(wireName: 'shop_logo')
-  String get shopLogo;
+  String? get shopLogo;
 
-  @nullable
   @BuiltValueField(wireName: 'shop_name')
-  String get shopName;
+  String? get shopName;
 
-  @nullable
   @BuiltValueField(wireName: 'shop_category')
-  String get shopCategory;
+  String? get shopCategory;
 
-  @nullable
-  String get address;
+  String? get address;
 
-  @nullable
-  String get state;
+  String? get state;
 
-  @nullable
-  String get city;
+  String? get city;
 
-  @nullable
-  String get pincode;
+  String? get pincode;
 
-  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
-  DocumentReference get reference;
+  DocumentReference? get ffRef;
+  DocumentReference get reference => ffRef!;
 
   static void _initializeBuilder(ShopsRecordBuilder builder) => builder
     ..shopPhoto = ''
@@ -64,11 +54,11 @@ abstract class ShopsRecord implements Built<ShopsRecord, ShopsRecordBuilder> {
 
   static Stream<ShopsRecord> getDocument(DocumentReference ref) => ref
       .snapshots()
-      .map((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .map((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   static Future<ShopsRecord> getDocumentOnce(DocumentReference ref) => ref
       .get()
-      .then((s) => serializers.deserializeWith(serializer, serializedData(s)));
+      .then((s) => serializers.deserializeWith(serializer, serializedData(s))!);
 
   ShopsRecord._();
   factory ShopsRecord([void Function(ShopsRecordBuilder) updates]) =
@@ -77,31 +67,37 @@ abstract class ShopsRecord implements Built<ShopsRecord, ShopsRecordBuilder> {
   static ShopsRecord getDocumentFromData(
           Map<String, dynamic> data, DocumentReference reference) =>
       serializers.deserializeWith(serializer,
-          {...mapFromFirestore(data), kDocumentReferenceField: reference});
+          {...mapFromFirestore(data), kDocumentReferenceField: reference})!;
 }
 
 Map<String, dynamic> createShopsRecordData({
-  DocumentReference vendorRef,
-  DocumentReference userRef,
-  String shopPhoto,
-  String shopLogo,
-  String shopName,
-  String shopCategory,
-  String address,
-  String state,
-  String city,
-  String pincode,
-}) =>
-    serializers.toFirestore(
-        ShopsRecord.serializer,
-        ShopsRecord((s) => s
-          ..vendorRef = vendorRef
-          ..userRef = userRef
-          ..shopPhoto = shopPhoto
-          ..shopLogo = shopLogo
-          ..shopName = shopName
-          ..shopCategory = shopCategory
-          ..address = address
-          ..state = state
-          ..city = city
-          ..pincode = pincode));
+  DocumentReference? vendorRef,
+  DocumentReference? userRef,
+  String? shopPhoto,
+  String? shopLogo,
+  String? shopName,
+  String? shopCategory,
+  String? address,
+  String? state,
+  String? city,
+  String? pincode,
+}) {
+  final firestoreData = serializers.toFirestore(
+    ShopsRecord.serializer,
+    ShopsRecord(
+      (s) => s
+        ..vendorRef = vendorRef
+        ..userRef = userRef
+        ..shopPhoto = shopPhoto
+        ..shopLogo = shopLogo
+        ..shopName = shopName
+        ..shopCategory = shopCategory
+        ..address = address
+        ..state = state
+        ..city = city
+        ..pincode = pincode,
+    ),
+  );
+
+  return firestoreData;
+}
